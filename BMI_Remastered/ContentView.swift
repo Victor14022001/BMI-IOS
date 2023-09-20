@@ -61,7 +61,7 @@ struct ContentView: View {
                     NavigationLink {
                         BAIView(viewModel: viewModel)
                     } label: {
-                        Text("Calculate you BAI")
+                        Text("Calculate your BAI")
                     }
                 }
             }
