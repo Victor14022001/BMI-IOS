@@ -11,7 +11,7 @@ import SwiftUI
 struct BMI_Remastered: App {
     var body: some Scene {
         WindowGroup {
-            ContentView(BmiViewModel())
+            ContentView()
         }
     }
 }

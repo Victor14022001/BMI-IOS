@@ -11,10 +11,6 @@ struct ContentView: View {
     @FocusState private var bodyDataFields: Bool
     @ObservedObject var viewModel = BmiViewModel()
     
-    init(_ viewModel: BmiViewModel) {
-        self.viewModel = viewModel
-    }
-    
     var body: some View {
         NavigationView {
             Form {
@@ -45,25 +41,28 @@ struct ContentView: View {
                     }
                 }
                 
-                Section("More nice things to know") {
-                    NavigationLink {
-                        IdealWeight(viewModel: viewModel)
-                    } label: {
-                        Text("Calculate my idealweight")
-                    }
-                    
-                    NavigationLink {
-                        BmiChartView(viewModel)
-                    } label: {
-                        Text("Look at your BMI at a Chart")
-                    }
-                    
-                    NavigationLink {
-                        BAIView(viewModel: viewModel)
-                    } label: {
-                        Text("Calculate your BAI")
+                if viewModel.yourBmi != nil {
+                    Section("More nice things to know") {
+                        NavigationLink {
+                            IdealWeight(viewModel: viewModel)
+                        } label: {
+                            Text("Calculate my idealweight")
+                        }
+                        
+                        NavigationLink {
+                            BmiChartView(viewModel)
+                        } label: {
+                            Text("Look at your BMI at a Chart")
+                        }
+                        
+                        NavigationLink {
+                            BAIView(viewModel: viewModel)
+                        } label: {
+                            Text("Calculate your BAI")
+                        }
                     }
                 }
+                
             }
             .navigationTitle("BMI \(viewModel.yourBmiString)")
             .toolbar {
@@ -76,12 +75,12 @@ struct ContentView: View {
                     }
                 }
             }
-        } 
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(BmiViewModel())
+        ContentView()
     }
 }

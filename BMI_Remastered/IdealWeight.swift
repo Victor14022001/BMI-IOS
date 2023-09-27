@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct IdealWeight: View {
-    var viewModel = BmiViewModel()
+   @ObservedObject var viewModel: BmiViewModel
     
     var body: some View {
         Form {
