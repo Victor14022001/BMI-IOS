@@ -8,11 +8,24 @@
 import SwiftUI
 
 struct Settings: View {
+    @ObservedObject var viewModel: BmiViewModel
+    @State private var darkMode = false
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Form {
+            Section("Color Scheme") {
+                Toggle(isOn: $darkMode, label: {
+                    Text("Darkmode")
+                    // should change the Color Scheme
+                })
+            }
+        }
+        MyTabView()
+        .navigationTitle("Settings")
+        .navigationBarTitleDisplayMode(.inline)
     }
-}
+} 
 
 #Preview {
-    Settings()
+    Settings(viewModel: BmiViewModel())
 }
