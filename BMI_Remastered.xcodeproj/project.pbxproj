@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F17B9C02AC61A2B00E3C849 /* AnimatedNumber in Frameworks */ = {isa = PBXBuildFile; productRef = 4F17B9BF2AC61A2B00E3C849 /* AnimatedNumber */; };
 		560515AA2AB60EDB0059DD4E /* BmiChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560515A92AB60EDB0059DD4E /* BmiChartView.swift */; };
 		560515AC2AB64E820059DD4E /* BAIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560515AB2AB64E820059DD4E /* BAIView.swift */; };
 		563C8F4E2AB711AF0094C985 /* MeaningBAIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563C8F4D2AB711AF0094C985 /* MeaningBAIView.swift */; };
@@ -40,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F17B9C02AC61A2B00E3C849 /* AnimatedNumber in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,6 +130,9 @@
 			dependencies = (
 			);
 			name = BMI_Remastered;
+			packageProductDependencies = (
+				4F17B9BF2AC61A2B00E3C849 /* AnimatedNumber */,
+			);
 			productName = "BMI_ 2";
 			productReference = 56ABFA442AB23807005D7E49 /* BMI_Remastered.app */;
 			productType = "com.apple.product-type.application";
@@ -156,6 +161,9 @@
 				Base,
 			);
 			mainGroup = 56ABFA3B2AB23807005D7E49;
+			packageReferences = (
+				4F17B9BE2AC61A2B00E3C849 /* XCRemoteSwiftPackageReference "AnimatedNumber" */,
+			);
 			productRefGroup = 56ABFA452AB23807005D7E49 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -319,7 +327,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BMI_Remastered/Preview Content\"";
-				DEVELOPMENT_TEAM = D3B28ZYAJ6;
+				DEVELOPMENT_TEAM = PSU9VZHG7L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -348,7 +356,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BMI_Remastered/Preview Content\"";
-				DEVELOPMENT_TEAM = D3B28ZYAJ6;
+				DEVELOPMENT_TEAM = PSU9VZHG7L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -391,6 +399,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4F17B9BE2AC61A2B00E3C849 /* XCRemoteSwiftPackageReference "AnimatedNumber" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jeffgrann/AnimatedNumber";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.7;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4F17B9BF2AC61A2B00E3C849 /* AnimatedNumber */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4F17B9BE2AC61A2B00E3C849 /* XCRemoteSwiftPackageReference "AnimatedNumber" */;
+			productName = AnimatedNumber;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 56ABFA3C2AB23807005D7E49 /* Project object */;
 }

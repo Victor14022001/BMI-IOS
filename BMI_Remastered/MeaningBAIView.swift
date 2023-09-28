@@ -8,8 +8,6 @@
 import SwiftUI
 
 struct MeaningBAIView: View {
-    @StateObject var viewModel: BmiViewModel
-    
     var body: some View {
         Form {
             Section {
@@ -57,6 +55,6 @@ struct MeaningBAIView: View {
 
 struct MeaningBAIView_Previews: PreviewProvider {
     static var previews: some View {
-        MeaningBAIView(viewModel: BmiViewModel())
+        MeaningBAIView()
     }
 }

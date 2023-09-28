@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct IdealWeight: View {
-   @ObservedObject var viewModel: BmiViewModel
-    
+   let viewModel: BmiViewModel
+
     var body: some View {
         Form {
             Section("Description") {

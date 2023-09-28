@@ -9,8 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     @FocusState private var bodyDataFields: Bool
-    @ObservedObject var viewModel = BmiViewModel()
-    
+    @ObservedObject var viewModel: BmiViewModel
+
     var body: some View {
         NavigationView {
             Form {
@@ -81,6 +81,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(viewModel: .init())
     }
 }

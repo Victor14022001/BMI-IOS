@@ -6,8 +6,14 @@
 //
 
 import Foundation
+import SwiftUI
 
 class BmiViewModel: ObservableObject {
+
+    // MARK: - AppStorage
+    @AppStorage("isDarkModeEnabled") var isDarkmodeEnabled: Bool = false
+
+    // MARK: - Published
     @Published var bodyWeight = ""
     @Published var bodyHeight = ""
     

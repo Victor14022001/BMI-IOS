@@ -8,8 +8,7 @@
 import SwiftUI
    
 struct BAIView: View {
-    @StateObject var viewModel = BmiViewModel()
-    
+    @ObservedObject var viewModel: BmiViewModel
     @FocusState private var hipDataField: Bool
     
     var body: some View {
@@ -67,7 +66,7 @@ struct BAIView: View {
             
             Section {
                 NavigationLink {
-                    MeaningBAIView(viewModel: viewModel)
+                    MeaningBAIView()
                 } label: {
                     Text("What is the meaning of my BAI?")
                 }

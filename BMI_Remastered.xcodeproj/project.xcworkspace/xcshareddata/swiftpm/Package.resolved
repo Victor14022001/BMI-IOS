@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "animatednumber",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/jeffgrann/AnimatedNumber",
+      "state" : {
+        "revision" : "3b4254001cc1b88a34e6f438b1d8eb5b71193e31",
+        "version" : "1.0.7"
+      }
+    }
+  ],
+  "version" : 2
+}

@@ -9,7 +9,7 @@ import SwiftUI
 import Charts
 
 struct BmiChartView: View {
-    var viewModel: BmiViewModel
+    let viewModel: BmiViewModel
     var bmiValues: [ToyShape]
     
     struct ToyShape: Identifiable {
