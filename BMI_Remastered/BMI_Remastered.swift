@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct BMI_Remastered: App {
@@ -14,5 +15,6 @@ struct BMI_Remastered: App {
         WindowGroup {
             MyTabView()
         }
+        .modelContainer(for: BMIData.self)
     }
 }

@@ -7,9 +7,20 @@
 
 import Foundation
 import SwiftUI
+import SwiftData
+
+@Model
+class BMIData: Identifiable {
+    let id: UUID
+    let bmi: Double
+    
+    init(bmi: Double) {
+        id = UUID()
+        self.bmi = bmi
+    }
+}
 
 class BmiViewModel: ObservableObject {
-
     // MARK: - AppStorage
     @AppStorage("isDarkModeEnabled") var isDarkmodeEnabled: Bool = false
 

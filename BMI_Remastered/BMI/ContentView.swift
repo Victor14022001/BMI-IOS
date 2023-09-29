@@ -6,11 +6,17 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct ContentView: View {
     @FocusState private var bodyDataFields: Bool
     @ObservedObject var viewModel: BmiViewModel
-
+    
+    @State private var showAlert = false
+    
+    @Environment(\.modelContext) var context
+    @Query private var datas: [BMIData]
+    
     var body: some View {
         NavigationView {
             Form {
@@ -36,9 +42,11 @@ struct ContentView: View {
                 Section {
                     Button {
                         viewModel.calculateBMI()
+                        showAlert = true
                     } label: {
                         Text("Calculate BMI")
                     }
+                    
                 }
                 
                 if viewModel.yourBmi != nil {
@@ -64,6 +72,21 @@ struct ContentView: View {
                 }
                 
             }
+            .alert(isPresented: $showAlert) {
+                Alert(
+                    title: Text("Save BMI"),
+                    message: Text("Will you save your BMI?"),
+                    primaryButton: .destructive(Text("Cancel")),
+                    secondaryButton: .default(Text("Save"), action: {
+                        guard let bmi = viewModel.yourBmi else { return }
+                        context.insert(BMIData(bmi: bmi))
+                        datas.forEach {
+                            print($0.bmi)
+                        }
+                    })
+                )
+            }
+            
             .navigationTitle("BMI \(viewModel.yourBmiString)")
             .toolbar {
                 ToolbarItemGroup(placement: .keyboard) {

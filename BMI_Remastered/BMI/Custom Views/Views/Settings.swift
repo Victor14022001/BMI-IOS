@@ -9,17 +9,19 @@ import SwiftUI
 
 struct Settings: View {
     @ObservedObject var viewModel: BmiViewModel
-
+    
     var body: some View {
-        Form {
-            Section("Color Scheme") {
-                Toggle("Darkmode", isOn: $viewModel.isDarkmodeEnabled)
+        NavigationView {
+            Form {
+                Section("Color Scheme") {
+                    Toggle("Darkmode", isOn: $viewModel.isDarkmodeEnabled)
+                }
             }
+            .navigationTitle("Settings")
+            .navigationBarTitleDisplayMode(.inline)
         }
-        .navigationTitle("Settings")
-        .navigationBarTitleDisplayMode(.inline)
-    }
-} 
+    } 
+}
 
 #Preview {
     Settings(viewModel: BmiViewModel())
