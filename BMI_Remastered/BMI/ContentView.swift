@@ -70,12 +70,11 @@ struct ContentView: View {
                         }
                     }
                 }
-                
             }
             .alert(isPresented: $showAlert) {
                 Alert(
                     title: Text("Save BMI"),
-                    message: Text("Will you save your BMI?"),
+                    message: Text("Do you want to save your BMI?"),
                     primaryButton: .destructive(Text("Cancel")),
                     secondaryButton: .default(Text("Save"), action: {
                         guard let bmi = viewModel.yourBmi else { return }
@@ -86,7 +85,6 @@ struct ContentView: View {
                     })
                 )
             }
-            
             .navigationTitle("BMI \(viewModel.yourBmiString)")
             .toolbar {
                 ToolbarItemGroup(placement: .keyboard) {

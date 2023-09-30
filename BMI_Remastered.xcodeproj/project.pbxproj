@@ -10,6 +10,7 @@
 		4F17B9C02AC61A2B00E3C849 /* AnimatedNumber in Frameworks */ = {isa = PBXBuildFile; productRef = 4F17B9BF2AC61A2B00E3C849 /* AnimatedNumber */; };
 		560515AA2AB60EDB0059DD4E /* BmiChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560515A92AB60EDB0059DD4E /* BmiChartView.swift */; };
 		560515AC2AB64E820059DD4E /* BAIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560515AB2AB64E820059DD4E /* BAIView.swift */; };
+		5614759A2AC87D1600B405CE /* BMIDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561475992AC87D1600B405CE /* BMIDataView.swift */; };
 		563C8F4E2AB711AF0094C985 /* MeaningBAIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563C8F4D2AB711AF0094C985 /* MeaningBAIView.swift */; };
 		5676A54C2AC4B6CC008AAB85 /* MyTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5676A54B2AC4B6CC008AAB85 /* MyTabView.swift */; };
 		5676A5502AC4C30E008AAB85 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5676A54F2AC4C30E008AAB85 /* Settings.swift */; };
@@ -24,6 +25,7 @@
 /* Begin PBXFileReference section */
 		560515A92AB60EDB0059DD4E /* BmiChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BmiChartView.swift; sourceTree = "<group>"; };
 		560515AB2AB64E820059DD4E /* BAIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAIView.swift; sourceTree = "<group>"; };
+		561475992AC87D1600B405CE /* BMIDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMIDataView.swift; sourceTree = "<group>"; };
 		563C8F4D2AB711AF0094C985 /* MeaningBAIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeaningBAIView.swift; sourceTree = "<group>"; };
 		5676A54B2AC4B6CC008AAB85 /* MyTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabView.swift; sourceTree = "<group>"; };
 		5676A54F2AC4C30E008AAB85 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
@@ -48,6 +50,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5614759B2AC897A300B405CE /* BAI */ = {
+			isa = PBXGroup;
+			children = (
+				560515AB2AB64E820059DD4E /* BAIView.swift */,
+				563C8F4D2AB711AF0094C985 /* MeaningBAIView.swift */,
+			);
+			path = BAI;
+			sourceTree = "<group>";
+		};
 		5676A54A2AC4B5EF008AAB85 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -84,10 +95,10 @@
 		56ABFA462AB23807005D7E49 /* BMI_Remastered */ = {
 			isa = PBXGroup;
 			children = (
-				56E74B962ABB81360055925D /* BMI */,
 				56ABFA472AB23807005D7E49 /* BMI_Remastered.swift */,
-				560515AB2AB64E820059DD4E /* BAIView.swift */,
-				563C8F4D2AB711AF0094C985 /* MeaningBAIView.swift */,
+				56E74B962ABB81360055925D /* BMI */,
+				5676A54A2AC4B5EF008AAB85 /* Custom Views */,
+				5614759B2AC897A300B405CE /* BAI */,
 				56ABFA552AB2384C005D7E49 /* ViewModel.swift */,
 				56E75B3D2AB38E44004E915A /* IdealWeight.swift */,
 				56ABFA4B2AB23808005D7E49 /* Assets.xcassets */,
@@ -109,7 +120,7 @@
 			children = (
 				560515A92AB60EDB0059DD4E /* BmiChartView.swift */,
 				56ABFA492AB23807005D7E49 /* ContentView.swift */,
-				5676A54A2AC4B5EF008AAB85 /* Custom Views */,
+				561475992AC87D1600B405CE /* BMIDataView.swift */,
 			);
 			path = BMI;
 			sourceTree = "<group>";
@@ -197,6 +208,7 @@
 				5676A5502AC4C30E008AAB85 /* Settings.swift in Sources */,
 				563C8F4E2AB711AF0094C985 /* MeaningBAIView.swift in Sources */,
 				56ABFA482AB23807005D7E49 /* BMI_Remastered.swift in Sources */,
+				5614759A2AC87D1600B405CE /* BMIDataView.swift in Sources */,
 				5676A54C2AC4B6CC008AAB85 /* MyTabView.swift in Sources */,
 				56E75B3E2AB38E44004E915A /* IdealWeight.swift in Sources */,
 			);
@@ -330,6 +342,8 @@
 				DEVELOPMENT_TEAM = PSU9VZHG7L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = HealthMetrics;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -360,6 +374,8 @@
 				DEVELOPMENT_TEAM = PSU9VZHG7L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = HealthMetrics;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

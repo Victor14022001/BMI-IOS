@@ -16,6 +16,12 @@ struct Settings: View {
                 Section("Color Scheme") {
                     Toggle("Darkmode", isOn: $viewModel.isDarkmodeEnabled)
                 }
+                
+                NavigationLink {
+                    BMIDataView()
+                } label: {
+                    Text("Show my BMI's")
+                }
             }
             .navigationTitle("Settings")
             .navigationBarTitleDisplayMode(.inline)
