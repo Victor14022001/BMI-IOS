@@ -11,6 +11,8 @@
 		560515AA2AB60EDB0059DD4E /* BmiChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560515A92AB60EDB0059DD4E /* BmiChartView.swift */; };
 		560515AC2AB64E820059DD4E /* BAIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560515AB2AB64E820059DD4E /* BAIView.swift */; };
 		5614759A2AC87D1600B405CE /* BMIDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561475992AC87D1600B405CE /* BMIDataView.swift */; };
+		5614759D2AC8B2DB00B405CE /* BmiDataChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5614759C2AC8B2DB00B405CE /* BmiDataChartView.swift */; };
+		5614759F2AC8C12A00B405CE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5614759E2AC8C12A00B405CE /* HomeView.swift */; };
 		563C8F4E2AB711AF0094C985 /* MeaningBAIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563C8F4D2AB711AF0094C985 /* MeaningBAIView.swift */; };
 		5676A54C2AC4B6CC008AAB85 /* MyTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5676A54B2AC4B6CC008AAB85 /* MyTabView.swift */; };
 		5676A5502AC4C30E008AAB85 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5676A54F2AC4C30E008AAB85 /* Settings.swift */; };
@@ -26,6 +28,8 @@
 		560515A92AB60EDB0059DD4E /* BmiChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BmiChartView.swift; sourceTree = "<group>"; };
 		560515AB2AB64E820059DD4E /* BAIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAIView.swift; sourceTree = "<group>"; };
 		561475992AC87D1600B405CE /* BMIDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMIDataView.swift; sourceTree = "<group>"; };
+		5614759C2AC8B2DB00B405CE /* BmiDataChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BmiDataChartView.swift; sourceTree = "<group>"; };
+		5614759E2AC8C12A00B405CE /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		563C8F4D2AB711AF0094C985 /* MeaningBAIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeaningBAIView.swift; sourceTree = "<group>"; };
 		5676A54B2AC4B6CC008AAB85 /* MyTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabView.swift; sourceTree = "<group>"; };
 		5676A54F2AC4C30E008AAB85 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
@@ -72,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				5676A54F2AC4C30E008AAB85 /* Settings.swift */,
+				5614759E2AC8C12A00B405CE /* HomeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -119,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				560515A92AB60EDB0059DD4E /* BmiChartView.swift */,
+				5614759C2AC8B2DB00B405CE /* BmiDataChartView.swift */,
 				56ABFA492AB23807005D7E49 /* ContentView.swift */,
 				561475992AC87D1600B405CE /* BMIDataView.swift */,
 			);
@@ -203,6 +209,7 @@
 			files = (
 				560515AA2AB60EDB0059DD4E /* BmiChartView.swift in Sources */,
 				56ABFA4A2AB23807005D7E49 /* ContentView.swift in Sources */,
+				5614759D2AC8B2DB00B405CE /* BmiDataChartView.swift in Sources */,
 				56ABFA562AB2384C005D7E49 /* ViewModel.swift in Sources */,
 				560515AC2AB64E820059DD4E /* BAIView.swift in Sources */,
 				5676A5502AC4C30E008AAB85 /* Settings.swift in Sources */,
@@ -211,6 +218,7 @@
 				5614759A2AC87D1600B405CE /* BMIDataView.swift in Sources */,
 				5676A54C2AC4B6CC008AAB85 /* MyTabView.swift in Sources */,
 				56E75B3E2AB38E44004E915A /* IdealWeight.swift in Sources */,
+				5614759F2AC8C12A00B405CE /* HomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,7 +347,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BMI_Remastered/Preview Content\"";
-				DEVELOPMENT_TEAM = PSU9VZHG7L;
+				DEVELOPMENT_TEAM = D3B28ZYAJ6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = HealthMetrics;
@@ -371,7 +379,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BMI_Remastered/Preview Content\"";
-				DEVELOPMENT_TEAM = PSU9VZHG7L;
+				DEVELOPMENT_TEAM = D3B28ZYAJ6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = HealthMetrics;

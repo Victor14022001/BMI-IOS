@@ -8,15 +8,18 @@
 import Foundation
 import SwiftUI
 import SwiftData
+import Charts
 
 @Model
 class BMIData: Identifiable {
     let id: UUID
     let bmi: Double
+    let date: Date
     
-    init(bmi: Double) {
+    init(bmi: Double, date: Date) {
         id = UUID()
         self.bmi = bmi
+        self.date = date
     }
 }
 
@@ -36,6 +39,8 @@ class BmiViewModel: ObservableObject {
     
     @Published var selectedGender = "Male"
     @Published var genders = ["Male", "Female"]
+    
+    @Published var chooseDate: Date = Date.now
     
     @Published var averageBodyWeight: String = "28"
     

@@ -22,6 +22,20 @@ struct Settings: View {
                 } label: {
                     Text("Show my BMI's")
                 }
+                
+                NavigationLink {
+                    BmiDataChartView()
+                } label: {
+                    Text("Look at your BMI's")
+                }
+                
+                Section("New Design") {
+                    NavigationLink {
+                        HomeView()
+                    } label: {
+                        Text("New Design (HomeView")
+                    }
+                }
             }
             .navigationTitle("Settings")
             .navigationBarTitleDisplayMode(.inline)

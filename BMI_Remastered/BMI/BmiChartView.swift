@@ -23,8 +23,8 @@ struct BmiChartView: View {
         self.viewModel = viewModel
         
         self.bmiValues = [
-            .init(color: "Green", title: "average BMI", BMICount: 26.8),
-            .init(color: "Yellow", title: "your BMI", BMICount: viewModel.yourBmi)
+            .init(color: "Blue", title: "average BMI", BMICount: 26.8),
+            .init(color: "Green", title: "your BMI", BMICount: viewModel.yourBmi)
         ]
     }
     

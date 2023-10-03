@@ -30,6 +30,12 @@ struct ContentView: View {
                         .focused($bodyDataFields)
                 }
                 
+                Section("Choose a date for your saved BMI") {
+                    DatePicker(selection: $viewModel.chooseDate, in: ...Date.now, displayedComponents: .date) {
+                        Text("Choose a Date")
+                    }
+                }
+                
                 Section("Choose your Gender") {
                     Picker("Gender:", selection: $viewModel.selectedGender) {
                         ForEach(viewModel.genders, id: \.self) {
@@ -78,9 +84,10 @@ struct ContentView: View {
                     primaryButton: .destructive(Text("Cancel")),
                     secondaryButton: .default(Text("Save"), action: {
                         guard let bmi = viewModel.yourBmi else { return }
-                        context.insert(BMIData(bmi: bmi))
+                        let date = viewModel.chooseDate
+                        context.insert(BMIData(bmi: bmi, date: date))
                         datas.forEach {
-                            print($0.bmi)
+                            print($0.bmi, $0.date)
                         }
                     })
                 )
