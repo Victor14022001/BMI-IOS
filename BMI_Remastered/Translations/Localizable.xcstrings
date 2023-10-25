@@ -1,0 +1,746 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "%@" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
+        }
+      }
+    },
+    "%@ cm" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "cm"
+          }
+        }
+      }
+    },
+    "%@ kg" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "kg"
+          }
+        }
+      }
+    },
+    "A BAI value above 26 can indicate high body fat and is often considered a sign of obesity" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ein BAI-Wert über 26 kann auf einen hohen Körperfettanteil hinweisen und wird oft als Zeichen von Fettleibigkeit angesehen"
+          }
+        }
+      }
+    },
+    "A BAI value in this range is usually considered a healthy body weight." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ein BAI-Wert in diesem Bereich wird normalerweise als gesundes Körpergewicht angesehen."
+          }
+        }
+      }
+    },
+    "A higher BAI value may indicate a higher percentage of body fat, which is classified as overweight." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ein höherer BAI-Wert kann auf einen höheren Körperfettanteil hinweisen, der als Übergewicht eingestuft wird."
+          }
+        }
+      }
+    },
+    "Are you sure to delete all saved BMI's" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bist du dir sicher, dass di alle gespeicherten BMI's löschen möchtest?"
+          }
+        }
+      }
+    },
+    "BAI" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BAI"
+          }
+        }
+      }
+    },
+    "BAI between 8 and 21:" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BAI zwischen 8 und 21:"
+          }
+        }
+      }
+    },
+    "BAI between 21 and 26:" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BAI zwischen 21 und 26"
+          }
+        }
+      }
+    },
+    "BAI over 26:" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BAI über 26:"
+          }
+        }
+      }
+    },
+    "BAI under 8:" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BAI unter 8:"
+          }
+        }
+      }
+    },
+    "BMI %@" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BMI"
+          }
+        }
+      }
+    },
+    "BMI Chart" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BMI Diagramm "
+          }
+        }
+      }
+    },
+    "BMI History Chart" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BMI Verlaufsdiagramm "
+          }
+        }
+      }
+    },
+    "Body mass index BMI is a measure of body fat based on height and weight that applies to" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Der Body-Mass-Index (BMI) ist ein Maß für den Körperfettanteil, der auf Größe und Gewicht basiert"
+          }
+        }
+      }
+    },
+    "Calculate BAI" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "berechne BAI"
+          }
+        }
+      }
+    },
+    "Calculate BMI" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BMI berechnen"
+          }
+        }
+      }
+    },
+    "Calculate my idealweight" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Berechne mein Idealgewicht"
+          }
+        }
+      }
+    },
+    "Calculate your BAI" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "berechne deinen BAI"
+          }
+        }
+      }
+    },
+    "Cancel" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abbrechen"
+          }
+        }
+      }
+    },
+    "Choose a Date" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wähle ein Datum "
+          }
+        }
+      }
+    },
+    "Choose a date for your saved BMI" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wähle ein Datum für deinen gespeicherten BMI"
+          }
+        }
+      }
+    },
+    "Choose your Gender" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wähle dein Geschlecht "
+          }
+        }
+      }
+    },
+    "Color Scheme" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Farbschema"
+          }
+        }
+      }
+    },
+    "Darkmode" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dunkelmodus"
+          }
+        }
+      }
+    },
+    "Delete all data" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lösche alle Daten "
+          }
+        }
+      }
+    },
+    "Delete your saved BMI's" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lösche deine gespeicherten BMI's"
+          }
+        }
+      }
+    },
+    "Description" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beschreibung"
+          }
+        }
+      }
+    },
+    "Do you want to save your BMI?" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Willst du deinen BMI speichern?"
+          }
+        }
+      }
+    },
+    "Done" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fertig"
+          }
+        }
+      }
+    },
+    "Enter your Hip circumference" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gebe dein Hüftumfang ein "
+          }
+        }
+      }
+    },
+    "Female" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Weiblich"
+          }
+        }
+      }
+    },
+    "Gender" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Geschlecht"
+          }
+        }
+      }
+    },
+    "Gender:" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Geschlecht:"
+          }
+        }
+      }
+    },
+    "Hallo" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hallo"
+          }
+        }
+      }
+    },
+    "HealthMetrics" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "HealthMetrics"
+          }
+        }
+      }
+    },
+    "Healthy Weightt" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gesundes Gewicht "
+          }
+        }
+      }
+    },
+    "Height" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Größe"
+          }
+        }
+      }
+    },
+    "Hip" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hüfte "
+          }
+        }
+      }
+    },
+    "Home" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Startseite "
+          }
+        }
+      }
+    },
+    "If you press 'Yes' all saved BMI's will be deleted" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wenn su auf 'Ja' drückst, werden alle gespeicherten BMI's gelöscht"
+          }
+        }
+      }
+    },
+    "Look at your BMI at a Chart" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schau dir deinen BMI in einem Diagramm an "
+          }
+        }
+      }
+    },
+    "Male" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Männlich"
+          }
+        }
+      }
+    },
+    "Meaning of your BAI" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bedeutung deines BAI"
+          }
+        }
+      }
+    },
+    "More nice things to know" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Weitere wichtige Informationen"
+          }
+        }
+      }
+    },
+    "Note" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beachte"
+          }
+        }
+      }
+    },
+    "Obesity" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fettleibigkeit"
+          }
+        }
+      }
+    },
+    "Overview" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Übersicht"
+          }
+        }
+      }
+    },
+    "Overview of your Data" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Übersicht über deine Daten"
+          }
+        }
+      }
+    },
+    "Overweight" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Übergewicht"
+          }
+        }
+      }
+    },
+    "People with a very low body fat percentage may fall into this category." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Menschen mit einem sehr geringen Körperfettanteil fallen möglicherweise in diese Kategorie."
+          }
+        }
+      }
+    },
+    "Save" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sichern"
+          }
+        }
+      }
+    },
+    "Save BMI" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "speicher BMI"
+          }
+        }
+      }
+    },
+    "Settings" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Einstellungen"
+          }
+        }
+      }
+    },
+    "Shape Color" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Formfarbe"
+          }
+        }
+      }
+    },
+    "Shape Type" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Shape Type "
+          }
+        }
+      }
+    },
+    "Show my BMI's" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zeige mir meine BMI's"
+          }
+        }
+      }
+    },
+    "The BAI is an alternative to the BMI, which is calculated based on hip circumference in relation to your height." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Der BAI ist eine Alternative zum BMI, der anhand des Hüftumfangs im Verhältnis zu Ihrer Körpergröße berechnet wird."
+          }
+        }
+      }
+    },
+    "The BAI is just one of many metrics for assessing your health, and it may not provide a complete picture on its own. Always consult with a healthcare professional for a comprehensive evaluation of your health and body composition. Remember that maintaining a healthy lifestyle through proper diet and regular exercise is key to overall well-being.\n\nEnjoy using the App, and stay committed to a healthier you!" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Der BAI ist nur einer von vielen Messwerten zur Beurteilung Ihrer Gesundheit und liefert für sich genommen möglicherweise kein vollständiges Bild. Konsultieren Sie immer einen Arzt, um eine umfassende Beurteilung Ihrer Gesundheit und Körperzusammensetzung zu erhalten. Denken Sie daran, dass die Aufrechterhaltung eines gesunden Lebensstils durch richtige Ernährung und regelmäßige Bewegung der Schlüssel zum allgemeinen Wohlbefinden ist.\n\nViel Spaß mit der App und setzen Sie sich weiterhin für ein gesünderes Leben ein!"
+          }
+        }
+      }
+    },
+    "The ideal weight is a term used to describe the weight that is considered healthy and appropriate for a specific individual based on various factors such as height, gender, age, body composition, and health condition. It's important to note that ideal weight is not solely focused on aesthetics but primarily on maintaining health and well-being." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unter Idealgewicht versteht man das Gewicht, das aufgrund verschiedener Faktoren wie Größe, Geschlecht, Alter, Körperzusammensetzung und Gesundheitszustand als gesund und angemessen für eine bestimmte Person angesehen wird. Es ist wichtig zu beachten, dass es beim Idealgewicht nicht nur um die Ästhetik geht, sondern in erster Linie um die Erhaltung von Gesundheit und Wohlbefinden."
+          }
+        }
+      }
+    },
+    "Total Count" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Komplette Anzahl"
+          }
+        }
+      }
+    },
+    "Underweight" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Untergewicht"
+          }
+        }
+      }
+    },
+    "Weight" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gewicht "
+          }
+        }
+      }
+    },
+    "What is the meaning of my BAI?" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Was ist die Bedeutung von meinem BAI?"
+          }
+        }
+      }
+    },
+    "Yes" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ja"
+          }
+        }
+      }
+    },
+    "Your BAI" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dein BAI"
+          }
+        }
+      }
+    },
+    "Your BAI:" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dein BAI:"
+          }
+        }
+      }
+    },
+    "Your Bodyheight" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dein Körpergewicht"
+          }
+        }
+      }
+    },
+    "Your Bodyweight" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dein Körpergewicht"
+          }
+        }
+      }
+    },
+    "Your Data" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Deine Daten"
+          }
+        }
+      }
+    },
+    "Your Idealweight" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dein Idealgewicht"
+          }
+        }
+      }
+    },
+    "Your IdealWeight:" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dein Idealgewicht"
+          }
+        }
+      }
+    },
+    "Your saved BMI's" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Deine gespeicherten BMI's"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

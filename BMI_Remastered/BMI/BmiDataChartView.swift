@@ -14,7 +14,7 @@ struct BmiDataChartView: View {
     @Query private var datas: [BMIData]
     
     var body: some View {
-        Text("HallInitializer 'init(x:y:width:height:stacking:)' requires that '[BMIData]' conform to 'Plottable'o")
+        Text("Hallo")
     }
 }
 

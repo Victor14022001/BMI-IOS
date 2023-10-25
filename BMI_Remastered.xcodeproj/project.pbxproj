@@ -14,6 +14,7 @@
 		5614759D2AC8B2DB00B405CE /* BmiDataChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5614759C2AC8B2DB00B405CE /* BmiDataChartView.swift */; };
 		5614759F2AC8C12A00B405CE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5614759E2AC8C12A00B405CE /* HomeView.swift */; };
 		563C8F4E2AB711AF0094C985 /* MeaningBAIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563C8F4D2AB711AF0094C985 /* MeaningBAIView.swift */; };
+		567073DB2AE952A0002AF246 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 567073DA2AE952A0002AF246 /* Localizable.xcstrings */; };
 		5676A54C2AC4B6CC008AAB85 /* MyTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5676A54B2AC4B6CC008AAB85 /* MyTabView.swift */; };
 		5676A5502AC4C30E008AAB85 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5676A54F2AC4C30E008AAB85 /* Settings.swift */; };
 		56ABFA482AB23807005D7E49 /* BMI_Remastered.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56ABFA472AB23807005D7E49 /* BMI_Remastered.swift */; };
@@ -31,6 +32,7 @@
 		5614759C2AC8B2DB00B405CE /* BmiDataChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BmiDataChartView.swift; sourceTree = "<group>"; };
 		5614759E2AC8C12A00B405CE /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		563C8F4D2AB711AF0094C985 /* MeaningBAIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeaningBAIView.swift; sourceTree = "<group>"; };
+		567073DA2AE952A0002AF246 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		5676A54B2AC4B6CC008AAB85 /* MyTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabView.swift; sourceTree = "<group>"; };
 		5676A54F2AC4C30E008AAB85 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		56ABFA442AB23807005D7E49 /* BMI_Remastered.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BMI_Remastered.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,6 +97,14 @@
 			path = Idealweight;
 			sourceTree = "<group>";
 		};
+		564A05962AE94B7000D0DB15 /* Translations */ = {
+			isa = PBXGroup;
+			children = (
+				567073DA2AE952A0002AF246 /* Localizable.xcstrings */,
+			);
+			path = Translations;
+			sourceTree = "<group>";
+		};
 		5676A54A2AC4B5EF008AAB85 /* TabView */ = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				56ABFA472AB23807005D7E49 /* BMI_Remastered.swift */,
+				564A05962AE94B7000D0DB15 /* Translations */,
 				5649D1432AE410C7000D8CD9 /* Settings */,
 				56E74B962ABB81360055925D /* BMI */,
 				5676A54A2AC4B5EF008AAB85 /* TabView */,
@@ -200,6 +211,7 @@
 			knownRegions = (
 				en,
 				Base,
+				de,
 			);
 			mainGroup = 56ABFA3B2AB23807005D7E49;
 			packageReferences = (
@@ -221,6 +233,7 @@
 			files = (
 				56ABFA4F2AB23808005D7E49 /* Preview Assets.xcassets in Resources */,
 				56ABFA4C2AB23808005D7E49 /* Assets.xcassets in Resources */,
+				567073DB2AE952A0002AF246 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
