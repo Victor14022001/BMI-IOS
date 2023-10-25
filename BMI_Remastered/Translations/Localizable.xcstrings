@@ -2,34 +2,13 @@
   "sourceLanguage" : "en",
   "strings" : {
     "%@" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@"
-          }
-        }
-      }
+
     },
     "%@ cm" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "cm"
-          }
-        }
-      }
+
     },
     "%@ kg" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "kg"
-          }
-        }
-      }
+
     },
     "A BAI value above 26 can indicate high body fat and is often considered a sign of obesity" : {
       "localizations" : {
@@ -122,14 +101,7 @@
       }
     },
     "BMI %@" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "BMI"
-          }
-        }
-      }
+
     },
     "BMI Chart" : {
       "localizations" : {
@@ -166,7 +138,7 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "berechne BAI"
+            "value" : "Berechne BAI"
           }
         }
       }
@@ -176,7 +148,7 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "BMI berechnen"
+            "value" : "Berechne BMI"
           }
         }
       }
@@ -196,7 +168,7 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "berechne deinen BAI"
+            "value" : "Berechne deinen BAI"
           }
         }
       }
@@ -266,7 +238,7 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Lösche alle Daten "
+            "value" : "Lösche alle gespeicherten BMI's"
           }
         }
       }
@@ -326,7 +298,7 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Weiblich"
+            "value" : "Freu"
           }
         }
       }
@@ -436,7 +408,7 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Männlich"
+            "value" : "Mann"
           }
         }
       }
@@ -536,7 +508,7 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "speicher BMI"
+            "value" : "Sichere deinen BMI"
           }
         }
       }
@@ -552,14 +524,7 @@
       }
     },
     "Shape Color" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Formfarbe"
-          }
-        }
-      }
+
     },
     "Shape Type" : {
       "localizations" : {

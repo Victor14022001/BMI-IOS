@@ -47,9 +47,6 @@ class BmiViewModel: ObservableObject {
     @Published var yourBai: Double?
     @Published var yourBaiString: String = ""
     
-    @Published var test: String = "Test"
-    
-    
     func calculateBMI() {
         guard let height = Double(bodyHeight), let weight = Double(bodyWeight) else { return }
         let bmi = weight / ((height / 100) * (height / 100))
