@@ -15,6 +15,7 @@ struct ContentView: View {
     @State private var showAlert = false
     
     @Environment(\.modelContext) var context
+    @Environment(\.modelContext) var contextDate
     @Query private var datas: [BMIData]
     
     var body: some View {
@@ -84,10 +85,9 @@ struct ContentView: View {
                     primaryButton: .destructive(Text("Cancel")),
                     secondaryButton: .default(Text("Save"), action: {
                         guard let bmi = viewModel.yourBmi else { return }
-                        let date = viewModel.chooseDate
-                        context.insert(BMIData(bmi: bmi, date: date))
+                        context.insert(BMIData(bmi: bmi))
                         datas.forEach {
-                            print($0.bmi, $0.date)
+                            print($0.bmi)
                         }
                     })
                 )

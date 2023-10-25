@@ -14,12 +14,11 @@ import Charts
 class BMIData: Identifiable {
     let id: UUID
     let bmi: Double
-    let date: Date
+   
     
-    init(bmi: Double, date: Date) {
+    init(bmi: Double) {
         id = UUID()
         self.bmi = bmi
-        self.date = date
     }
 }
 
