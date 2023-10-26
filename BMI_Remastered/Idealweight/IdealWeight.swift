@@ -48,7 +48,7 @@ struct IdealWeight: View {
         }
         .navigationTitle("Your Idealweight")
         .navigationBarTitleDisplayMode(.inline)
-        .onAppear(perform: viewModel.calculateIdealWeight)
+        
     }
 }
 

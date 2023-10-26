@@ -63,6 +63,9 @@ struct ContentView: View {
                         } label: {
                             Text("Calculate my idealweight")
                         }
+                        .onAppear(perform: {
+                            viewModel.calculateIdealWeight()
+                        })
                         
                         NavigationLink {
                             BmiChartView(viewModel)

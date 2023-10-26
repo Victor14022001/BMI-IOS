@@ -30,7 +30,7 @@ struct Settings: View {
                 }
                 
                 NavigationLink {
-                    BmiDataChartView()
+                    BmiDataChartView() 
                 } label: {
                     Text("BMI History Chart")
                 }
@@ -41,6 +41,7 @@ struct Settings: View {
                     } label: {
                         Text("Delete all data")
                     }
+                    .foregroundColor(.red)
                 }
             }
             .alert(isPresented: $showDeleteAlert) {

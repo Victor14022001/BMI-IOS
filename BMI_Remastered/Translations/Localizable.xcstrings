@@ -173,6 +173,17 @@
         }
       }
     },
+    "Calculate your Idealweight" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Berechne dein Idealgewicht"
+          }
+        }
+      }
+    },
     "Cancel" : {
       "localizations" : {
         "de" : {
