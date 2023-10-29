@@ -12,12 +12,11 @@ import Charts
 
 @Model
 class BMIData: Identifiable {
-    //let id: UUID
     let bmi: Double
     let date: Date
     
     init(bmi: Double, date: Date = .now) {
-       // self.id = id
+        //self.id = id
         self.bmi = bmi
         self.date = date
     }
