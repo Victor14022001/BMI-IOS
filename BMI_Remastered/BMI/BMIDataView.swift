@@ -16,6 +16,7 @@ struct BMIDataView: View {
         Form {
             ForEach(datas) {
                 Text($0.bmi.description)
+                Text($0.date.description)
             }
             .onDelete { indexSet in
                 for index in indexSet {

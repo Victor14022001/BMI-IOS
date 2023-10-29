@@ -17,6 +17,7 @@
 		567073DB2AE952A0002AF246 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 567073DA2AE952A0002AF246 /* Localizable.xcstrings */; };
 		5676A54C2AC4B6CC008AAB85 /* MyTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5676A54B2AC4B6CC008AAB85 /* MyTabView.swift */; };
 		5676A5502AC4C30E008AAB85 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5676A54F2AC4C30E008AAB85 /* Settings.swift */; };
+		56908C5C2AEB23BF00F03DF3 /* MeaningOfBMIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56908C5B2AEB23BF00F03DF3 /* MeaningOfBMIView.swift */; };
 		56ABFA482AB23807005D7E49 /* BMI_Remastered.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56ABFA472AB23807005D7E49 /* BMI_Remastered.swift */; };
 		56ABFA4A2AB23807005D7E49 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56ABFA492AB23807005D7E49 /* ContentView.swift */; };
 		56ABFA4C2AB23808005D7E49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56ABFA4B2AB23808005D7E49 /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 		567073DA2AE952A0002AF246 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		5676A54B2AC4B6CC008AAB85 /* MyTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabView.swift; sourceTree = "<group>"; };
 		5676A54F2AC4C30E008AAB85 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		56908C5B2AEB23BF00F03DF3 /* MeaningOfBMIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeaningOfBMIView.swift; sourceTree = "<group>"; };
 		56ABFA442AB23807005D7E49 /* BMI_Remastered.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BMI_Remastered.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56ABFA472AB23807005D7E49 /* BMI_Remastered.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMI_Remastered.swift; sourceTree = "<group>"; };
 		56ABFA492AB23807005D7E49 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 				560515A92AB60EDB0059DD4E /* BmiChartView.swift */,
 				5614759C2AC8B2DB00B405CE /* BmiDataChartView.swift */,
 				56ABFA492AB23807005D7E49 /* ContentView.swift */,
+				56908C5B2AEB23BF00F03DF3 /* MeaningOfBMIView.swift */,
 				561475992AC87D1600B405CE /* BMIDataView.swift */,
 			);
 			path = BMI;
@@ -253,6 +256,7 @@
 				563C8F4E2AB711AF0094C985 /* MeaningBAIView.swift in Sources */,
 				56ABFA482AB23807005D7E49 /* BMI_Remastered.swift in Sources */,
 				5614759A2AC87D1600B405CE /* BMIDataView.swift in Sources */,
+				56908C5C2AEB23BF00F03DF3 /* MeaningOfBMIView.swift in Sources */,
 				5676A54C2AC4B6CC008AAB85 /* MyTabView.swift in Sources */,
 				56E75B3E2AB38E44004E915A /* IdealWeight.swift in Sources */,
 				5614759F2AC8C12A00B405CE /* HomeView.swift in Sources */,

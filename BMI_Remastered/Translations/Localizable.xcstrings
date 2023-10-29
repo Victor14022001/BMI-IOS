@@ -30,6 +30,56 @@
         }
       }
     },
+    "A BMI between 18.5 and 24.9 is considered normal weight. This is the range that many consider a healthy weight." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Als Normalgewicht gilt ein BMI zwischen 18,5 und 24,9. Dies ist der Bereich, den viele als gesundes Gewicht betrachten."
+          }
+        }
+      }
+    },
+    "A BMI between 25 and 29.9 indicates overweight. This increases the risk of health problems such as heart disease and type 2 diabetes." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ein BMI zwischen 25 und 29,9 weist auf Übergewicht hin. Dadurch steigt das Risiko für gesundheitliche Probleme wie Herzerkrankungen und Typ-2-Diabetes."
+          }
+        }
+      }
+    },
+    "A BMI of 30 to 34.9 is considered mildly overweight or grade I obesity." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ein BMI von 30 bis 34,9 gilt als leichtes Übergewicht oder Adipositas Grad I."
+          }
+        }
+      }
+    },
+    "A BMI of 35 to 39.9 is considered moderate obesity or grade II obesity." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ein BMI von 35 bis 39,9 gilt als mittelschwere Adipositas oder Adipositas Grad II."
+          }
+        }
+      }
+    },
+    "A BMI of 40 or higher is called severe obesity or grade III obesity." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ab einem BMI von 40 spricht man von schwerer Adipositas oder Adipositas Grad III."
+          }
+        }
+      }
+    },
     "A higher BAI value may indicate a higher percentage of body fat, which is classified as overweight." : {
       "localizations" : {
         "de" : {
@@ -103,6 +153,56 @@
     "BMI %@" : {
 
     },
+    "BMI > 40" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BMI > 40"
+          }
+        }
+      }
+    },
+    "BMI between 18.5 - 24.0" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BMI zwischen 18.5 - 24.0"
+          }
+        }
+      }
+    },
+    "BMI between 25 - 29.9" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BMI zwischen 25 - 29.9"
+          }
+        }
+      }
+    },
+    "BMI between 30 - 34.9" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BMI zwischen 30 - 34.9"
+          }
+        }
+      }
+    },
+    "BMI between 35 - 39.9" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BMI zwischen 35 - 39.9"
+          }
+        }
+      }
+    },
     "BMI Chart" : {
       "localizations" : {
         "de" : {
@@ -119,6 +219,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "BMI Verlaufsdiagramm "
+          }
+        }
+      }
+    },
+    "BMI under < 18.5" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bei unter < 18.5"
           }
         }
       }
@@ -404,6 +514,16 @@
         }
       }
     },
+    "It is important to note that BMI is only a rough method of assessing body weight and does not take into account all relevant factors, such as muscle mass, body composition, age and gender differences. Therefore, BMI should be used in conjunction with other health factors and medical judgment to provide a more comprehensive assessment of health status." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Es ist wichtig zu beachten, dass der BMI nur eine grobe Methode zur Beurteilung des Körpergewichts ist und nicht alle relevanten Faktoren wie Muskelmasse, Körperzusammensetzung, Alter und Geschlechtsunterschiede berücksichtigt. Daher sollte der BMI in Verbindung mit anderen Gesundheitsfaktoren und medizinischer Beurteilung verwendet werden, um eine umfassendere Beurteilung des Gesundheitszustands zu ermöglichen."
+          }
+        }
+      }
+    },
     "Look at your BMI at a Chart" : {
       "localizations" : {
         "de" : {
@@ -420,6 +540,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mann"
+          }
+        }
+      }
+    },
+    "Meaning of my BMI" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bedeutung von meinem BMI"
           }
         }
       }
@@ -444,6 +574,16 @@
         }
       }
     },
+    "Normalwieght" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Normalgewicht"
+          }
+        }
+      }
+    },
     "Note" : {
       "localizations" : {
         "de" : {
@@ -460,6 +600,36 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fettleibigkeit"
+          }
+        }
+      }
+    },
+    "Obesity grade I" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fettleibigkeit Grad I"
+          }
+        }
+      }
+    },
+    "Obesity grade II" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fettleibigkeit Grad II"
+          }
+        }
+      }
+    },
+    "Obesity grade III" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fettleibigkeit Grad III"
           }
         }
       }
@@ -490,6 +660,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Übergewicht"
+          }
+        }
+      }
+    },
+    "People with a BMI below 18.5 are considered underweight. This may indicate malnutrition or other health problems." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Als untergewichtig gelten Menschen mit einem BMI unter 18,5. Dies kann auf Unterernährung oder andere gesundheitliche Probleme hinweisen."
           }
         }
       }
@@ -535,7 +715,14 @@
       }
     },
     "Shape Color" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Shape Color"
+          }
+        }
+      }
     },
     "Shape Type" : {
       "localizations" : {
@@ -598,6 +785,16 @@
       }
     },
     "Underweight" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Untergewicht"
+          }
+        }
+      }
+    },
+    "Underwieght" : {
       "localizations" : {
         "de" : {
           "stringUnit" : {

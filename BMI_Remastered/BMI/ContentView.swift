@@ -15,7 +15,6 @@ struct ContentView: View {
     @State private var showAlert = false
     
     @Environment(\.modelContext) var context
-    @Environment(\.modelContext) var contextDate
     @Query private var datas: [BMIData]
     
     var body: some View {
@@ -59,56 +58,64 @@ struct ContentView: View {
                 if viewModel.yourBmi != nil {
                     Section("More nice things to know") {
                         NavigationLink {
-                            IdealWeight(viewModel: viewModel)
+                            MeaningOfBMIView()
                         } label: {
-                            Text("Calculate my idealweight")
+                            Text("Meaning of my BMI")
                         }
-                        .onAppear(perform: {
-                            viewModel.calculateIdealWeight()
-                        })
-                        
-                        NavigationLink {
-                            BmiChartView(viewModel)
-                        } label: {
-                            Text("Look at your BMI at a Chart")
-                        }
-                        
-                        NavigationLink {
-                            BAIView(viewModel: viewModel)
-                        } label: {
-                            Text("Calculate your BAI")
-                        }
+                    }
+                    
+                    NavigationLink {
+                        IdealWeight(viewModel: viewModel)
+                    } label: {
+                        Text("Calculate my idealweight")
+                    }
+                    .onAppear(perform: {
+                        viewModel.calculateIdealWeight()
+                    })
+                    
+                    NavigationLink {
+                        BmiChartView(viewModel)
+                    } label: {
+                        Text("Look at your BMI at a Chart")
+                    }
+                    
+                    NavigationLink {
+                        BAIView(viewModel: viewModel)
+                    } label: {
+                        Text("Calculate your BAI")
                     }
                 }
             }
-            .alert(isPresented: $showAlert) {
-                Alert(
-                    title: Text("Save BMI"),
-                    message: Text("Do you want to save your BMI?"),
-                    primaryButton: .destructive(Text("Cancel")),
-                    secondaryButton: .default(Text("Save"), action: {
-                        guard let bmi = viewModel.yourBmi else { return }
-                        context.insert(BMIData(bmi: bmi))
-                        datas.forEach {
-                            print($0.bmi)
-                        }
-                    })
-                )
-            }
             .navigationTitle("BMI \(viewModel.yourBmiString)")
-            .toolbar {
-                ToolbarItemGroup(placement: .keyboard) {
-                    
-                    Spacer()
-                    
-                    Button("Done") {
-                        bodyDataFields = false
+        }
+        .alert(isPresented: $showAlert) {
+            Alert(
+                title: Text("Save BMI"),
+                message: Text("Do you want to save your BMI?"),
+                primaryButton: .destructive(Text("Cancel")),
+                secondaryButton: .default(Text("Save"), action: {
+                    guard let bmi = viewModel.yourBmi else { return }
+                    context.insert(BMIData(bmi: bmi, date: .now))
+                    datas.forEach {
+                        print($0.bmi)
                     }
+                })
+            )
+        }
+        
+        .toolbar {
+            ToolbarItemGroup(placement: .keyboard) {
+                
+                Spacer()
+                
+                Button("Done") {
+                    bodyDataFields = false
                 }
             }
         }
     }
 }
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
