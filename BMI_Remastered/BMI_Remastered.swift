@@ -15,6 +15,6 @@ struct BMI_Remastered: App {
         WindowGroup {
             MyTabView()
         }
-        .modelContainer(for: BMIData.self)
+        .modelContainer(for: [BMIData.self, Diary.self, BAIData.self])
     }
 }

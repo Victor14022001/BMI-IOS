@@ -1,6 +1,9 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "" : {
+
+    },
     "%@" : {
 
     },
@@ -8,6 +11,9 @@
 
     },
     "%@ kg" : {
+
+    },
+    "%lf" : {
 
     },
     "A BAI value above 26 can indicate high body fat and is often considered a sign of obesity" : {
@@ -90,12 +96,43 @@
         }
       }
     },
+    "Are you sure to delete all saved BAI's?" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bist du sicher dass du alle deine gespeicherten BAI's löschen möchtest?"
+          }
+        }
+      }
+    },
     "Are you sure to delete all saved BMI's" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bist du dir sicher, dass di alle gespeicherten BMI's löschen möchtest?"
+          }
+        }
+      }
+    },
+    "Are you sure to delete all saved BMI's?" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bist du sicher, dass du alle deine gespeicherten BMI's löschen möchtest?"
+          }
+        }
+      }
+    },
+    "Are you sure to delete all saved Diaries?" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bist du sicher, dass du alle deine gespeicherten Tagebucheinträge löschen möchtest?"
           }
         }
       }
@@ -130,6 +167,16 @@
         }
       }
     },
+    "BAI History Chart" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BMI Verlaufsdiagramm "
+          }
+        }
+      }
+    },
     "BAI over 26:" : {
       "localizations" : {
         "de" : {
@@ -146,6 +193,26 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "BAI unter 8:"
+          }
+        }
+      }
+    },
+    "Bai's History Chart" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BAI Verlaufsdiagramm"
+          }
+        }
+      }
+    },
+    "BMI" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BMI"
           }
         }
       }
@@ -209,6 +276,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "BMI Diagramm "
+          }
+        }
+      }
+    },
+    "BMI History" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BMI Geschichte"
           }
         }
       }
@@ -354,7 +431,38 @@
         }
       }
     },
+    "Date" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Datum"
+          }
+        }
+      }
+    },
+    "Delete all BAI's" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lösche alle BAI's"
+          }
+        }
+      }
+    },
+    "Delete all BMI's" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lösche alle BMi's"
+          }
+        }
+      }
+    },
     "Delete all data" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -364,12 +472,44 @@
         }
       }
     },
+    "Delete all Diaries" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lösche alle Tagebucheinträge"
+          }
+        }
+      }
+    },
     "Delete your saved BMI's" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lösche deine gespeicherten BMI's"
+          }
+        }
+      }
+    },
+    "Delete your saved Data" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lösche deine gespeicherten Daten"
+          }
+        }
+      }
+    },
+    "Delete your saved Diaries" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lösche deine gespeicherten Tagebücher"
           }
         }
       }
@@ -380,6 +520,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Beschreibung"
+          }
+        }
+      }
+    },
+    "Diary" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tagebuch"
           }
         }
       }
@@ -400,6 +550,26 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fertig"
+          }
+        }
+      }
+    },
+    "Enter todays Diary" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gebe heutige Ereignisse ein"
+          }
+        }
+      }
+    },
+    "Enter todays title" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gebe einen Titel für heute ein"
           }
         }
       }
@@ -445,6 +615,7 @@
       }
     },
     "Hallo" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -504,12 +675,42 @@
         }
       }
     },
+    "If you press 'Yes' all saved BAI's will be deleted" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wenn su auf 'Ja' drückst, werden alle gespeicherten BMI's gelöscht"
+          }
+        }
+      }
+    },
     "If you press 'Yes' all saved BMI's will be deleted" : {
       "localizations" : {
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Wenn su auf 'Ja' drückst, werden alle gespeicherten BMI's gelöscht"
+          }
+        }
+      }
+    },
+    "If you press 'Yes' all saved Diaries will be deleted" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wenn du auf 'Ja' drückst, werden alle gespeicherten Tagebucheinträge gelöscht."
+          }
+        }
+      }
+    },
+    "Index" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Index"
           }
         }
       }
@@ -734,12 +935,32 @@
         }
       }
     },
+    "Show my Bai's" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zeige meine BAI's"
+          }
+        }
+      }
+    },
     "Show my BMI's" : {
       "localizations" : {
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zeige mir meine BMI's"
+          }
+        }
+      }
+    },
+    "Show my Diaries" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "meine Tagebucheinträge"
           }
         }
       }
@@ -774,6 +995,16 @@
         }
       }
     },
+    "Today's Diary: %@" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Heutiges Tagebuch:"
+          }
+        }
+      }
+    },
     "Total Count" : {
       "localizations" : {
         "de" : {
@@ -800,6 +1031,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Untergewicht"
+          }
+        }
+      }
+    },
+    "Value" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Value"
           }
         }
       }
@@ -880,6 +1121,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Deine Daten"
+          }
+        }
+      }
+    },
+    "Your Diary's" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Deine Einträge"
           }
         }
       }

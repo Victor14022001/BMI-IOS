@@ -6,10 +6,14 @@
 //
 
 import SwiftUI
+import SwiftData
    
 struct BAIView: View {
     @ObservedObject var viewModel: BmiViewModel
     @FocusState private var hipDataField: Bool
+    
+    @Environment(\.modelContext) var BaiContext
+    @Query private var datas: [BAIData]
     
     var body: some View {
         Form {
@@ -26,6 +30,11 @@ struct BAIView: View {
             Section {
                 Button {
                     viewModel.calculateBAI()
+                    guard let bai = viewModel.yourBai else { return }
+                    BaiContext.insert(BAIData(bai: bai, date: .now))
+                    datas.forEach { 
+                        print($0.bai)
+                    }
                 } label: {
                     Text("Calculate BAI")
                 }

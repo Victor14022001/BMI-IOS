@@ -87,31 +87,30 @@ struct ContentView: View {
                 }
             }
             .navigationTitle("BMI \(viewModel.yourBmiString)")
-        }
-        .alert(isPresented: $showAlert) {
-            Alert(
-                title: Text("Save BMI"),
-                message: Text("Do you want to save your BMI?"),
-                primaryButton: .destructive(Text("Cancel")),
-                secondaryButton: .default(Text("Save"), action: {
-                    guard let bmi = viewModel.yourBmi else { return }
-                    context.insert(BMIData(bmi: bmi, date: .now))
-                    datas.forEach {
-                        print($0.bmi)
+            .toolbar {
+                ToolbarItemGroup(placement: .keyboard) {
+                    
+                    Spacer()
+                    
+                    Button("Done") {
+                        bodyDataFields = false
                     }
-                })
-            )
-        }
-        
-        .toolbar {
-            ToolbarItemGroup(placement: .keyboard) {
-                
-                Spacer()
-                
-                Button("Done") {
-                    bodyDataFields = false
                 }
             }
+            .alert(isPresented: $showAlert) {
+                Alert(
+                    title: Text("Save BMI"),
+                    message: Text("Do you want to save your BMI?"),
+                    primaryButton: .destructive(Text("Cancel")),
+                    secondaryButton: .default(Text("Save"), action: {
+                        guard let bmi = viewModel.yourBmi else { return }
+                        context.insert(BMIData(bmi: bmi, date: .now))
+                        datas.forEach {
+                            print($0.bmi)
+                        }
+                    })
+                )
+            }  
         }
     }
 }

@@ -14,7 +14,15 @@ struct Settings: View {
     @Environment(\.modelContext) var context
     @Query private var datas: [BMIData]
     
-    @State private var showDeleteAlert = false
+    @Query var diary: [Diary]
+    @Environment(\.modelContext) var diaryContext
+    
+    @Environment(\.modelContext) var baiContext
+    @Query private var baiDatas: [BAIData]
+    
+    @State private var showBMIDeleteAlert = false
+    @State private var showDiaryDeleteAlert = false
+    @State private var showBAIDeleteAlert = false
     
     var body: some View {
         NavigationView {
@@ -23,42 +31,101 @@ struct Settings: View {
                     Toggle("Darkmode", isOn: $viewModel.isDarkmodeEnabled)
                 }
                 
-                NavigationLink {
-                    BMIDataView()
-                } label: {
-                    Text("Show my BMI's")
-                }
-                
-                NavigationLink {
-                    BmiDataChartView() 
-                } label: {
-                    Text("BMI History Chart")
-                }
-                
-                Section("Delete your saved BMI's") {
-                    Button {
-                        showDeleteAlert = true
+                Section("BMI") {
+                    NavigationLink {
+                        BMIDataView()
                     } label: {
-                        Text("Delete all data")
+                        Text("Show my BMI's")
+                    }
+                    
+                    NavigationLink {
+                        BmiDataChartView()
+                    } label: {
+                        Text("BMI History Chart")
+                    }
+                }
+                
+                Section("BAI") {
+                    NavigationLink {
+                        BaiDataView()
+                    } label: {
+                        Text("Show my Bai's")
+                    }
+                    
+                    NavigationLink {
+                        BaiDataChartView()
+                    } label: {
+                        Text("BAI History Chart")
+                    }
+                }
+                
+                Section("Delete your saved Data") {
+                    Button {
+                        showBMIDeleteAlert = true
+                    } label: {
+                        Text("Delete all BMI's")
                     }
                     .foregroundColor(.red)
+                    .alert(isPresented: $showBMIDeleteAlert) {
+                        Alert(
+                            title: Text("Are you sure to delete all saved BMI's?"),
+                            message: Text("If you press 'Yes' all saved BMI's will be deleted"),
+                            primaryButton: .destructive(Text("Cancel")),
+                            secondaryButton: .default(Text("Yes"), action: {
+                                do {
+                                    try context.delete(model: BMIData.self)
+                                } catch {
+                                    print("Failed to delete data")
+                                }
+                            })
+                        )
+                    }
+                    
+                    
+                    Button {
+                        showDiaryDeleteAlert = true
+                    } label: {
+                        Text("Delete all Diaries")
+                    }
+                    .foregroundColor(.red)
+                    .alert(isPresented: $showDiaryDeleteAlert) {
+                        Alert(
+                            title: Text("Are you sure to delete all saved Diaries?"),
+                            message: Text("If you press 'Yes' all saved Diaries will be deleted"),
+                            primaryButton: .destructive(Text("Cancel")),
+                            secondaryButton: .default(Text("Yes"), action: {
+                                do {
+                                    try diaryContext.delete(model: Diary.self)
+                                } catch {
+                                    print("Failed to delete data")
+                                }
+                            })
+                        )
+                    }
+                    
+                    
+                    Button {
+                        showBAIDeleteAlert = true
+                    } label: {
+                        Text("Delete all BAI's")
+                    }
+                    .foregroundColor(.red)
+                    .alert(isPresented: $showBAIDeleteAlert) {
+                        Alert(
+                            title: Text("Are you sure to delete all saved BAI's?"),
+                            message: Text("If you press 'Yes' all saved BAI's will be deleted"),
+                            primaryButton: .destructive(Text("Cancel")),
+                            secondaryButton: .default(Text("Yes"), action: {
+                                do {
+                                    try baiContext.delete(model: BAIData.self)
+                                } catch {
+                                    print("Failed to delete data")
+                                }
+                            })
+                        )
+                    }
                 }
             }
-            .alert(isPresented: $showDeleteAlert) {
-                Alert(
-                    title: Text("Are you sure to delete all saved BMI's"),
-                    message: Text("If you press 'Yes' all saved BMI's will be deleted"),
-                    primaryButton: .destructive(Text("Cancel")),
-                    secondaryButton: .default(Text("Yes"), action: {
-                        do {
-                            try context.delete(model: BMIData.self)
-                        } catch {
-                            print("Failed to delete data")
-                        }
-                    })
-                )
-            }
-            
             .navigationTitle("Settings")
             .navigationBarTitleDisplayMode(.inline)
         }

@@ -11,21 +11,38 @@ import SwiftData
 import Charts
 
 @Model
+class BAIData {
+    let bai: Double
+    let date: Date
+    
+    init(bai: Double, date: Date = .now) {
+        self.bai = bai
+        self.date = date
+    }
+}
+
+@Model
+class Diary {
+    let title: String
+    let detail: String
+    let date: Date
+    
+    init(title: String, detail: String, date: Date = .now) {
+        self.title = title
+        self.detail = detail
+        self.date = date
+    }
+}
+
+@Model
 class BMIData: Identifiable {
     let bmi: Double
     let date: Date
     
-    init(bmi: Double, date: Date = .now) {
-        //self.id = id
+    init(bmi: Double, date: Date) {
         self.bmi = bmi
         self.date = date
     }
-   
-    
-    //init(bmi: Double) {
-      //  id = UUID()
-        //self.bmi = bmi
-    //}
 }
 
 class BmiViewModel: ObservableObject {
