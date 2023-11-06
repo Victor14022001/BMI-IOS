@@ -10,18 +10,18 @@ import SwiftUI
 struct HomeView: View {
     @State private var weight = ""
     @State private var height = ""
-    
+
     var body: some View {
         ZStack {
             VStack(alignment: .leading) {
                 Text("HealthMetrics")
                     .font(.system(size: 32, weight: .bold))
                     .foregroundColor(.init(red: 11 / 255, green: 24 / 255, blue: 54 / 255))
-                
+
                 Text("Body mass index BMI is a measure of body fat based on height and weight that applies to")
-                
-                
-                
+
+
+
                 HStack(spacing: 20) {
                     Button {
                         // button action here
@@ -35,8 +35,8 @@ struct HomeView: View {
                         .background(Color.gray)
                         .cornerRadius(10)
                     }
-                    
-                    
+
+
                     Button {
                         // button action here
                     } label: {
@@ -49,31 +49,31 @@ struct HomeView: View {
                         .background(Color.gray)
                         .cornerRadius(10)
                     }
-                    
-                    
+
+
                 }
                 .frame(maxWidth: .infinity)
                 .padding(.top, 40)
-                
+
                 // Spacer()
-                
+
                 VStack(spacing: 20) {
                     TextField("Height", text: $height)
                         .frame(maxWidth: .infinity)
                         .background(Color.gray)
                         .cornerRadius(10)
-                    
+
                     TextField("Weight", text: $weight)
                         .textFieldStyle(MyTextFieldStyle())
                 }
                 .padding(.top, 40)
-                
+
                 Spacer()
-                
+
             }
         }
         .padding(.horizontal, 20)
-        
+
     }
 }
 

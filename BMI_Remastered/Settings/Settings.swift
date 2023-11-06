@@ -10,55 +10,55 @@ import SwiftData
 
 struct Settings: View {
     @ObservedObject var viewModel: BmiViewModel
-    
+
     @Environment(\.modelContext) var context
-    @Query private var datas: [BMIData]
-    
-    @Query var diary: [Diary]
-    @Environment(\.modelContext) var diaryContext
-    
-    @Environment(\.modelContext) var baiContext
-    @Query private var baiDatas: [BAIData]
-    
+
+    @Query private var datas: [BMIData] // TODO: Ungenutze Variable, kann gelöscht werden
+    @Query var diary: [Diary] // TODO: Ungenutze Variable, kann gelöscht werden
+
+    @Environment(\.modelContext) var diaryContext // TODO: Warum 2 context, es gibt nur einen! 2 sind nicht nötig
+    @Environment(\.modelContext) var baiContext // TODO: Warum 2 context, es gibt nur einen! 2 sind nicht nötig
+    @Query private var baiDatas: [BAIData] // TODO: Ungenutze Variable, kann gelöscht werden
+
     @State private var showBMIDeleteAlert = false
     @State private var showDiaryDeleteAlert = false
     @State private var showBAIDeleteAlert = false
-    
+
     var body: some View {
         NavigationView {
             Form {
                 Section("Color Scheme") {
                     Toggle("Darkmode", isOn: $viewModel.isDarkmodeEnabled)
                 }
-                
+
                 Section("BMI") {
                     NavigationLink {
                         BMIDataView()
                     } label: {
                         Text("Show my BMI's")
                     }
-                    
+
                     NavigationLink {
                         BmiDataChartView()
                     } label: {
                         Text("BMI History Chart")
                     }
                 }
-                
+
                 Section("BAI") {
                     NavigationLink {
                         BaiDataView()
                     } label: {
                         Text("Show my Bai's")
                     }
-                    
+
                     NavigationLink {
                         BaiDataChartView()
                     } label: {
                         Text("BAI History Chart")
                     }
                 }
-                
+
                 Section("Delete your saved Data") {
                     Button {
                         showBMIDeleteAlert = true
@@ -80,8 +80,8 @@ struct Settings: View {
                             })
                         )
                     }
-                    
-                    
+
+
                     Button {
                         showDiaryDeleteAlert = true
                     } label: {
@@ -102,8 +102,8 @@ struct Settings: View {
                             })
                         )
                     }
-                    
-                    
+
+
                     Button {
                         showBAIDeleteAlert = true
                     } label: {

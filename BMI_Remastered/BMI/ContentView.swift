@@ -11,12 +11,12 @@ import SwiftData
 struct ContentView: View {
     @FocusState private var bodyDataFields: Bool
     @ObservedObject var viewModel: BmiViewModel
-    
+
     @State private var showAlert = false
-    
+
     @Environment(\.modelContext) var context
-    @Query private var datas: [BMIData]
-    
+    @Query private var datas: [BMIData] // TODO: Ungenutze Variable, da die stelle nur zum Debuggen genutzt wurde. Kannst beides entfernen hier und unten
+
     var body: some View {
         NavigationView {
             List {
@@ -24,22 +24,22 @@ struct ContentView: View {
                     TextField("Your Bodyheight", text: $viewModel.bodyHeight)
                         .keyboardType(.decimalPad)
                         .focused($bodyDataFields)
-                    
+
                     TextField("Your Bodyweight", text: $viewModel.bodyWeight)
                         .keyboardType(.decimalPad)
                         .focused($bodyDataFields)
                 }
-                
+
                 Section("This Date will be saved") {
                     HStack {
                         Text("Date")
-                        
+
                         Spacer()
-                        
+
                         Text("\(Date.now.formatted(date: .complete, time: .omitted))")
                     }
                 }
-                
+
                 Section {
                     Button {
                         viewModel.calculateBMI()
@@ -49,7 +49,7 @@ struct ContentView: View {
                     }
                     .disabled(viewModel.bodyHeight.isEmpty || viewModel.bodyWeight.isEmpty)
                 }
-                
+
                 if viewModel.yourBmi != nil {
                     Section("More nice things to know") {
                         NavigationLink {
@@ -58,7 +58,7 @@ struct ContentView: View {
                             Text("Meaning of my BMI")
                         }
                     }
-                    
+
                     NavigationLink {
                         IdealWeight(viewModel: viewModel)
                     } label: {
@@ -67,13 +67,13 @@ struct ContentView: View {
                     .onAppear(perform: {
                         viewModel.calculateIdealWeight()
                     })
-                    
+
                     NavigationLink {
                         BmiChartView(viewModel)
                     } label: {
                         Text("Look at your BMI at a Chart")
                     }
-                    
+
                     NavigationLink {
                         BAIView(viewModel: viewModel)
                     } label: {
@@ -84,9 +84,9 @@ struct ContentView: View {
             .navigationTitle("BMI \(viewModel.yourBmiString)")
             .toolbar {
                 ToolbarItemGroup(placement: .keyboard) {
-                    
+
                     Spacer()
-                    
+
                     Button("Done") {
                         bodyDataFields = false
                     }
@@ -100,6 +100,7 @@ struct ContentView: View {
                     secondaryButton: .default(Text("Save"), action: {
                         guard let bmi = viewModel.yourBmi else { return }
                         context.insert(BMIData(bmi: bmi, date: .now))
+                        // TODO: War nur für Debugging gedacht, kann weg
                         datas.forEach {
                             print($0.bmi)
                         }

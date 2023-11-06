@@ -9,30 +9,33 @@ import SwiftUI
 import Charts
 
 struct BmiChartView: View {
+    // TODO: BMIViewModel hier zu nutzen macht keinen Sinn weil du damit unten nichts anstellst also entfernen, auch aus dem Init
     let viewModel: BmiViewModel
     var bmiValues: [ToyShape]
-    
+
+    // TODO: Gescheiten Namen vergeben, der scheint noch aus einem Tutorial zu stammen
     struct ToyShape: Identifiable {
         var color: String
         var title: String
         var BMICount: Double?
         var id = UUID()
     }
-    
+
     init(_ viewModel: BmiViewModel) {
         self.viewModel = viewModel
-        
+
         self.bmiValues = [
             .init(color: "Blue", title: "average BMI", BMICount: 26.8),
             .init(color: "Green", title: "your BMI", BMICount: viewModel.yourBmi)
         ]
     }
-    
-   
-    
+
+
+
     var body: some View {
         VStack {
             Chart {
+                // TODO: shape scheint noch aus einem Tutorial zu stammen
                 ForEach(bmiValues) { shape in
                     BarMark(
                         x: .value("Shape Type", shape.title),

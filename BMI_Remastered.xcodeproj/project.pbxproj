@@ -202,6 +202,7 @@
 				56ABFA402AB23807005D7E49 /* Sources */,
 				56ABFA412AB23807005D7E49 /* Frameworks */,
 				56ABFA422AB23807005D7E49 /* Resources */,
+				4F353F9E2AF984B1006DCC8C /* Swiftlint */,
 			);
 			buildRules = (
 			);
@@ -264,6 +265,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4F353F9E2AF984B1006DCC8C /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		56ABFA402AB23807005D7E49 /* Sources */ = {
@@ -420,6 +442,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"BMI_Remastered/Preview Content\"";
 				DEVELOPMENT_TEAM = D3B28ZYAJ6;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = HealthMetrics;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
@@ -452,6 +475,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"BMI_Remastered/Preview Content\"";
 				DEVELOPMENT_TEAM = D3B28ZYAJ6;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = HealthMetrics;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";

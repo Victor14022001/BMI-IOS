@@ -14,7 +14,7 @@ import Charts
 class BAIData {
     let bai: Double
     let date: Date
-    
+
     init(bai: Double, date: Date = .now) {
         self.bai = bai
         self.date = date
@@ -26,7 +26,7 @@ class Diary {
     let title: String
     let detail: String
     let date: Date
-    
+
     init(title: String, detail: String, date: Date = .now) {
         self.title = title
         self.detail = detail
@@ -38,7 +38,7 @@ class Diary {
 class BMIData: Identifiable {
     let bmi: Double
     let date: Date
-    
+
     init(bmi: Double, date: Date) {
         self.bmi = bmi
         self.date = date
@@ -52,24 +52,26 @@ class BmiViewModel: ObservableObject {
     // MARK: - Published
     @Published var bodyWeight = ""
     @Published var bodyHeight = ""
-    
+
     @Published var yourBmi: Double?
     @Published var yourBmiString: String = ""
-    
+
     @Published var yourIdealWeight: Double?
     @Published var yourIdealWeightString: String = ""
-    
+
     @Published var selectedGender = "Male"
     @Published var genders = ["Male", "Female"]
-    
+
     @Published var chooseDate: Date = Date.now
-    
+
     @Published var averageBodyWeight: String = "28"
-    
+
     @Published var hipCircumference: String = ""
     @Published var yourBai: Double?
     @Published var yourBaiString: String = ""
-    
+
+    // TODO: - Rückgabewert wäre hier sinnvoll, da wenn die Textfelder falsch befüllt sind, nix passiert und nix berechnet wird
+    /// Wenn Komma werte in den Textfeldern zugelassen sind, musst du die von DE in ENG ändern 12,5 -> 12.5 Sonst fliegt der Cast auf die schnauze
     func calculateBMIForGender(gender: String) {
         guard let height = Double(bodyHeight), let weight = Double(bodyWeight) else { return }
         let bmi = weight / ((height / 100) * (height / 100))
@@ -77,21 +79,26 @@ class BmiViewModel: ObservableObject {
         yourBmiString = String(format: "%.2f", bmi)
     }
 
-    
+    // TODO: - Rückgabewert wäre hier sinnvoll, da wenn die Textfelder falsch befüllt sind, nix passiert und nix berechnet wird
+    /// Wenn Komma werte in den Textfeldern zugelassen sind, musst du die von DE in ENG ändern 12,5 -> 12.5 Sonst fliegt der Cast auf die schnauze
     func calculateBMI() {
         guard let height = Double(bodyHeight), let weight = Double(bodyWeight) else { return }
         let bmi = weight / ((height / 100) * (height / 100))
         yourBmi = bmi
         yourBmiString = String(format: "%.2f", bmi)
     }
-    
+
+    // TODO: - Rückgabewert wäre hier sinnvoll, da wenn die Textfelder falsch befüllt sind, nix passiert und nix berechnet wird
+    /// Wenn Komma werte in den Textfeldern zugelassen sind, musst du die von DE in ENG ändern 12,5 -> 12.5 Sonst fliegt der Cast auf die schnauze
     func calculateIdealWeight() {
         guard let height = Double(bodyHeight) else { return }
         let idealWeight = selectedGender == "Male" ? (height - 100) + 1 : (height - 110) + 1
         yourIdealWeight = idealWeight
         yourIdealWeightString = String(format: "%.2f", idealWeight)
     }
-    
+
+    // TODO: - Rückgabewert wäre hier sinnvoll, da wenn die Textfelder falsch befüllt sind, nix passiert und nix berechnet wird
+    /// Wenn Komma werte in den Textfeldern zugelassen sind, musst du die von DE in ENG ändern 12,5 -> 12.5 Sonst fliegt der Cast auf die schnauze
     func calculateBAI() {
         guard let hipCircumference = Double(hipCircumference), let height = Double(bodyHeight) else { return }
         let heightInMeters = height / 100.0

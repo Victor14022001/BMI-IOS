@@ -8,12 +8,13 @@
 import SwiftUI
 import SwiftData
 
+// TODO: - Class-/Struct Names werden mit einem Großbuchstaben begonnen
 struct myDiaryDataView: View {
     @Query var datas: [Diary]
     @Environment(\.modelContext) var diaryContext
-    
-    @State private var selection: Diary?
-    
+
+    @State private var selection: Diary? // TODO: Ungenutzte Variable, also kann weg.
+
     var body: some View {
         List {
             ForEach(datas) { data in
@@ -23,7 +24,7 @@ struct myDiaryDataView: View {
                     VStack(alignment: .leading) {
                         Text("\(data.title)")
                             .font(.headline)
-                        
+
                         Text(data.date.formatted(date: .complete, time: .omitted))
                     }
                 }

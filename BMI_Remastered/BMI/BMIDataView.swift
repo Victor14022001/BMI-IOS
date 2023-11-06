@@ -11,14 +11,14 @@ import SwiftData
 struct BMIDataView: View {
     @Environment(\.modelContext) var context
     @Query private var datas: [BMIData]
-    
+
     var body: some View {
         List {
             ForEach(datas) { data in
                 VStack(alignment: .leading) {
                     Text("\(data.bmi)")
                         .font(.headline)
-                    
+
                     Text(data.date.formatted(date: .complete, time: .omitted))
                 }
             }

@@ -7,28 +7,28 @@
 
 import SwiftUI
 import SwiftData
-   
+
 struct BAIView: View {
     @ObservedObject var viewModel: BmiViewModel
     @FocusState private var hipDataField: Bool
-    
+
     @Environment(\.modelContext) var BaiContext
     @Query private var datas: [BAIData]
-    
+
     @State private var showBaiSaveAlert = false
-    
+
     var body: some View {
         List {
             Section("Description") {
                 Text("The BAI is an alternative to the BMI, which is calculated based on hip circumference in relation to your height.")
             }
-            
+
             Section("Enter your Hip circumference") {
                 TextField("Enter your Hip circumference", text: $viewModel.hipCircumference)
                     .keyboardType(.decimalPad)
                     .focused($hipDataField)
             }
-            
+
             Section {
                 Button {
                     viewModel.calculateBAI()
@@ -52,40 +52,40 @@ struct BAIView: View {
                     )
                 }
             }
-            
+
             Section("Overview") {
                 HStack {
                     VStack {
                         Text("Hip")
                         Text("\(viewModel.hipCircumference) cm")
                     }
-                    
+
                     Spacer()
-                    
+
                     VStack {
                         Text("Height")
                         Text("\(viewModel.bodyHeight) cm")
                     }
-                    
+
                     Spacer()
-                    
+
                     VStack {
                         Text("Weight")
                         Text("\(viewModel.bodyWeight) kg")
                     }
                 }
             }
-            
+
             Section("Your BAI") {
                 HStack {
                     Text("Your BAI:")
-                    
+
                     Spacer()
-                    
+
                     Text("\(viewModel.yourBaiString)")
                 }
             }
-            
+
             Section {
                 NavigationLink {
                     MeaningBAIView()
@@ -98,9 +98,9 @@ struct BAIView: View {
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             ToolbarItemGroup(placement: .keyboard) {
-                
+
                 Spacer()
-                
+
                 Button("Done") {
                     hipDataField = false
                 }

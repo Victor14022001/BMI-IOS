@@ -21,23 +21,23 @@ struct IdealWeight: View {
                         Text("Gender")
                         Text("\(viewModel.selectedGender)")
                     }
-                    
+
                     Spacer()
-                    
+
                     VStack {
                         Text("Height")
                         Text("\(viewModel.bodyHeight) cm")
                     }
-                    
+
                     Spacer()
-                    
+
                     VStack {
                         Text("Weight")
                         Text("\(viewModel.bodyWeight) kg")
                     }
                 }
             }
-            
+
             Section {
                 HStack {
                     Text("Your IdealWeight:")
@@ -48,7 +48,7 @@ struct IdealWeight: View {
         }
         .navigationTitle("Your Idealweight")
         .navigationBarTitleDisplayMode(.inline)
-        
+
     }
 }
 
