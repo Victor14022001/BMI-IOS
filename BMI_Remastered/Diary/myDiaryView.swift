@@ -9,15 +9,45 @@ import SwiftUI
 import SwiftData
 
 struct myDiaryView: View {
-    @Environment(\.modelContext) var context
-    @Query private var datas: [BMIData]
+    @Environment(\.modelContext) var diaryContext
+    @Query private var datas: [Diary]
     
-    @State private var hallo: String
+    @State private var title: String = ""
+    @State private var detail: String = ""
+    
+    let lineHeight: CGFloat = 22
     
     var body: some View {
-        Form {
-            TextField("Enter text", text: $hallo, axis: .vertical)
-            
+        NavigationView {
+            Form {
+                Section("Enter todays title") {
+                    TextField("", text: $title)
+                }
+                
+                Section("Enter todays Diary") {
+                    TextEditor(text: $detail)
+                        .padding()
+                        .frame(height: lineHeight * 15)
+                }
+                
+                Section {
+                    Button {
+                        let diary = Diary(title: title, detail: detail, date: .now)
+                        diaryContext.insert(diary)
+                    } label: {
+                        Text("Done")
+                    }
+                }
+                
+                Section {
+                    NavigationLink {
+                        myDiaryDataView()
+                    } label: {
+                        Text("Show my Diaries")
+                    }
+                }
+                .navigationTitle("Today's Diary: \(title)")
+            }
         }
     }
 }

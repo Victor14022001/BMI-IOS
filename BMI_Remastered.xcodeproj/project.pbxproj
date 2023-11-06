@@ -14,11 +14,11 @@
 		5614759D2AC8B2DB00B405CE /* BmiDataChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5614759C2AC8B2DB00B405CE /* BmiDataChartView.swift */; };
 		5614759F2AC8C12A00B405CE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5614759E2AC8C12A00B405CE /* HomeView.swift */; };
 		5615512B2AF90D30004C8A3F /* BaiDataChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5615512A2AF90D30004C8A3F /* BaiDataChartView.swift */; };
-		5623AE5A2AF69F8F000102AA /* myDiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5623AE592AF69F8F000102AA /* myDiaryView.swift */; };
 		5623AE5C2AF6B859000102AA /* myDiaryDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5623AE5B2AF6B859000102AA /* myDiaryDataView.swift */; };
 		5623AE602AF6D6B1000102AA /* myDiaryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5623AE5F2AF6D6B1000102AA /* myDiaryDetailView.swift */; };
 		562471C12AF8F3B700409F29 /* BaiDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562471C02AF8F3B700409F29 /* BaiDataView.swift */; };
 		563C8F4E2AB711AF0094C985 /* MeaningBAIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563C8F4D2AB711AF0094C985 /* MeaningBAIView.swift */; };
+		5645A0782AF958DE00B6BC87 /* myDiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5645A0772AF958DE00B6BC87 /* myDiaryView.swift */; };
 		567073DB2AE952A0002AF246 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 567073DA2AE952A0002AF246 /* Localizable.xcstrings */; };
 		5676A54C2AC4B6CC008AAB85 /* MyTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5676A54B2AC4B6CC008AAB85 /* MyTabView.swift */; };
 		5676A5502AC4C30E008AAB85 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5676A54F2AC4C30E008AAB85 /* Settings.swift */; };
@@ -38,11 +38,11 @@
 		5614759C2AC8B2DB00B405CE /* BmiDataChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BmiDataChartView.swift; sourceTree = "<group>"; };
 		5614759E2AC8C12A00B405CE /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		5615512A2AF90D30004C8A3F /* BaiDataChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiDataChartView.swift; sourceTree = "<group>"; };
-		5623AE592AF69F8F000102AA /* myDiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = myDiaryView.swift; path = ../myDiaryView.swift; sourceTree = "<group>"; };
 		5623AE5B2AF6B859000102AA /* myDiaryDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myDiaryDataView.swift; sourceTree = "<group>"; };
 		5623AE5F2AF6D6B1000102AA /* myDiaryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myDiaryDetailView.swift; sourceTree = "<group>"; };
 		562471C02AF8F3B700409F29 /* BaiDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiDataView.swift; sourceTree = "<group>"; };
 		563C8F4D2AB711AF0094C985 /* MeaningBAIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeaningBAIView.swift; sourceTree = "<group>"; };
+		5645A0772AF958DE00B6BC87 /* myDiaryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myDiaryView.swift; sourceTree = "<group>"; };
 		567073DA2AE952A0002AF246 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		5676A54B2AC4B6CC008AAB85 /* MyTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabView.swift; sourceTree = "<group>"; };
 		5676A54F2AC4C30E008AAB85 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
@@ -130,7 +130,7 @@
 		569B43612AF1A242005AE67C /* Diary */ = {
 			isa = PBXGroup;
 			children = (
-				5623AE592AF69F8F000102AA /* myDiaryView.swift */,
+				5645A0772AF958DE00B6BC87 /* myDiaryView.swift */,
 				5623AE5B2AF6B859000102AA /* myDiaryDataView.swift */,
 				5623AE5F2AF6D6B1000102AA /* myDiaryDetailView.swift */,
 			);
@@ -272,7 +272,6 @@
 			files = (
 				560515AA2AB60EDB0059DD4E /* BmiChartView.swift in Sources */,
 				56ABFA4A2AB23807005D7E49 /* ContentView.swift in Sources */,
-				5623AE5A2AF69F8F000102AA /* myDiaryView.swift in Sources */,
 				5614759D2AC8B2DB00B405CE /* BmiDataChartView.swift in Sources */,
 				56ABFA562AB2384C005D7E49 /* ViewModel.swift in Sources */,
 				560515AC2AB64E820059DD4E /* BAIView.swift in Sources */,
@@ -283,6 +282,7 @@
 				562471C12AF8F3B700409F29 /* BaiDataView.swift in Sources */,
 				5614759A2AC87D1600B405CE /* BMIDataView.swift in Sources */,
 				56908C5C2AEB23BF00F03DF3 /* MeaningOfBMIView.swift in Sources */,
+				5645A0782AF958DE00B6BC87 /* myDiaryView.swift in Sources */,
 				5676A54C2AC4B6CC008AAB85 /* MyTabView.swift in Sources */,
 				56E75B3E2AB38E44004E915A /* IdealWeight.swift in Sources */,
 				5615512B2AF90D30004C8A3F /* BaiDataChartView.swift in Sources */,
