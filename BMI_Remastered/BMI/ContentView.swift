@@ -19,7 +19,7 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            Form {
+            List {
                 Section("Your Data") {
                     TextField("Your Bodyheight", text: $viewModel.bodyHeight)
                         .keyboardType(.decimalPad)
@@ -30,20 +30,15 @@ struct ContentView: View {
                         .focused($bodyDataFields)
                 }
                 
-                Section("Choose a date for your saved BMI") {
-                    DatePicker(selection: $viewModel.chooseDate, in: ...Date.now, displayedComponents: .date) {
-                        Text("Choose a Date")
+                Section("This Date will be saved") {
+                    HStack {
+                        Text("Date")
+                        
+                        Spacer()
+                        
+                        Text("\(Date.now.formatted(date: .complete, time: .omitted))")
                     }
                 }
-                
-                Section("Choose your Gender") {
-                    Picker("Gender:", selection: $viewModel.selectedGender) {
-                        ForEach(viewModel.genders, id: \.self) {
-                            Text($0)
-                        }
-                    }
-                }
-                .pickerStyle(.segmented)
                 
                 Section {
                     Button {
@@ -52,7 +47,7 @@ struct ContentView: View {
                     } label: {
                         Text("Calculate BMI")
                     }
-                    
+                    .disabled(viewModel.bodyHeight.isEmpty || viewModel.bodyWeight.isEmpty)
                 }
                 
                 if viewModel.yourBmi != nil {
@@ -110,7 +105,7 @@ struct ContentView: View {
                         }
                     })
                 )
-            }  
+            }
         }
     }
 }

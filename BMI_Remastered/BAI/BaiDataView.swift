@@ -28,6 +28,7 @@ struct BaiDataView: View {
                     baiContext.delete(deleteData)
                 }
             }
+            .navigationTitle("Your saved BAI's")
         }
     }
 }

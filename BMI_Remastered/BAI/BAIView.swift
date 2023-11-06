@@ -15,8 +15,10 @@ struct BAIView: View {
     @Environment(\.modelContext) var BaiContext
     @Query private var datas: [BAIData]
     
+    @State private var showBaiSaveAlert = false
+    
     var body: some View {
-        Form {
+        List {
             Section("Description") {
                 Text("The BAI is an alternative to the BMI, which is calculated based on hip circumference in relation to your height.")
             }
@@ -30,13 +32,24 @@ struct BAIView: View {
             Section {
                 Button {
                     viewModel.calculateBAI()
-                    guard let bai = viewModel.yourBai else { return }
-                    BaiContext.insert(BAIData(bai: bai, date: .now))
-                    datas.forEach { 
-                        print($0.bai)
-                    }
+                    showBaiSaveAlert = true
                 } label: {
                     Text("Calculate BAI")
+                }
+                .disabled(viewModel.hipCircumference.isEmpty)
+                .alert(isPresented: $showBaiSaveAlert) {
+                    Alert(
+                        title: Text("Save BAI"),
+                        message: Text("Do you want to save your BAI?"),
+                        primaryButton: .destructive(Text("Cancel")),
+                        secondaryButton: .default(Text("Save"), action: {
+                            guard let bai = viewModel.yourBai else { return }
+                            BaiContext.insert(BAIData(bai: bai, date: .now))
+                            datas.forEach {
+                                print($0.bai)
+                            }
+                        })
+                    )
                 }
             }
             

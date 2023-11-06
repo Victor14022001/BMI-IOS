@@ -382,6 +382,7 @@
       }
     },
     "Choose a Date" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -392,6 +393,7 @@
       }
     },
     "Choose a date for your saved BMI" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -402,6 +404,7 @@
       }
     },
     "Choose your Gender" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -534,6 +537,16 @@
         }
       }
     },
+    "Do you want to save your BAI?" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Willst du deinen BAI speichern?"
+          }
+        }
+      }
+    },
     "Do you want to save your BMI?" : {
       "localizations" : {
         "de" : {
@@ -605,6 +618,7 @@
       }
     },
     "Gender:" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -895,6 +909,16 @@
         }
       }
     },
+    "Save BAI" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sichere deinen BAI"
+          }
+        }
+      }
+    },
     "Save BMI" : {
       "localizations" : {
         "de" : {
@@ -991,6 +1015,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Unter Idealgewicht versteht man das Gewicht, das aufgrund verschiedener Faktoren wie Größe, Geschlecht, Alter, Körperzusammensetzung und Gesundheitszustand als gesund und angemessen für eine bestimmte Person angesehen wird. Es ist wichtig zu beachten, dass es beim Idealgewicht nicht nur um die Ästhetik geht, sondern in erster Linie um die Erhaltung von Gesundheit und Wohlbefinden."
+          }
+        }
+      }
+    },
+    "This Date will be saved" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dieses Datum wird mit abgespeichert"
           }
         }
       }
@@ -1100,7 +1134,7 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Dein Körpergewicht"
+            "value" : "Deine Körpergröße"
           }
         }
       }
@@ -1151,6 +1185,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dein Idealgewicht"
+          }
+        }
+      }
+    },
+    "Your saved BAI's" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Deine gespeicherten BAI's"
           }
         }
       }
