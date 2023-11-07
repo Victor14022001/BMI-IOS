@@ -17,12 +17,12 @@ struct MyTabView: View {
                     Label("Home", systemImage: "house")
                 }
 
-            Settings(viewModel: viewModel)
+            SettingsView(viewModel: viewModel)
                 .tabItem {
                     Label("Settings", systemImage: "gearshape")
                 }
 
-            myDiaryView()
+            DiaryView()
                 .tabItem {
                     Label("Diary", systemImage: "pencil")
                 }

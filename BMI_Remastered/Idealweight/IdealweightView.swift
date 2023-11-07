@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct IdealWeight: View {
+struct IdealweightView: View {
    let viewModel: BmiViewModel
 
     var body: some View {
@@ -52,8 +52,6 @@ struct IdealWeight: View {
     }
 }
 
-struct idealWeight_Previews: PreviewProvider {
-    static var previews: some View {
-        IdealWeight(viewModel: BmiViewModel())
-    }
+#Preview {
+    IdealweightView(viewModel: BmiViewModel())
 }

@@ -19,7 +19,7 @@ struct BaiDataChartView: View {
                 ForEach(datas) { data in
                     LineMark(
                         x: .value("Date", data.date),
-                        y: .value("BAI", data.bai)
+                        y: .value("BAI", data.dataBai)
                     )
                 }
             }
@@ -30,7 +30,7 @@ struct BaiDataChartView: View {
             List {
                 ForEach(datas) { data in
                     VStack(alignment: .leading) {
-                        Text("\(data.bai)")
+                        Text("\(data.dataBai)")
                             .font(.headline)
 
                         Text(data.date.formatted(date: .complete, time: .omitted))

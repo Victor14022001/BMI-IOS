@@ -15,7 +15,7 @@ struct ContentView: View {
     @State private var showAlert = false
 
     @Environment(\.modelContext) var context
-    @Query private var datas: [BMIData] // TODO: Ungenutze Variable, da die stelle nur zum Debuggen genutzt wurde. Kannst beides entfernen hier und unten
+    @Query private var datas: [BMIData]
 
     var body: some View {
         NavigationView {
@@ -60,7 +60,7 @@ struct ContentView: View {
                     }
 
                     NavigationLink {
-                        IdealWeight(viewModel: viewModel)
+                        IdealweightView(viewModel: viewModel)
                     } label: {
                         Text("Calculate my idealweight")
                     }
@@ -98,12 +98,8 @@ struct ContentView: View {
                     message: Text("Do you want to save your BMI?"),
                     primaryButton: .destructive(Text("Cancel")),
                     secondaryButton: .default(Text("Save"), action: {
-                        guard let bmi = viewModel.yourBmi else { return }
-                        context.insert(BMIData(bmi: bmi, date: .now))
-                        // TODO: War nur für Debugging gedacht, kann weg
-                        datas.forEach {
-                            print($0.bmi)
-                        }
+                        guard let bmis = viewModel.yourBmi else { return }
+                        context.insert(BMIData(dataBmi: bmis, date: .now))
                     })
                 )
             }

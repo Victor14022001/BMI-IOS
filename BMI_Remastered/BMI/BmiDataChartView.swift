@@ -19,7 +19,7 @@ struct BmiDataChartView: View {
                 ForEach(datas) { value in
                     LineMark(
                         x: .value("Index", value.date),
-                        y: .value("Value", value.bmi)
+                        y: .value("Value", value.dataBmi)
                     )
                 }
             }
@@ -30,7 +30,7 @@ struct BmiDataChartView: View {
             List {
                 ForEach(datas) { data in
                     VStack(alignment: .leading) {
-                        Text("\(data.bmi)")
+                        Text("\(data.dataBmi)")
                             .font(.headline)
 
                         Text(data.date.formatted(date: .complete, time: .omitted))

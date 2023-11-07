@@ -16,7 +16,7 @@ struct BaiDataView: View {
         List {
             ForEach(datas) { data in
                 VStack(alignment: .leading) {
-                    Text("\(data.bai)")
+                    Text("\(data.dataBai)")
                         .font(.headline)
 
                     Text(data.date.formatted(date: .complete, time: .omitted))

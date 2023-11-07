@@ -12,11 +12,11 @@ import Charts
 
 @Model
 class BAIData {
-    let bai: Double
+    let dataBai: Double
     let date: Date
 
-    init(bai: Double, date: Date = .now) {
-        self.bai = bai
+    init(dataBai: Double, date: Date = .now) {
+        self.dataBai = dataBai
         self.date = date
     }
 }
@@ -36,11 +36,11 @@ class Diary {
 
 @Model
 class BMIData: Identifiable {
-    let bmi: Double
+    let dataBmi: Double
     let date: Date
 
-    init(bmi: Double, date: Date) {
-        self.bmi = bmi
+    init(dataBmi: Double, date: Date = .now) {
+        self.dataBmi = dataBmi
         self.date = date
     }
 }
@@ -72,20 +72,11 @@ class BmiViewModel: ObservableObject {
 
     // TODO: - Rückgabewert wäre hier sinnvoll, da wenn die Textfelder falsch befüllt sind, nix passiert und nix berechnet wird
     /// Wenn Komma werte in den Textfeldern zugelassen sind, musst du die von DE in ENG ändern 12,5 -> 12.5 Sonst fliegt der Cast auf die schnauze
-    func calculateBMIForGender(gender: String) {
-        guard let height = Double(bodyHeight), let weight = Double(bodyWeight) else { return }
-        let bmi = weight / ((height / 100) * (height / 100))
-        yourBmi = bmi
-        yourBmiString = String(format: "%.2f", bmi)
-    }
-
-    // TODO: - Rückgabewert wäre hier sinnvoll, da wenn die Textfelder falsch befüllt sind, nix passiert und nix berechnet wird
-    /// Wenn Komma werte in den Textfeldern zugelassen sind, musst du die von DE in ENG ändern 12,5 -> 12.5 Sonst fliegt der Cast auf die schnauze
     func calculateBMI() {
         guard let height = Double(bodyHeight), let weight = Double(bodyWeight) else { return }
-        let bmi = weight / ((height / 100) * (height / 100))
-        yourBmi = bmi
-        yourBmiString = String(format: "%.2f", bmi)
+        let calculatedBmi = weight / ((height / 100) * (height / 100))
+        yourBmi = calculatedBmi
+        yourBmiString = String(format: "%.2f", calculatedBmi)
     }
 
     // TODO: - Rückgabewert wäre hier sinnvoll, da wenn die Textfelder falsch befüllt sind, nix passiert und nix berechnet wird
@@ -102,8 +93,8 @@ class BmiViewModel: ObservableObject {
     func calculateBAI() {
         guard let hipCircumference = Double(hipCircumference), let height = Double(bodyHeight) else { return }
         let heightInMeters = height / 100.0
-        let bai = (hipCircumference / pow(heightInMeters, 1.5)) - 18
-        let roundedBAI = (bai * 100).rounded() / 100
+        let calculatedBai = (hipCircumference / pow(heightInMeters, 1.5)) - 18
+        let roundedBAI = (calculatedBai * 100).rounded() / 100
         yourBai = roundedBAI
         yourBaiString = String(format: "%.2f", roundedBAI)
     }

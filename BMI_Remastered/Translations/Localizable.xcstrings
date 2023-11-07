@@ -311,6 +311,7 @@
       }
     },
     "Body mass index BMI is a measure of body fat based on height and weight that applies to" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -598,6 +599,7 @@
       }
     },
     "Female" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -640,6 +642,7 @@
       }
     },
     "HealthMetrics" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -750,6 +753,7 @@
       }
     },
     "Male" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {

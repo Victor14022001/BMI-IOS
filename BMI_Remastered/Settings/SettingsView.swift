@@ -8,17 +8,12 @@
 import SwiftUI
 import SwiftData
 
-struct Settings: View {
+struct SettingsView: View {
     @ObservedObject var viewModel: BmiViewModel
 
     @Environment(\.modelContext) var context
-
-    @Query private var datas: [BMIData] // TODO: Ungenutze Variable, kann gelöscht werden
-    @Query var diary: [Diary] // TODO: Ungenutze Variable, kann gelöscht werden
-
-    @Environment(\.modelContext) var diaryContext // TODO: Warum 2 context, es gibt nur einen! 2 sind nicht nötig
-    @Environment(\.modelContext) var baiContext // TODO: Warum 2 context, es gibt nur einen! 2 sind nicht nötig
-    @Query private var baiDatas: [BAIData] // TODO: Ungenutze Variable, kann gelöscht werden
+    @Environment(\.modelContext) var diaryContext
+    @Environment(\.modelContext) var baiContext
 
     @State private var showBMIDeleteAlert = false
     @State private var showDiaryDeleteAlert = false
@@ -81,7 +76,6 @@ struct Settings: View {
                         )
                     }
 
-
                     Button {
                         showDiaryDeleteAlert = true
                     } label: {
@@ -102,7 +96,6 @@ struct Settings: View {
                             })
                         )
                     }
-
 
                     Button {
                         showBAIDeleteAlert = true
@@ -133,5 +126,5 @@ struct Settings: View {
 }
 
 #Preview {
-    Settings(viewModel: BmiViewModel())
+    SettingsView(viewModel: BmiViewModel())
 }

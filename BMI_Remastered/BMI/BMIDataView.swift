@@ -16,7 +16,7 @@ struct BMIDataView: View {
         List {
             ForEach(datas) { data in
                 VStack(alignment: .leading) {
-                    Text("\(data.bmi)")
+                    Text("\(data.dataBmi)")
                         .font(.headline)
 
                     Text(data.date.formatted(date: .complete, time: .omitted))

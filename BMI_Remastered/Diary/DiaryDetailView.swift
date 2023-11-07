@@ -9,7 +9,7 @@ import SwiftUI
 import SwiftData
 
 // TODO: - Class-/Struct Names werden mit einem Großbuchstaben begonnen
-struct myDiaryDetailView: View {
+struct DiaryDetailView: View {
     var diary: Diary
 
     var body: some View {

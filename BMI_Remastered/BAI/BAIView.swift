@@ -12,7 +12,7 @@ struct BAIView: View {
     @ObservedObject var viewModel: BmiViewModel
     @FocusState private var hipDataField: Bool
 
-    @Environment(\.modelContext) var BaiContext
+    @Environment(\.modelContext) var baiContenxt
     @Query private var datas: [BAIData]
 
     @State private var showBaiSaveAlert = false
@@ -43,10 +43,10 @@ struct BAIView: View {
                         message: Text("Do you want to save your BAI?"),
                         primaryButton: .destructive(Text("Cancel")),
                         secondaryButton: .default(Text("Save"), action: {
-                            guard let bai = viewModel.yourBai else { return }
-                            BaiContext.insert(BAIData(bai: bai, date: .now))
+                            guard let bais = viewModel.yourBai else { return }
+                            baiContenxt.insert(BAIData(dataBai: bais, date: .now))
                             datas.forEach {
-                                print($0.bai)
+                                print($0.dataBai)
                             }
                         })
                     )
