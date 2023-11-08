@@ -30,8 +30,6 @@ struct BmiChartView: View {
         ]
     }
 
-
-
     var body: some View {
         VStack {
             Chart {

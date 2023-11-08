@@ -568,6 +568,9 @@
         }
       }
     },
+    "eins_zwei" : {
+      "extractionState" : "manual"
+    },
     "Enter todays Diary" : {
       "localizations" : {
         "de" : {
@@ -1157,8 +1160,14 @@
       "localizations" : {
         "de" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Deine Daten"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your Data"
           }
         }
       }

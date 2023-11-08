@@ -81,7 +81,6 @@ struct ContentView: View {
                     }
                 }
             }
-            .navigationTitle("BMI \(viewModel.yourBmiString)")
             .toolbar {
                 ToolbarItemGroup(placement: .keyboard) {
 
@@ -92,6 +91,7 @@ struct ContentView: View {
                     }
                 }
             }
+            .navigationTitle("BMI \(viewModel.yourBmiString)")
             .alert(isPresented: $showAlert) {
                 Alert(
                     title: Text("Save BMI"),
@@ -99,14 +99,13 @@ struct ContentView: View {
                     primaryButton: .destructive(Text("Cancel")),
                     secondaryButton: .default(Text("Save"), action: {
                         guard let bmis = viewModel.yourBmi else { return }
-                        context.insert(BMIData(dataBmi: bmis, date: .now))
+                          context.insert(BMIData(dataBmi: bmis, date: .now))
                     })
                 )
             }
         }
     }
 }
-
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
