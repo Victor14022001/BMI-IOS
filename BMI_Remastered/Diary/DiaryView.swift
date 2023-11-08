@@ -10,25 +10,22 @@ import SwiftData
 
 struct DiaryView: View {
     @Environment(\.modelContext) var diaryContext
-    
+
     @State private var title: String = ""
     @State private var detail: String = ""
-    
     let lineHeight: CGFloat = 330
-    
     var body: some View {
         NavigationView {
             Form {
                 Section("Enter todays title") {
                     TextField("", text: $title)
                 }
-                
+
                 Section("Enter todays Diary") {
                     TextEditor(text: $detail)
                         .padding()
                         .frame(height: lineHeight)
                 }
-                
                 Section {
                     Button {
                         let diary = Diary(title: title, detail: detail, date: .now)
@@ -37,7 +34,7 @@ struct DiaryView: View {
                         Text("Done")
                     }
                 }
-                
+
                 Section {
                     NavigationLink {
                         DiaryDataView()

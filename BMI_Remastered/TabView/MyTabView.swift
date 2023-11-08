@@ -31,7 +31,6 @@ struct MyTabView: View {
     }
 }
 
-
 #Preview {
     MyTabView()
 }

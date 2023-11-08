@@ -8,7 +8,6 @@
 import SwiftUI
 import SwiftData
 
-// TODO: - Class-/Struct Names werden mit einem Großbuchstaben begonnen
 struct DiaryDetailView: View {
     var diary: Diary
 
@@ -26,7 +25,3 @@ struct DiaryDetailView: View {
         .navigationBarTitleDisplayMode(.inline)
     }
 }
-
-//#Preview {
-//    myDiaryDetailView(diary: Diary(title: "Hallo", detail: "Hallo"))
-//}

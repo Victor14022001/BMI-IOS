@@ -10,7 +10,6 @@ import Charts
 import SwiftData
 
 struct BmiDataChartView: View {
-    @Environment(\.modelContext) var context // TODO: Ungenutzte Variable, kann weg!
     @Query private var datas: [BMIData]
 
     var body: some View {
@@ -41,8 +40,6 @@ struct BmiDataChartView: View {
         }
     }
 }
-
-
 
     #Preview {
         BmiDataChartView()

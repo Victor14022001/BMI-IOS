@@ -9,12 +9,10 @@ import SwiftUI
 import Charts
 
 struct BmiChartView: View {
-    // TODO: BMIViewModel hier zu nutzen macht keinen Sinn weil du damit unten nichts anstellst also entfernen, auch aus dem Init
     let viewModel: BmiViewModel
-    var bmiValues: [ToyShape]
+    var bmiValues: [BmiAverageChart]
 
-    // TODO: Gescheiten Namen vergeben, der scheint noch aus einem Tutorial zu stammen
-    struct ToyShape: Identifiable {
+    struct BmiAverageChart: Identifiable {
         var color: String
         var title: String
         var BMICount: Double?
@@ -33,13 +31,12 @@ struct BmiChartView: View {
     var body: some View {
         VStack {
             Chart {
-                // TODO: shape scheint noch aus einem Tutorial zu stammen
-                ForEach(bmiValues) { shape in
+                ForEach(bmiValues) { data in
                     BarMark(
-                        x: .value("Shape Type", shape.title),
-                        y: .value("Total Count", shape.BMICount ?? 1.9)
+                        x: .value("Shape Type", data.title),
+                        y: .value("Total Count", data.BMICount ?? 1.9)
                     )
-                    .foregroundStyle(by: .value("Shape Color", shape.color))
+                    .foregroundStyle(by: .value("Shape Color", data.color))
                 }
             }
         }

@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-
 struct MeaningBAIView: View {
     var body: some View {
         Form {
