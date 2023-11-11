@@ -15,6 +15,22 @@ struct MailView: UIViewControllerRepresentable {
         func mailComposeController(_ controller: MFMailComposeViewController,
                                    didFinishWith result: MFMailComposeResult,
                                    error: Error?) {
+
+            switch result {
+            case .cancelled:
+                print("E-Mail wurde abgebrochen")
+            case .saved:
+                print("E-Mail wurde gespeichert, aber nicht versendet")
+            case .sent:
+                print("E-Mail wurde erfolgreich versendet")
+            case .failed:
+                print("Fehler beim Versenden der E-Mail: \(error?.localizedDescription ?? "Unbekannter Fehler")")
+            default:
+                break
+            }
+
+            // Schließe das E-Mail-Fenster
+            controller.dismiss(animated: true, completion: nil)
         }
     }
 
@@ -24,9 +40,9 @@ struct MailView: UIViewControllerRepresentable {
 
     func makeUIViewController(context: UIViewControllerRepresentableContext<MailView>) -> MFMailComposeViewController {
         let viewController = MFMailComposeViewController()
-        viewController.setCcRecipients(["victor@gate17.de"])
+        viewController.setToRecipients(["victor@gate17.de"])
         viewController.setSubject("Feedack for HealthMetrics")
-        viewController.setMessageBody("\(UIDevice.current.name) \n \(UIDevice.current.systemVersion) \n \(UIDevice.current.systemName) \n Enter your text here...", isHTML: false)
+        viewController.setMessageBody("\(UIDevice.current.systemName) \n \(UIDevice.current.systemVersion) \n \(UIDevice.current.systemName) \n Describe your concern below this line. \n", isHTML: false)
         viewController.mailComposeDelegate = context.coordinator
         return viewController
     }

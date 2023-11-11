@@ -9,18 +9,17 @@ import MessageUI
 
 struct Test: View {
     @State private var isShowingMailView = false
-    
+
     var body: some View {
         Button(action: {
             self.isShowingMailView.toggle()
         })
-        {
-            Text("E-Mail senden")
-        }
+        Text("Send Email")
+    }
         .sheet(isPresented: $isShowingMailView) {
             MailView()
         }
-    }
+}
 }
 
 #Preview {
@@ -33,11 +32,11 @@ struct MailView: UIViewControllerRepresentable {
             controller.dismiss(animated: true)
         }
     }
-    
+
     func makeCoordinator() -> Coordinator {
         return Coordinator()
     }
-    
+
     func makeUIViewController(context: UIViewControllerRepresentableContext<MailView>) -> MFMailComposeViewController {
         let viewController = MFMailComposeViewController()
         viewController.mailComposeDelegate = context.coordinator
@@ -46,8 +45,7 @@ struct MailView: UIViewControllerRepresentable {
         viewController.setMessageBody("Hier ist der Text der E-Mail.", isHTML: false)
         return viewController
     }
-    
+
     func updateUIViewController(_ uiViewController: MFMailComposeViewController, context: UIViewControllerRepresentableContext<MailView>) {
-        // Aktualisierungen hier, wenn nötig
     }
 }
