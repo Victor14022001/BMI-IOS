@@ -34,83 +34,84 @@ struct BAIView: View {
                     viewModel.calculateBAI()
                     showBaiSaveAlert = true
                 } label: {
-                    Text("Calculate BAI")
-                }
-                .disabled(viewModel.hipCircumference.isEmpty)
-                .alert(isPresented: $showBaiSaveAlert) {
-                    Alert(
-                        title: Text("Save BAI"),
-                        message: Text("Do you want to save your BAI?"),
-                        primaryButton: .destructive(Text("Cancel")),
-                        secondaryButton: .default(Text("Save"), action: {
-                            guard let bais = viewModel.yourBai else { return }
-                            baiContenxt.insert(BAIData(dataBai: bais, date: .now))
-                            datas.forEach {
-                                print($0.dataBai)
+                    HStack {
+                        Image(systemName: "plus.forwardslash.minus")
+                        Text("Calculate BAI")
+                    }
+                        }
+                        .disabled(viewModel.hipCircumference.isEmpty)
+                        .alert(isPresented: $showBaiSaveAlert) {
+                            Alert(
+                                title: Text("Save BAI"),
+                                message: Text("Do you want to save your BAI?"),
+                                primaryButton: .destructive(Text("Cancel")),
+                                secondaryButton: .default(Text("Save"), action: {
+                                    guard let bais = viewModel.yourBai else { return }
+                                    baiContenxt.insert(BAIData(dataBai: bais, date: .now))
+                                })
+                            )
+                        }
+                    }
+
+                    Section("Overview") {
+                        HStack {
+                            VStack {
+                                Text("Hip")
+                                Text("\(viewModel.hipCircumference) cm")
                             }
-                        })
-                    )
-                }
-            }
 
-            Section("Overview") {
-                HStack {
-                    VStack {
-                        Text("Hip")
-                        Text("\(viewModel.hipCircumference) cm")
+                            Spacer()
+
+                            VStack {
+                                Text("Height")
+                                Text("\(viewModel.bodyHeight) cm")
+                            }
+
+                            Spacer()
+
+                            VStack {
+                                Text("Weight")
+                                Text("\(viewModel.bodyWeight) kg")
+                            }
+                        }
                     }
 
-                    Spacer()
+                    Section("Your BAI") {
+                        HStack {
+                            Text("Your BAI:")
 
-                    VStack {
-                        Text("Height")
-                        Text("\(viewModel.bodyHeight) cm")
+                            Spacer()
+
+                            Text("\(viewModel.yourBaiString)")
+                        }
                     }
 
-                    Spacer()
-
-                    VStack {
-                        Text("Weight")
-                        Text("\(viewModel.bodyWeight) kg")
+                    Section {
+                        NavigationLink {
+                            MeaningBAIView()
+                        } label: {
+                            HStack {
+                                Image(systemName: "lightbulb.min")
+                                Text("What is the meaning of my BAI?")
+                            }
+                        }
                     }
                 }
-            }
+                .navigationTitle("BAI")
+                .navigationBarTitleDisplayMode(.inline)
+                .toolbar {
+                    ToolbarItemGroup(placement: .keyboard) {
 
-            Section("Your BAI") {
-                HStack {
-                    Text("Your BAI:")
+                        Spacer()
 
-                    Spacer()
-
-                    Text("\(viewModel.yourBaiString)")
-                }
-            }
-
-            Section {
-                NavigationLink {
-                    MeaningBAIView()
-                } label: {
-                    Text("What is the meaning of my BAI?")
+                        Button("Done") {
+                            hipDataField = false
+                        }
+                    }
                 }
             }
         }
-        .navigationTitle("BAI")
-        .navigationBarTitleDisplayMode(.inline)
-        .toolbar {
-            ToolbarItemGroup(placement: .keyboard) {
 
-                Spacer()
-
-                Button("Done") {
-                    hipDataField = false
-                }
-            }
-        }
-    }
-}
-
-struct BAIView_Previews: PreviewProvider {
-    static var previews: some View {
-        BAIView(viewModel: BmiViewModel())
-    }
+#Preview {
+    BAIView(viewModel: BmiViewModel())
 }

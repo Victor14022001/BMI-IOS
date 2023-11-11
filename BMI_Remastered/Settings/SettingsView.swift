@@ -19,6 +19,8 @@ struct SettingsView: View {
     @State private var showDiaryDeleteAlert = false
     @State private var showBAIDeleteAlert = false
 
+    @State private var showMailSheet = false
+
     var body: some View {
         NavigationView {
             Form {
@@ -30,13 +32,19 @@ struct SettingsView: View {
                     NavigationLink {
                         BMIDataView()
                     } label: {
-                        Text("Show my BMI's")
+                        HStack {
+                            Image(systemName: "list.clipboard")
+                            Text("Show my BMI's")
+                        }
                     }
 
                     NavigationLink {
                         BmiDataChartView()
                     } label: {
-                        Text("BMI History Chart")
+                        HStack {
+                            Image(systemName: "chart.xyaxis.line")
+                            Text("BMI History Chart")
+                        }
                     }
                 }
 
@@ -44,13 +52,19 @@ struct SettingsView: View {
                     NavigationLink {
                         BaiDataView()
                     } label: {
-                        Text("Show my Bai's")
+                        HStack {
+                            Image(systemName: "list.clipboard")
+                            Text("Show my Bai's")
+                        }
                     }
 
                     NavigationLink {
                         BaiDataChartView()
                     } label: {
-                        Text("BAI History Chart")
+                        HStack {
+                            Image(systemName: "chart.xyaxis.line")
+                            Text("BAI History Chart")
+                        }
                     }
                 }
 
@@ -58,7 +72,10 @@ struct SettingsView: View {
                     Button {
                         showBMIDeleteAlert = true
                     } label: {
-                        Text("Delete all BMI's")
+                        HStack {
+                            Image(systemName: "trash")
+                            Text("Delete all BMI's")
+                        }
                     }
                     .foregroundColor(.red)
                     .alert(isPresented: $showBMIDeleteAlert) {
@@ -79,7 +96,10 @@ struct SettingsView: View {
                     Button {
                         showDiaryDeleteAlert = true
                     } label: {
-                        Text("Delete all Diaries")
+                        HStack {
+                            Image(systemName: "trash")
+                            Text("Delete all Diaries")
+                        }
                     }
                     .foregroundColor(.red)
                     .alert(isPresented: $showDiaryDeleteAlert) {
@@ -100,7 +120,10 @@ struct SettingsView: View {
                     Button {
                         showBAIDeleteAlert = true
                     } label: {
-                        Text("Delete all BAI's")
+                        HStack {
+                            Image(systemName: "trash")
+                            Text("Delete all BAI's")
+                        }
                     }
                     .foregroundColor(.red)
                     .alert(isPresented: $showBAIDeleteAlert) {
@@ -116,6 +139,20 @@ struct SettingsView: View {
                                 }
                             })
                         )
+                    }
+                }
+
+                Section {
+                    Button {
+                        showMailSheet = true
+                    } label: {
+                        HStack {
+                            Image(systemName: "mail")
+                            Text("Contact the Support")
+                        }
+                    }
+                    .sheet(isPresented: $showMailSheet) {
+                        SendMaillView()
                     }
                 }
             }

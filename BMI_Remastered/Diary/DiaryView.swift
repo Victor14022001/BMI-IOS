@@ -14,6 +14,7 @@ struct DiaryView: View {
     @State private var title: String = ""
     @State private var detail: String = ""
     let lineHeight: CGFloat = 330
+
     var body: some View {
         NavigationView {
             Form {
@@ -39,7 +40,10 @@ struct DiaryView: View {
                     NavigationLink {
                         DiaryDataView()
                     } label: {
-                        Text("Show my Diaries")
+                        HStack {
+                            Image(systemName: "bookmark")
+                            Text("Show my Diaries")
+                        }
                     }
                 }
                 .navigationTitle("Today's Diary: \(title)")

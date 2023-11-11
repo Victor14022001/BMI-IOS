@@ -11,6 +11,7 @@ import SwiftData
 
 struct BmiDataChartView: View {
     @Query private var datas: [BMIData]
+    @Environment(\.modelContext) var bmiContext
 
     var body: some View {
         VStack {
@@ -35,12 +36,18 @@ struct BmiDataChartView: View {
                         Text(data.date.formatted(date: .complete, time: .omitted))
                     }
                 }
+                .onDelete { indexSet in
+                    for index in indexSet {
+                        let deleteData = datas[index]
+                        bmiContext.delete(deleteData)
+                    }
+                }
             }
             .navigationTitle("BMI History")
         }
     }
 }
 
-    #Preview {
-        BmiDataChartView()
-    }
+#Preview {
+    BmiDataChartView()
+}

@@ -11,11 +11,10 @@ import SwiftData
 struct ContentView: View {
     @FocusState private var bodyDataFields: Bool
     @ObservedObject var viewModel: BmiViewModel
+    @Query private var datas: [BMIData]
+    @Environment(\.modelContext) var context
 
     @State private var showAlert = false
-
-    @Environment(\.modelContext) var context
-    @Query private var datas: [BMIData]
 
     var body: some View {
         NavigationView {
@@ -45,7 +44,11 @@ struct ContentView: View {
                         viewModel.calculateBMI()
                         showAlert = true
                     } label: {
-                        Text("Calculate BMI")
+                        HStack {
+                            Image(systemName: "plus.forwardslash.minus")
+                            Text("Calculate BMI")
+
+                        }
                     }
                     .disabled(viewModel.bodyHeight.isEmpty || viewModel.bodyWeight.isEmpty)
                 }
@@ -55,14 +58,20 @@ struct ContentView: View {
                         NavigationLink {
                             MeaningOfBMIView()
                         } label: {
-                            Text("Meaning of my BMI")
+                            HStack {
+                                Image(systemName: "lightbulb.min")
+                                Text("Meaning of my BMI")
+                            }
                         }
                     }
 
                     NavigationLink {
                         IdealweightView(viewModel: viewModel)
                     } label: {
-                        Text("Calculate my idealweight")
+                        HStack {
+                            Image(systemName: "plus.forwardslash.minus")
+                            Text("Calculate my idealweight")
+                        }
                     }
                     .onAppear(perform: {
                         viewModel.calculateIdealWeight()
@@ -71,13 +80,19 @@ struct ContentView: View {
                     NavigationLink {
                         BmiChartView(viewModel)
                     } label: {
-                        Text("Look at your BMI at a Chart")
+                        HStack {
+                            Image(systemName: "chart.bar.xaxis")
+                            Text("Look at your BMI at a Chart")
+                        }
                     }
 
                     NavigationLink {
                         BAIView(viewModel: viewModel)
                     } label: {
-                        Text("Calculate your BAI")
+                        HStack {
+                            Image(systemName: "plus.forwardslash.minus")
+                            Text("Calculate your BAI")
+                        }
                     }
                 }
             }
