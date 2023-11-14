@@ -20,6 +20,7 @@
 		562471C12AF8F3B700409F29 /* BaiDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562471C02AF8F3B700409F29 /* BaiDataView.swift */; };
 		563C8F4E2AB711AF0094C985 /* MeaningBAIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563C8F4D2AB711AF0094C985 /* MeaningBAIView.swift */; };
 		5645A0782AF958DE00B6BC87 /* DiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5645A0772AF958DE00B6BC87 /* DiaryView.swift */; };
+		564685BF2B00EC250093E403 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 564685BE2B00EC250093E403 /* LaunchScreen.storyboard */; };
 		567073DB2AE952A0002AF246 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 567073DA2AE952A0002AF246 /* Localizable.xcstrings */; };
 		5676A54C2AC4B6CC008AAB85 /* MyTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5676A54B2AC4B6CC008AAB85 /* MyTabView.swift */; };
 		5676A5502AC4C30E008AAB85 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5676A54F2AC4C30E008AAB85 /* SettingsView.swift */; };
@@ -45,6 +46,8 @@
 		562471C02AF8F3B700409F29 /* BaiDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiDataView.swift; sourceTree = "<group>"; };
 		563C8F4D2AB711AF0094C985 /* MeaningBAIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeaningBAIView.swift; sourceTree = "<group>"; };
 		5645A0772AF958DE00B6BC87 /* DiaryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiaryView.swift; sourceTree = "<group>"; };
+		564685B92B00E8550093E403 /* BMI-Remastered-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "BMI-Remastered-Info.plist"; sourceTree = SOURCE_ROOT; };
+		564685BE2B00EC250093E403 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		567073DA2AE952A0002AF246 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		5676A54B2AC4B6CC008AAB85 /* MyTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabView.swift; sourceTree = "<group>"; };
 		5676A54F2AC4C30E008AAB85 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -88,6 +91,14 @@
 				56202D6E2AFEEB24002D2A84 /* SendMaillView.swift */,
 			);
 			path = Mail;
+			sourceTree = "<group>";
+		};
+		56448CD32B001DAE006A6735 /* Launch Screen */ = {
+			isa = PBXGroup;
+			children = (
+				564685BE2B00EC250093E403 /* LaunchScreen.storyboard */,
+			);
+			path = "Launch Screen";
 			sourceTree = "<group>";
 		};
 		5649D1432AE410C7000D8CD9 /* Settings */ = {
@@ -159,7 +170,9 @@
 		56ABFA462AB23807005D7E49 /* BMI_Remastered */ = {
 			isa = PBXGroup;
 			children = (
+				564685B92B00E8550093E403 /* BMI-Remastered-Info.plist */,
 				56ABFA472AB23807005D7E49 /* Bmi_new.swift */,
+				56448CD32B001DAE006A6735 /* Launch Screen */,
 				569B43612AF1A242005AE67C /* Diary */,
 				564A05962AE94B7000D0DB15 /* Translations */,
 				5649D1432AE410C7000D8CD9 /* Settings */,
@@ -262,6 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				56ABFA4F2AB23808005D7E49 /* Preview Assets.xcassets in Resources */,
+				564685BF2B00EC250093E403 /* LaunchScreen.storyboard in Resources */,
 				56ABFA4C2AB23808005D7E49 /* Assets.xcassets in Resources */,
 				567073DB2AE952A0002AF246 /* Localizable.xcstrings in Resources */,
 			);
@@ -449,11 +463,13 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "BMI-Remastered-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = HealthMetrics;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
@@ -485,11 +501,13 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "BMI-Remastered-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = HealthMetrics;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
