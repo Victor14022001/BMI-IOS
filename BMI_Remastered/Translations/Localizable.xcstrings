@@ -620,6 +620,24 @@
         }
       }
     },
+    "Export BAI" : {
+
+    },
+    "Export Bodydetails to PDF" : {
+
+    },
+    "Export both" : {
+
+    },
+    "Export Data to PDF" : {
+
+    },
+    "Exprt BMI" : {
+
+    },
+    "Exprt Bodydetails to PDF" : {
+
+    },
     "Female" : {
       "extractionState" : "stale",
       "localizations" : {

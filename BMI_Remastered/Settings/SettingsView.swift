@@ -20,6 +20,8 @@ struct SettingsView: View {
     @State private var showBAIDeleteAlert = false
 
     @State private var showMailSheet = false
+    
+    @State private var showPDFDialog = false
 
     var body: some View {
         NavigationView {
@@ -139,6 +141,24 @@ struct SettingsView: View {
                                 }
                             })
                         )
+                    }
+                }
+
+                Section {
+                    Button {
+                        showPDFDialog = true
+                    } label: {
+                        HStack {
+                            Image(systemName: "square.and.arrow.up")
+                            Text("Export Data to PDF")
+                        }
+                    }
+                    .confirmationDialog("Export Bodydetails to PDF", isPresented: $showPDFDialog) {
+                        Button("Exprt BMI") { }
+                        Button("Export BAI") { }
+                        Button("Export both") { }
+                    } message: {
+                        Text("Exprt Bodydetails to PDF")
                     }
                 }
 
