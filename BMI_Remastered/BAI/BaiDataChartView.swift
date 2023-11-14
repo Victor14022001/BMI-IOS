@@ -10,8 +10,8 @@ import SwiftData
 import Charts
 
 struct BaiDataChartView: View {
+    @Query(sort: \BAIData.date) private var datas: [BAIData]
     @Environment(\.modelContext) var baiContext
-    @Query private var datas: [BAIData]
 
     var body: some View {
         VStack {

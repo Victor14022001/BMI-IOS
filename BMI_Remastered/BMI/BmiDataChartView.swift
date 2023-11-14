@@ -10,7 +10,7 @@ import Charts
 import SwiftData
 
 struct BmiDataChartView: View {
-    @Query private var datas: [BMIData]
+    @Query(sort: \BMIData.date) private var datas: [BMIData]
     @Environment(\.modelContext) var bmiContext
 
     var body: some View {
