@@ -9,7 +9,7 @@ import SwiftUI
 import SwiftData
 
 @main
-struct Bmi_new: App {
+   struct Bmi_new: App {
 
     var body: some Scene {
         WindowGroup {

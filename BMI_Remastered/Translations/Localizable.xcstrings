@@ -632,9 +632,6 @@
     "Export Data to PDF" : {
 
     },
-    "Exprt BMI" : {
-
-    },
     "Exprt Bodydetails to PDF" : {
 
     },
@@ -1151,6 +1148,9 @@
           }
         }
       }
+    },
+    "Wxport BMI" : {
+
     },
     "Yes" : {
       "localizations" : {

@@ -154,7 +154,7 @@ struct SettingsView: View {
                         }
                     }
                     .confirmationDialog("Export Bodydetails to PDF", isPresented: $showPDFDialog) {
-                        Button("Exprt BMI") { }
+                        Button("Wxport BMI") { }
                         Button("Export BAI") { }
                         Button("Export both") { }
                     } message: {

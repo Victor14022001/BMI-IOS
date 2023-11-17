@@ -12,7 +12,7 @@ struct MyTabView: View {
 
     var body: some View {
         TabView {
-            ContentView(viewModel: viewModel)
+            PDFBmiView(viewModel: viewModel)
                 .tabItem {
                     Label("Home", systemImage: "house")
                 }

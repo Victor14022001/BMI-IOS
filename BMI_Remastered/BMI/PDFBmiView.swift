@@ -8,7 +8,7 @@
 import SwiftUI
 import SwiftData
 
-struct ContentView: View {
+struct PDFBmiView: View {
     @FocusState private var bodyDataFields: Bool
     @ObservedObject var viewModel: BmiViewModel
     @Query private var datas: [BMIData]
@@ -124,6 +124,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(viewModel: .init())
+        PDFBmiView(viewModel: .init())
     }
 }
