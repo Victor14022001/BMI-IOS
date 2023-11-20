@@ -620,19 +620,13 @@
         }
       }
     },
-    "Export BAI" : {
-
-    },
-    "Export Bodydetails to PDF" : {
-
-    },
-    "Export both" : {
+    "Export BMI to PDF" : {
 
     },
     "Export Data to PDF" : {
 
     },
-    "Exprt Bodydetails to PDF" : {
+    "Export to PDF" : {
 
     },
     "Female" : {
@@ -923,6 +917,9 @@
         }
       }
     },
+    "PDF erstellen" : {
+
+    },
     "People with a BMI below 18.5 are considered underweight. This may indicate malnutrition or other health problems." : {
       "localizations" : {
         "de" : {
@@ -1148,9 +1145,6 @@
           }
         }
       }
-    },
-    "Wxport BMI" : {
-
     },
     "Yes" : {
       "localizations" : {

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4F17B9C02AC61A2B00E3C849 /* AnimatedNumber in Frameworks */ = {isa = PBXBuildFile; productRef = 4F17B9BF2AC61A2B00E3C849 /* AnimatedNumber */; };
 		560515AA2AB60EDB0059DD4E /* BmiChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560515A92AB60EDB0059DD4E /* BmiChartView.swift */; };
 		560515AC2AB64E820059DD4E /* BAIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560515AB2AB64E820059DD4E /* BAIView.swift */; };
 		5614759A2AC87D1600B405CE /* BMIDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561475992AC87D1600B405CE /* BMIDataView.swift */; };
@@ -18,8 +17,8 @@
 		5623AE5C2AF6B859000102AA /* DiaryDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5623AE5B2AF6B859000102AA /* DiaryDataView.swift */; };
 		5623AE602AF6D6B1000102AA /* DiaryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5623AE5F2AF6D6B1000102AA /* DiaryDetailView.swift */; };
 		562471C12AF8F3B700409F29 /* BaiDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562471C02AF8F3B700409F29 /* BaiDataView.swift */; };
-		563159312B07F572006E01A1 /* PDFCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563159302B07F572006E01A1 /* PDFCreator.swift */; };
-		563159332B07F5F3006E01A1 /* PDFBmiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563159322B07F5F3006E01A1 /* PDFBmiView.swift */; };
+		563159312B07F572006E01A1 /* BmiPDFCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563159302B07F572006E01A1 /* BmiPDFCreator.swift */; };
+		563159332B07F5F3006E01A1 /* BmiPDFView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563159322B07F5F3006E01A1 /* BmiPDFView.swift */; };
 		563C8F4E2AB711AF0094C985 /* MeaningBAIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563C8F4D2AB711AF0094C985 /* MeaningBAIView.swift */; };
 		5645A0782AF958DE00B6BC87 /* DiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5645A0772AF958DE00B6BC87 /* DiaryView.swift */; };
 		564685BF2B00EC250093E403 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 564685BE2B00EC250093E403 /* LaunchScreen.storyboard */; };
@@ -32,6 +31,7 @@
 		56ABFA4C2AB23808005D7E49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56ABFA4B2AB23808005D7E49 /* Assets.xcassets */; };
 		56ABFA4F2AB23808005D7E49 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56ABFA4E2AB23808005D7E49 /* Preview Assets.xcassets */; };
 		56ABFA562AB2384C005D7E49 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56ABFA552AB2384C005D7E49 /* ViewModel.swift */; };
+		56BFBB402B081008005F2721 /* ChoicePDFView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BFBB3F2B081008005F2721 /* ChoicePDFView.swift */; };
 		56E75B3E2AB38E44004E915A /* IdealweightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E75B3D2AB38E44004E915A /* IdealweightView.swift */; };
 /* End PBXBuildFile section */
 
@@ -46,8 +46,8 @@
 		5623AE5B2AF6B859000102AA /* DiaryDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryDataView.swift; sourceTree = "<group>"; };
 		5623AE5F2AF6D6B1000102AA /* DiaryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryDetailView.swift; sourceTree = "<group>"; };
 		562471C02AF8F3B700409F29 /* BaiDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiDataView.swift; sourceTree = "<group>"; };
-		563159302B07F572006E01A1 /* PDFCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFCreator.swift; sourceTree = "<group>"; };
-		563159322B07F5F3006E01A1 /* PDFBmiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFBmiView.swift; sourceTree = "<group>"; };
+		563159302B07F572006E01A1 /* BmiPDFCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BmiPDFCreator.swift; sourceTree = "<group>"; };
+		563159322B07F5F3006E01A1 /* BmiPDFView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BmiPDFView.swift; sourceTree = "<group>"; };
 		563C8F4D2AB711AF0094C985 /* MeaningBAIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeaningBAIView.swift; sourceTree = "<group>"; };
 		5645A0772AF958DE00B6BC87 /* DiaryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiaryView.swift; sourceTree = "<group>"; };
 		564685B92B00E8550093E403 /* BMI-Remastered-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "BMI-Remastered-Info.plist"; sourceTree = SOURCE_ROOT; };
@@ -62,6 +62,7 @@
 		56ABFA4B2AB23808005D7E49 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		56ABFA4E2AB23808005D7E49 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		56ABFA552AB2384C005D7E49 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		56BFBB3F2B081008005F2721 /* ChoicePDFView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoicePDFView.swift; sourceTree = "<group>"; };
 		56E75B3D2AB38E44004E915A /* IdealweightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdealweightView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -70,7 +71,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F17B9C02AC61A2B00E3C849 /* AnimatedNumber in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,8 +204,9 @@
 		56B674782B0633650052A8B8 /* PDF */ = {
 			isa = PBXGroup;
 			children = (
-				563159302B07F572006E01A1 /* PDFCreator.swift */,
-				563159322B07F5F3006E01A1 /* PDFBmiView.swift */,
+				563159302B07F572006E01A1 /* BmiPDFCreator.swift */,
+				563159322B07F5F3006E01A1 /* BmiPDFView.swift */,
+				56BFBB3F2B081008005F2721 /* ChoicePDFView.swift */,
 			);
 			path = PDF;
 			sourceTree = "<group>";
@@ -240,7 +241,6 @@
 			);
 			name = BMI_Remastered;
 			packageProductDependencies = (
-				4F17B9BF2AC61A2B00E3C849 /* AnimatedNumber */,
 			);
 			productName = "BMI_ 2";
 			productReference = 56ABFA442AB23807005D7E49 /* BMI_Remastered.app */;
@@ -326,15 +326,16 @@
 			files = (
 				560515AA2AB60EDB0059DD4E /* BmiChartView.swift in Sources */,
 				56ABFA4A2AB23807005D7E49 /* PDFBmiView.swift in Sources */,
+				56BFBB402B081008005F2721 /* ChoicePDFView.swift in Sources */,
 				5614759D2AC8B2DB00B405CE /* BmiDataChartView.swift in Sources */,
 				56ABFA562AB2384C005D7E49 /* ViewModel.swift in Sources */,
 				560515AC2AB64E820059DD4E /* BAIView.swift in Sources */,
 				5676A5502AC4C30E008AAB85 /* SettingsView.swift in Sources */,
 				5623AE5C2AF6B859000102AA /* DiaryDataView.swift in Sources */,
 				56202D6D2AFEE241002D2A84 /* MailView.swift in Sources */,
-				563159332B07F5F3006E01A1 /* PDFBmiView.swift in Sources */,
+				563159332B07F5F3006E01A1 /* BmiPDFView.swift in Sources */,
 				563C8F4E2AB711AF0094C985 /* MeaningBAIView.swift in Sources */,
-				563159312B07F572006E01A1 /* PDFCreator.swift in Sources */,
+				563159312B07F572006E01A1 /* BmiPDFCreator.swift in Sources */,
 				56ABFA482AB23807005D7E49 /* Bmi_new.swift in Sources */,
 				562471C12AF8F3B700409F29 /* BaiDataView.swift in Sources */,
 				5614759A2AC87D1600B405CE /* BMIDataView.swift in Sources */,
@@ -576,14 +577,6 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		4F17B9BF2AC61A2B00E3C849 /* AnimatedNumber */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 4F17B9BE2AC61A2B00E3C849 /* XCRemoteSwiftPackageReference "AnimatedNumber" */;
-			productName = AnimatedNumber;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 56ABFA3C2AB23807005D7E49 /* Project object */;
 }

@@ -11,7 +11,7 @@ import SwiftData
 struct SettingsView: View {
     @ObservedObject var viewModel: BmiViewModel
 
-    @Environment(\.modelContext) var context
+    @Environment(\.modelContext) var bmiContext
     @Environment(\.modelContext) var diaryContext
     @Environment(\.modelContext) var baiContext
 
@@ -20,8 +20,6 @@ struct SettingsView: View {
     @State private var showBAIDeleteAlert = false
 
     @State private var showMailSheet = false
-    
-    @State private var showPDFDialog = false
 
     var body: some View {
         NavigationView {
@@ -87,7 +85,7 @@ struct SettingsView: View {
                             primaryButton: .destructive(Text("Cancel")),
                             secondaryButton: .default(Text("Yes"), action: {
                                 do {
-                                    try context.delete(model: BMIData.self)
+                                    try bmiContext.delete(model: BMIData.self)
                                 } catch {
                                     print("Failed to delete data")
                                 }
@@ -145,20 +143,13 @@ struct SettingsView: View {
                 }
 
                 Section {
-                    Button {
-                        showPDFDialog = true
+                    NavigationLink {
+                        ChoicePDFView()
                     } label: {
                         HStack {
                             Image(systemName: "square.and.arrow.up")
                             Text("Export Data to PDF")
                         }
-                    }
-                    .confirmationDialog("Export Bodydetails to PDF", isPresented: $showPDFDialog) {
-                        Button("Wxport BMI") { }
-                        Button("Export BAI") { }
-                        Button("Export both") { }
-                    } message: {
-                        Text("Exprt Bodydetails to PDF")
                     }
                 }
 
