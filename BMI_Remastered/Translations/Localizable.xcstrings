@@ -620,6 +620,9 @@
         }
       }
     },
+    "Export BAI to PDF" : {
+
+    },
     "Export BMI to PDF" : {
 
     },
@@ -916,9 +919,6 @@
           }
         }
       }
-    },
-    "PDF erstellen" : {
-
     },
     "People with a BMI below 18.5 are considered underweight. This may indicate malnutrition or other health problems." : {
       "localizations" : {

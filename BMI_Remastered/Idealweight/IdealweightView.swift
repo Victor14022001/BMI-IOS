@@ -41,14 +41,15 @@ struct IdealweightView: View {
             Section {
                 HStack {
                     Text("Your IdealWeight:")
+
                     Spacer()
+
                     Text("\(viewModel.yourIdealWeightString)")
                 }
             }
         }
         .navigationTitle("Your Idealweight")
         .navigationBarTitleDisplayMode(.inline)
-
     }
 }
 

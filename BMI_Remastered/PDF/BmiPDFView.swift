@@ -6,9 +6,12 @@
 //
 
 import SwiftUI
+import SwiftData
 import PDFKit
 
 struct BmiPDFView: View {
+    @Query(sort: \BMIData.date) private var datas: [BMIData]
+
     var body: some View {
         VStack {
             Button("PDF erstellen") {
@@ -18,7 +21,7 @@ struct BmiPDFView: View {
     }
 
     func showPDF() {
-    let pdfView = BmiPDFCreator.createPDF()
+        let pdfView = BmiPDFCreator.createPDF(datas: datas)
 
     // PDFView in einem UIViewController platzieren (optional)
     let pdfViewController = UIViewController()
