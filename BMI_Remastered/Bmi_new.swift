@@ -12,7 +12,7 @@ import SwiftData
 struct Bmi_new: App {
     var body: some Scene {
         WindowGroup {
-            MyTabView()
+            MyTabViewNew()
         }
         .modelContainer(for: [BMIData.self, Diary.self, BAIData.self])
     }

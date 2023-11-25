@@ -51,7 +51,6 @@ class BaiPDFCreator {
         // Draw the image
         image!.draw(in: imageRect)
 
-
         // Daten aus der Datenbank anzeigen
         let dataText = "Daten aus der BMI Datenbank"
         let dataTextAttributes: [NSAttributedString.Key: Any] = [

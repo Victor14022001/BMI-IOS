@@ -439,7 +439,14 @@
       }
     },
     "Contact the Support" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kontaktiere den Support"
+          }
+        }
+      }
     },
     "Darkmode" : {
       "localizations" : {
@@ -545,7 +552,14 @@
       }
     },
     "Device:" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gerät:"
+          }
+        }
+      }
     },
     "Diary" : {
       "localizations" : {
@@ -624,10 +638,24 @@
 
     },
     "Export BMI to PDF" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Exportiere deinen BMI in ein PDF"
+          }
+        }
+      }
     },
     "Export Data to PDF" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Exportiere deine Daten in ein PDF"
+          }
+        }
+      }
     },
     "Export to PDF" : {
 
@@ -888,7 +916,14 @@
       }
     },
     "OS and Version:" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OS und Version:"
+          }
+        }
+      }
     },
     "Overview" : {
       "localizations" : {
@@ -941,7 +976,14 @@
       }
     },
     "Please send us an email if you have any problems or ideas for new features." : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sende uns bitte eine Email, wenn du Probleme oder Ideen für neue Features hast."
+          }
+        }
+      }
     },
     "Save" : {
       "localizations" : {
@@ -974,7 +1016,14 @@
       }
     },
     "Send Mail" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "sende Email"
+          }
+        }
+      }
     },
     "Settings" : {
       "localizations" : {
