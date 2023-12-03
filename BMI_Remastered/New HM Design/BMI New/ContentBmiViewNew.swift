@@ -14,72 +14,72 @@ struct ContentBmiViewNew: View {
     @ObservedObject var viewModel: BmiViewModel
     @Query private var datas: [BMIData]
     @Environment(\.modelContext) var context
-
+    
     @State private var showAlert = false
-
+    @State private var showMeaningOfBmiSheet = false
+    @State private var showBmiDataChartSheet = false
+    @State private var showIdealweightSheet = false
+    
     var body: some View {
-            NavigationView {
-                ZStack {
-                    Color("appBlue")
-                        .edgesIgnoringSafeArea(.all)
-                List {
-                    Section("Your Data") {
-                        TextField("Your Bodyheight", text: $viewModel.bodyHeight)
-                            .keyboardType(.decimalPad)
-                            .focused($bodyDataFields)
-                        
-                        TextField("Your Bodyweight", text: $viewModel.bodyWeight)
-                            .keyboardType(.decimalPad)
-                            .focused($bodyDataFields)
+        NavigationView {
+            ZStack {
+                Color("appBlue")
+                    .edgesIgnoringSafeArea(.all)
+                VStack(spacing: 20) {
+                    TextField("Your Bodyheight", text: $viewModel.bodyHeight)
+                        .keyboardType(.decimalPad)
+                        .focused($bodyDataFields)
+                        .modifier(TextFieldStyle())
+                    TextField("Your Bodyweight", text: $viewModel.bodyWeight)
+                        .keyboardType(.decimalPad)
+                        .focused($bodyDataFields)
+                        .modifier(TextFieldStyle())
+
+                    HStack {
+                        Text("Date")
+                        Spacer()
+                        Text("\(Date.now.formatted(date: .complete, time: .omitted))")
                     }
-                    
-                    Section("This Date will be saved") {
+                    .padding()
+                    .frame(maxWidth: .infinity)
+                    .foregroundColor(Color("appOrange"))
+                    .font(.system(size: 24))
+
+                    Button {
+                        viewModel.calculateBMI()
+                        showAlert = true
+                    } label: {
                         HStack {
-                            Text("Date")
-                            
-                            Spacer()
-                            
-                            Text("\(Date.now.formatted(date: .complete, time: .omitted))")
+                            Image(systemName: "plus.forwardslash.minus")
+                            Text("Calculate BMI")
                         }
                     }
-                    
-                    Section {
-                        Button {
-                            viewModel.calculateBMI()
-                            showAlert = true
-                        } label: {
-                            HStack {
-                                Image(systemName: "plus.forwardslash.minus")
-                                Text("Calculate BMI")
-                                
+                    .modifier(ButtonStyle())
+                    .disabled(viewModel.bodyHeight.isEmpty || viewModel.bodyWeight.isEmpty)
+
+                    Menu("More Informations") {
+                        Menu("BMI") {
+                            Button("Meaning of my BMI", systemImage: "lightbulb.min") {
+                                showMeaningOfBmiSheet = true
+                            }
+                            Button("Bmi History Chart", systemImage: "chart.xyaxis.line") {
+                                showBmiDataChartSheet = true
                             }
                         }
-                        .disabled(viewModel.bodyHeight.isEmpty || viewModel.bodyWeight.isEmpty)
+                        Menu("BAI") {
+                            Button("Bai Test") { }
+                            Button("Bai Test") { }
+                        }
+                        Button("Idealweight", systemImage: "plus.forwardslash.minu") {
+                            showIdealweightSheet = true
+                        }
                     }
-                    
+                    .modifier(ButtonStyle())
+
                     if viewModel.yourBmi != nil {
-                        Section("More nice things to know") {
-                            NavigationLink {
-                                MeaningOfBMIView()
-                            } label: {
-                                HStack {
-                                    Image(systemName: "lightbulb.min")
-                                    Text("Meaning of my BMI")
-                                }
-                            }
-                        }
                         
-                        NavigationLink {
-                            IdealweightView(viewModel: viewModel)
-                        } label: {
-                            HStack {
-                                Image(systemName: "plus.forwardslash.minus")
-                                Text("Calculate my idealweight")
-                            }
-                        }
-                        .onAppear(perform: {
-                            viewModel.calculateIdealWeight()
-                        })
+
+                        
                         
                         NavigationLink {
                             BmiChartView(viewModel)
@@ -89,7 +89,8 @@ struct ContentBmiViewNew: View {
                                 Text("Look at your BMI at a Chart")
                             }
                         }
-                        
+                        .modifier(ButtonStyle())
+ 
                         NavigationLink {
                             BAIView(viewModel: viewModel)
                         } label: {
@@ -98,7 +99,9 @@ struct ContentBmiViewNew: View {
                                 Text("Calculate your BAI")
                             }
                         }
+                        .modifier(ButtonStyle())
                     }
+                    Spacer()
                 }
                 .toolbar {
                     ToolbarItemGroup(placement: .keyboard) {
@@ -110,7 +113,25 @@ struct ContentBmiViewNew: View {
                         }
                     }
                 }
+                .padding()
                 .navigationTitle("BMI \(viewModel.yourBmiString)")
+                .preferredColorScheme(.dark)
+  
+                .sheet(isPresented: $showMeaningOfBmiSheet) {
+                    MeaningOfBmiNewView()
+                    }
+                
+                .sheet(isPresented: $showBmiDataChartSheet) {
+                    BmiDataChartNewView()
+                    }
+                
+                .sheet(isPresented: $showIdealweightSheet) {
+                    IdealweightNewView(viewModel: viewModel)
+                        .onAppear(perform: {
+                            viewModel.calculateIdealWeight()
+                        })
+                }
+
                 .alert(isPresented: $showAlert) {
                     Alert(
                         title: Text("Save BMI"),

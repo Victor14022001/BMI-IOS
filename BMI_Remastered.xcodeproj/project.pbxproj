@@ -27,6 +27,10 @@
 		5676A54C2AC4B6CC008AAB85 /* MyTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5676A54B2AC4B6CC008AAB85 /* MyTabView.swift */; };
 		5676A5502AC4C30E008AAB85 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5676A54F2AC4C30E008AAB85 /* SettingsView.swift */; };
 		5684ACC02B123EDA004D6EDD /* ContentBmiViewNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5684ACBF2B123EDA004D6EDD /* ContentBmiViewNew.swift */; };
+		568D4ADF2B1BA5F9007DF35C /* CustomModifierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568D4ADE2B1BA5F9007DF35C /* CustomModifierView.swift */; };
+		568D4AE32B1BF9B6007DF35C /* MeaningOfBmiNewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568D4AE22B1BF9B6007DF35C /* MeaningOfBmiNewView.swift */; };
+		568D4AE52B1C9B98007DF35C /* BmiDataChartNewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568D4AE42B1C9B98007DF35C /* BmiDataChartNewView.swift */; };
+		568D4AE82B1D1F80007DF35C /* IdealweightNewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568D4AE72B1D1F80007DF35C /* IdealweightNewView.swift */; };
 		56908C5C2AEB23BF00F03DF3 /* MeaningOfBMIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56908C5B2AEB23BF00F03DF3 /* MeaningOfBMIView.swift */; };
 		56ABFA482AB23807005D7E49 /* Bmi_new.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56ABFA472AB23807005D7E49 /* Bmi_new.swift */; };
 		56ABFA4A2AB23807005D7E49 /* ContentBmiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56ABFA492AB23807005D7E49 /* ContentBmiView.swift */; };
@@ -60,6 +64,10 @@
 		5676A54B2AC4B6CC008AAB85 /* MyTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabView.swift; sourceTree = "<group>"; };
 		5676A54F2AC4C30E008AAB85 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		5684ACBF2B123EDA004D6EDD /* ContentBmiViewNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentBmiViewNew.swift; sourceTree = "<group>"; };
+		568D4ADE2B1BA5F9007DF35C /* CustomModifierView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomModifierView.swift; sourceTree = "<group>"; };
+		568D4AE22B1BF9B6007DF35C /* MeaningOfBmiNewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeaningOfBmiNewView.swift; sourceTree = "<group>"; };
+		568D4AE42B1C9B98007DF35C /* BmiDataChartNewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BmiDataChartNewView.swift; sourceTree = "<group>"; };
+		568D4AE72B1D1F80007DF35C /* IdealweightNewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdealweightNewView.swift; sourceTree = "<group>"; };
 		56908C5B2AEB23BF00F03DF3 /* MeaningOfBMIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeaningOfBMIView.swift; sourceTree = "<group>"; };
 		56ABFA442AB23807005D7E49 /* BMI_Remastered.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BMI_Remastered.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56ABFA472AB23807005D7E49 /* Bmi_new.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bmi_new.swift; sourceTree = "<group>"; };
@@ -153,6 +161,8 @@
 		5649EE412B0D51D000A15AF5 /* New HM Design */ = {
 			isa = PBXGroup;
 			children = (
+				568D4AE62B1D1F5D007DF35C /* Idealweight New */,
+				568D4ADB2B1BA20E007DF35C /* Modifier */,
 				5684ACBE2B123E2E004D6EDD /* BMI New */,
 				5649EE452B0D57ED00A15AF5 /* Settings New */,
 				5649EE422B0D568900A15AF5 /* TabView New */,
@@ -196,8 +206,26 @@
 			isa = PBXGroup;
 			children = (
 				5684ACBF2B123EDA004D6EDD /* ContentBmiViewNew.swift */,
+				568D4AE22B1BF9B6007DF35C /* MeaningOfBmiNewView.swift */,
+				568D4AE42B1C9B98007DF35C /* BmiDataChartNewView.swift */,
 			);
 			path = "BMI New";
+			sourceTree = "<group>";
+		};
+		568D4ADB2B1BA20E007DF35C /* Modifier */ = {
+			isa = PBXGroup;
+			children = (
+				568D4ADE2B1BA5F9007DF35C /* CustomModifierView.swift */,
+			);
+			path = Modifier;
+			sourceTree = "<group>";
+		};
+		568D4AE62B1D1F5D007DF35C /* Idealweight New */ = {
+			isa = PBXGroup;
+			children = (
+				568D4AE72B1D1F80007DF35C /* IdealweightNewView.swift */,
+			);
+			path = "Idealweight New";
 			sourceTree = "<group>";
 		};
 		569B43612AF1A242005AE67C /* Diary */ = {
@@ -373,10 +401,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				568D4ADF2B1BA5F9007DF35C /* CustomModifierView.swift in Sources */,
 				560515AA2AB60EDB0059DD4E /* BmiChartView.swift in Sources */,
 				56ABFA4A2AB23807005D7E49 /* ContentBmiView.swift in Sources */,
 				56BFBB402B081008005F2721 /* ChoicePDFView.swift in Sources */,
 				5649EE442B0D56D800A15AF5 /* MyTabViewNew.swift in Sources */,
+				568D4AE32B1BF9B6007DF35C /* MeaningOfBmiNewView.swift in Sources */,
 				5614759D2AC8B2DB00B405CE /* BmiDataChartView.swift in Sources */,
 				56ABFA562AB2384C005D7E49 /* ViewModel.swift in Sources */,
 				560515AC2AB64E820059DD4E /* BAIView.swift in Sources */,
@@ -392,10 +422,12 @@
 				56908C5C2AEB23BF00F03DF3 /* MeaningOfBMIView.swift in Sources */,
 				56202D6F2AFEEB24002D2A84 /* SendMaillView.swift in Sources */,
 				5645A0782AF958DE00B6BC87 /* DiaryView.swift in Sources */,
+				568D4AE82B1D1F80007DF35C /* IdealweightNewView.swift in Sources */,
 				5676A54C2AC4B6CC008AAB85 /* MyTabView.swift in Sources */,
 				56E75B3E2AB38E44004E915A /* IdealweightView.swift in Sources */,
 				5615512B2AF90D30004C8A3F /* BaiDataChartView.swift in Sources */,
 				5649EE472B0D580900A15AF5 /* SettingsViewNew.swift in Sources */,
+				568D4AE52B1C9B98007DF35C /* BmiDataChartNewView.swift in Sources */,
 				5623AE602AF6D6B1000102AA /* DiaryDetailView.swift in Sources */,
 				5684ACC02B123EDA004D6EDD /* ContentBmiViewNew.swift in Sources */,
 			);

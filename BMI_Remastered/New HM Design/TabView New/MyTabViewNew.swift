@@ -33,7 +33,8 @@ struct MyTabViewNew: View {
                 }
         }
         .accentColor(Color("appOrange"))
-        .environment(\.colorScheme, viewModel.isDarkmodeEnabled ? .dark: .light)
+        .preferredColorScheme(.dark)
+       // .environment(\.colorScheme, viewModel.isDarkmodeEnabled ? .dark: .light)
     }
 }
 

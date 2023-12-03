@@ -197,6 +197,9 @@
         }
       }
     },
+    "Bai Test" : {
+
+    },
     "BAI under 8:" : {
       "localizations" : {
         "de" : {
@@ -299,6 +302,9 @@
           }
         }
       }
+    },
+    "Bmi History Chart" : {
+
     },
     "BMI History Chart" : {
       "localizations" : {
@@ -754,6 +760,9 @@
         }
       }
     },
+    "Idealweight" : {
+
+    },
     "If you press 'Yes' all saved BAI's will be deleted" : {
       "localizations" : {
         "de" : {
@@ -844,6 +853,9 @@
           }
         }
       }
+    },
+    "More Informations" : {
+
     },
     "More nice things to know" : {
       "localizations" : {
