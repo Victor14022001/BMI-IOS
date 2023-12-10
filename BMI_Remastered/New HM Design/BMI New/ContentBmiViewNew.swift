@@ -19,9 +19,11 @@ struct ContentBmiViewNew: View {
     @State private var showMeaningOfBmiSheet = false
     @State private var showBmiDataChartSheet = false
     @State private var showIdealweightSheet = false
+    @State private var showBaiSheet = false
+    @State private var showBaiDataChartSheet = false
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ZStack {
                 Color("appBlue")
                     .edgesIgnoringSafeArea(.all)
@@ -67,8 +69,12 @@ struct ContentBmiViewNew: View {
                             }
                         }
                         Menu("BAI") {
-                            Button("Bai Test") { }
-                            Button("Bai Test") { }
+                            Button("BAI", systemImage: "plus.forwardslash.minus") {
+                                showBaiSheet = true
+                            }
+                            Button("Bai History Chart", systemImage: "chart.xyaxis.line") {
+                                showBaiDataChartSheet = true
+                            }
                         }
                         Button("Idealweight", systemImage: "plus.forwardslash.minu") {
                             showIdealweightSheet = true
@@ -77,26 +83,12 @@ struct ContentBmiViewNew: View {
                     .modifier(ButtonStyle())
 
                     if viewModel.yourBmi != nil {
-                        
-
-                        
-                        
                         NavigationLink {
                             BmiChartView(viewModel)
                         } label: {
                             HStack {
                                 Image(systemName: "chart.bar.xaxis")
                                 Text("Look at your BMI at a Chart")
-                            }
-                        }
-                        .modifier(ButtonStyle())
- 
-                        NavigationLink {
-                            BAIView(viewModel: viewModel)
-                        } label: {
-                            HStack {
-                                Image(systemName: "plus.forwardslash.minus")
-                                Text("Calculate your BAI")
                             }
                         }
                         .modifier(ButtonStyle())
@@ -131,6 +123,14 @@ struct ContentBmiViewNew: View {
                             viewModel.calculateIdealWeight()
                         })
                 }
+                
+                .sheet(isPresented: $showBaiSheet) {
+                    BaiNewView(viewModel: BmiViewModel())
+                }
+                
+                .sheet(isPresented: $showBaiDataChartSheet) {
+                    BaiDataChartNewView()
+                    }
 
                 .alert(isPresented: $showAlert) {
                     Alert(

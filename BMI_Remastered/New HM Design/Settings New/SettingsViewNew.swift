@@ -28,49 +28,6 @@ struct SettingsViewNew: View {
 
                 ScrollView {
                     VStack(spacing: 20) {
-                       // Toggle("Darkmode", isOn: $viewModel.isDarkmodeEnabled)
-                           // .modifier(ButtonStyle())
-                        
-                        NavigationLink {
-                            BMIDataView()
-                        } label: {
-                            HStack {
-                                Image(systemName: "list.clipboard")
-                                Text("Show my BMI's")
-                            }
-                        }
-                        .modifier(ButtonStyle())
-                        
-                        NavigationLink {
-                            BmiDataChartView()
-                        } label: {
-                            HStack {
-                                Image(systemName: "chart.xyaxis.line")
-                                Text("BMI History Chart")
-                            }
-                        }
-                        .modifier(ButtonStyle())
-                        
-                        NavigationLink {
-                            BaiDataView()
-                        } label: {
-                            HStack {
-                                Image(systemName: "list.clipboard")
-                                Text("Show my Bai's")
-                            }
-                        }
-                        .modifier(ButtonStyle())
-                        
-                        NavigationLink {
-                            BaiDataChartView()
-                        } label: {
-                            HStack {
-                                Image(systemName: "chart.xyaxis.line")
-                                Text("BAI History Chart")
-                            }
-                        }
-                        .modifier(ButtonStyle())
-                        
                         Button {
                             showBMIDeleteAlert = true
                         } label: {

@@ -177,6 +177,9 @@
         }
       }
     },
+    "Bai History Chart" : {
+
+    },
     "BAI History Chart" : {
       "localizations" : {
         "de" : {
@@ -196,9 +199,6 @@
           }
         }
       }
-    },
-    "Bai Test" : {
-
     },
     "BAI under 8:" : {
       "localizations" : {
@@ -639,6 +639,9 @@
           }
         }
       }
+    },
+    "Enter your Title" : {
+
     },
     "Export BAI to PDF" : {
 
@@ -1096,6 +1099,9 @@
           }
         }
       }
+    },
+    "text here..." : {
+
     },
     "The BAI is an alternative to the BMI, which is calculated based on hip circumference in relation to your height." : {
       "localizations" : {

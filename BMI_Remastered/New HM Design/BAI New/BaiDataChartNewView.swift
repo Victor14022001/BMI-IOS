@@ -1,17 +1,17 @@
 //
-//  BmiDataChartNewView.swift
+//  BaiDataChartNewView.swift
 //  BMI_Remastered
 //
-//  Created by Victor Horn on 03.12.23.
+//  Created by Victor Horn on 04.12.23.
 //
 
 import SwiftUI
-import SwiftData
 import Charts
+import SwiftData
 
-struct BmiDataChartNewView: View {
-    @Query(sort: \BMIData.date) private var datas: [BMIData]
-    @Environment(\.modelContext) var bmiContext
+struct BaiDataChartNewView: View {
+    @Query(sort: \BAIData.date) private var datas: [BAIData]
+    @Environment(\.modelContext) var baiContext
 
     var body: some View {
         NavigationStack {
@@ -20,51 +20,45 @@ struct BmiDataChartNewView: View {
                     .ignoresSafeArea(.all)
                 VStack {
                     Chart {
-                        ForEach(datas) { value in
+                        ForEach(datas) { data in
                             LineMark(
-                                x: .value("Index", value.date),
-                                y: .value("Value", value.dataBmi)
+                                x: .value("Date", data.date),
+                                y: .value("BAI", data.dataBai)
                             )
                         }
                     }
-                    .foregroundColor(Color("appOrange"))
                     .frame(maxWidth: .infinity, maxHeight: 200)
+                    .foregroundColor(Color("appOrange"))
+                    
                     Spacer()
                     
                     List {
                         ForEach(datas) { data in
                             VStack(alignment: .leading) {
-                                Rectangle()
-                                    .frame(height: 2)
-                                    .foregroundColor(.lightbackground)
-
-                                Text("\(data.dataBmi)")
+                                Text("\(data.dataBai)")
                                     .font(.headline)
-                                    .foregroundStyle(Color("appOrange"))
-
+                                
                                 Text(data.date.formatted(date: .complete, time: .omitted))
-                                    .foregroundStyle(Color("appOrange"))
                             }
                             .listRowBackground(Color("appBlue"))
                         }
                         .onDelete { indexSet in
                             for index in indexSet {
                                 let deleteData = datas[index]
-                                bmiContext.delete(deleteData)
+                                baiContext.delete(deleteData)
                             }
                         }
                     }
                     .scrollContentBackground(.hidden)
+                    .navigationTitle("Bai's History Chart")
+                    .navigationBarTitleDisplayMode(.inline)
+                    .preferredColorScheme(.dark)
                 }
-                .padding()
-                .navigationTitle("Bmi History Chart")
-                .navigationBarTitleDisplayMode(.inline)
-                .preferredColorScheme(.dark)
             }
         }
     }
 }
 
-    #Preview {
-        BmiDataChartNewView()
-    }
+#Preview {
+    BaiDataChartNewView()
+}

@@ -27,7 +27,7 @@ struct MyTabViewNew: View {
                     Label("Settings", systemImage: "gearshape")
                 }
 
-            DiaryView()
+            DiaryNewView()
                 .tabItem {
                     Label("Diary", systemImage: "pencil")
                 }

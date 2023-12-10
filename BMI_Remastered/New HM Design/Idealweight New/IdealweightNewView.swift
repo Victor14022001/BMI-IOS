@@ -11,7 +11,7 @@ struct IdealweightNewView: View {
     let viewModel: BmiViewModel
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ZStack {
                 Color("appBlue")
                     .ignoresSafeArea(.all)
@@ -20,42 +20,53 @@ struct IdealweightNewView: View {
                         .foregroundColor(Color("appOrange"))
                         .padding(.bottom, 20)
                     
-                    HStack {
-                        VStack {
+                    Rectangle()
+                        .frame(height: 2)
+                        .foregroundColor(.lightbackground)
+                        .padding(.vertical)
+                    
+                    VStack {
+                        HStack {
                             Text("Gender")
                                 .foregroundColor(Color("appOrange"))
+                            Spacer()
                             Text("\(viewModel.selectedGender)")
                                 .foregroundColor(Color("appOrange"))
                         }
+                        .padding(.bottom, 10)
                         
-                        Spacer()
-                        
-                        VStack {
+                        HStack {
                             Text("Height")
                                 .foregroundColor(Color("appOrange"))
+                            Spacer()
                             Text("\(viewModel.bodyHeight) cm")
                                 .foregroundColor(Color("appOrange"))
                         }
+                        .padding(.bottom, 10)
                         
-                        Spacer()
-                        
-                        VStack {
+                        HStack {
                             Text("Weight")
                                 .foregroundColor(Color("appOrange"))
+                            Spacer()
                             Text("\(viewModel.bodyWeight) kg")
                                 .foregroundColor(Color("appOrange"))
                         }
+                        .padding(.bottom, 10)
                     }
                     .padding(.bottom, 20)
                     
-                    HStack {
+                    Rectangle()
+                        .frame(height: 2)
+                        .foregroundColor(.lightbackground)
+                        .padding(.horizontal)
+                    
+                    VStack {
                         Text("Your IdealWeight:")
                             .foregroundColor(Color("appOrange"))
-                        
-                        Spacer()
-                        
+                            .font(.title)
                         Text("\(viewModel.yourIdealWeightString)")
                             .foregroundColor(Color("appOrange"))
+                            .font(.title2)
                     }
                     .padding(.bottom, 20)
                     
