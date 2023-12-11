@@ -48,6 +48,7 @@ struct DiaryDataNewView: View {
                             }
                         }
                     }
+                    .accentColor(Color("appOrange"))
                     .scrollContentBackground(.hidden)
                     .navigationTitle("Your Diary's")
                     .navigationBarTitleDisplayMode(.inline)

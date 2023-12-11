@@ -36,7 +36,7 @@ struct SettingsViewNew: View {
                                 Text("Delete all BMI's")
                             }
                         }
-                        .modifier(ButtonStyle())
+                        .modifier(DeleteButtonStyle())
                         .alert(isPresented: $showBMIDeleteAlert) {
                             Alert(
                                 title: Text("Are you sure to delete all saved BMI's?"),
@@ -60,7 +60,7 @@ struct SettingsViewNew: View {
                                 Text("Delete all Diaries")
                             }
                         }
-                        .modifier(ButtonStyle())
+                        .modifier(DeleteButtonStyle())
                         .alert(isPresented: $showDiaryDeleteAlert) {
                             Alert(
                                 title: Text("Are you sure to delete all saved Diaries?"),
@@ -84,7 +84,7 @@ struct SettingsViewNew: View {
                                 Text("Delete all BAI's")
                             }
                         }
-                        .modifier(ButtonStyle())
+                        .modifier(DeleteButtonStyle())
                         .alert(isPresented: $showBAIDeleteAlert) {
                             Alert(
                                 title: Text("Are you sure to delete all saved BAI's?"),
@@ -101,7 +101,7 @@ struct SettingsViewNew: View {
                         }
                         
                         NavigationLink {
-                            ChoicePDFView()
+                            ChoicePdfNewView()
                         } label: {
                             HStack {
                                 Image(systemName: "square.and.arrow.up")
@@ -120,7 +120,7 @@ struct SettingsViewNew: View {
                         }
                         .modifier(ButtonStyle())
                         .sheet(isPresented: $showMailSheet) {
-                            SendMaillView()
+                            SendMailNewView()
                         }
                         .navigationTitle("Settings")
                         .navigationBarTitleDisplayMode(.inline)

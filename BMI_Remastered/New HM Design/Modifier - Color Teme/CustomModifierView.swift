@@ -30,3 +30,15 @@ struct ButtonStyle: ViewModifier {
             .font(.headline)
     }
 }
+
+struct DeleteButtonStyle: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .padding()
+            .frame(maxWidth: .infinity)
+            .background(Color("appDeleteRed"))
+            .cornerRadius(10)
+            .foregroundColor(Color("appBlue"))
+            .font(.headline)
+    }
+}

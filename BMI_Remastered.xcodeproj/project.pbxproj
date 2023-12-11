@@ -47,6 +47,9 @@
 		56D9E9BC2B0BCDD80079EB4F /* BaiPDFCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D9E9BB2B0BCDD80079EB4F /* BaiPDFCreator.swift */; };
 		56E75B3E2AB38E44004E915A /* IdealweightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E75B3D2AB38E44004E915A /* IdealweightView.swift */; };
 		56F89BFF2B254D0C00FC5390 /* DiaryDetailNewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F89BFE2B254D0C00FC5390 /* DiaryDetailNewView.swift */; };
+		56F89C022B2706BC00FC5390 /* SendMailNewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F89C012B2706BC00FC5390 /* SendMailNewView.swift */; };
+		56F89C042B275F8200FC5390 /* MailNewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F89C032B275F8200FC5390 /* MailNewView.swift */; };
+		56F89C072B27606F00FC5390 /* ChoicePdfNewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F89C062B27606F00FC5390 /* ChoicePdfNewView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +95,9 @@
 		56D9E9BB2B0BCDD80079EB4F /* BaiPDFCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiPDFCreator.swift; sourceTree = "<group>"; };
 		56E75B3D2AB38E44004E915A /* IdealweightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdealweightView.swift; sourceTree = "<group>"; };
 		56F89BFE2B254D0C00FC5390 /* DiaryDetailNewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryDetailNewView.swift; sourceTree = "<group>"; };
+		56F89C012B2706BC00FC5390 /* SendMailNewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMailNewView.swift; sourceTree = "<group>"; };
+		56F89C032B275F8200FC5390 /* MailNewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailNewView.swift; sourceTree = "<group>"; };
+		56F89C062B27606F00FC5390 /* ChoicePdfNewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoicePdfNewView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +191,8 @@
 		5649EE412B0D51D000A15AF5 /* New HM Design */ = {
 			isa = PBXGroup;
 			children = (
+				56F89C052B27603600FC5390 /* PDF New */,
+				56F89C002B27068600FC5390 /* Mail New */,
 				5646E2DA2B2115F60051B132 /* Diary New */,
 				568D4AE92B1DBEB5007DF35C /* BAI New */,
 				568D4AE62B1D1F5D007DF35C /* Idealweight New */,
@@ -337,6 +345,23 @@
 			path = BMI;
 			sourceTree = "<group>";
 		};
+		56F89C002B27068600FC5390 /* Mail New */ = {
+			isa = PBXGroup;
+			children = (
+				56F89C012B2706BC00FC5390 /* SendMailNewView.swift */,
+				56F89C032B275F8200FC5390 /* MailNewView.swift */,
+			);
+			path = "Mail New";
+			sourceTree = "<group>";
+		};
+		56F89C052B27603600FC5390 /* PDF New */ = {
+			isa = PBXGroup;
+			children = (
+				56F89C062B27606F00FC5390 /* ChoicePdfNewView.swift */,
+			);
+			path = "PDF New";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -453,9 +478,11 @@
 				563C8F4E2AB711AF0094C985 /* MeaningBAIView.swift in Sources */,
 				56D9E9BC2B0BCDD80079EB4F /* BaiPDFCreator.swift in Sources */,
 				563159312B07F572006E01A1 /* BmiPDFCreator.swift in Sources */,
+				56F89C022B2706BC00FC5390 /* SendMailNewView.swift in Sources */,
 				56ABFA482AB23807005D7E49 /* Bmi_new.swift in Sources */,
 				562471C12AF8F3B700409F29 /* BaiDataView.swift in Sources */,
 				5646E2DE2B211B960051B132 /* DiaryNewView.swift in Sources */,
+				56F89C072B27606F00FC5390 /* ChoicePdfNewView.swift in Sources */,
 				568D4AED2B1DC19D007DF35C /* BaiDataChartNewView.swift in Sources */,
 				5614759A2AC87D1600B405CE /* BMIDataView.swift in Sources */,
 				568D4AEB2B1DBEC9007DF35C /* BaiNewView.swift in Sources */,
@@ -471,6 +498,7 @@
 				5649EE472B0D580900A15AF5 /* SettingsViewNew.swift in Sources */,
 				568D4AE52B1C9B98007DF35C /* BmiDataChartNewView.swift in Sources */,
 				5646E2D92B2106EA0051B132 /* MeaningOfBaiNewView.swift in Sources */,
+				56F89C042B275F8200FC5390 /* MailNewView.swift in Sources */,
 				568D4AEF2B1DD84D007DF35C /* ColorTheme.swift in Sources */,
 				5623AE602AF6D6B1000102AA /* DiaryDetailView.swift in Sources */,
 				5684ACC02B123EDA004D6EDD /* ContentBmiViewNew.swift in Sources */,

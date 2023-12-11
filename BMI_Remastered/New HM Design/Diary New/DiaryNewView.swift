@@ -63,6 +63,7 @@ struct DiaryNewView: View {
                      .padding()
                     //  Spacer()
                 }
+                .accentColor(Color("appOrange"))
                 .navigationTitle("Today's Diary: \(title)")
                 .navigationBarTitleDisplayMode(.inline)
                 .preferredColorScheme(.dark)
