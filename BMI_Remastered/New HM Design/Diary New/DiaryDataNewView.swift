@@ -29,14 +29,17 @@ struct DiaryDataNewView: View {
                         ForEach(sortedDatas) { data in
                             NavigationLink {
                                DiaryDetailNewView(diary: data)
+                                    .accentColor(Color("appOrange"))
                             } label: {
                                 VStack(alignment: .leading) {
+                                    Divider()
                                     Text("\(data.title)")
                                         .font(.headline)
                                         .foregroundColor(Color("appOrange"))
                                     
                                     Text(data.date.formatted(date: .complete, time: .omitted))
                                         .foregroundColor(Color("appOrange"))
+                                    Divider()
                                 }
                             }
                             .listRowBackground(Color("appBlue"))
@@ -48,7 +51,6 @@ struct DiaryDataNewView: View {
                             }
                         }
                     }
-                    .accentColor(Color("appOrange"))
                     .scrollContentBackground(.hidden)
                     .navigationTitle("Your Diary's")
                     .navigationBarTitleDisplayMode(.inline)

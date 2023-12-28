@@ -20,10 +20,7 @@ struct IdealweightNewView: View {
                         .foregroundColor(Color("appOrange"))
                         .padding(.bottom, 20)
                     
-                    Rectangle()
-                        .frame(height: 2)
-                        .foregroundColor(.lightbackground)
-                        .padding(.vertical)
+                   Divider()
                     
                     VStack {
                         HStack {
@@ -55,10 +52,7 @@ struct IdealweightNewView: View {
                     }
                     .padding(.bottom, 20)
                     
-                    Rectangle()
-                        .frame(height: 2)
-                        .foregroundColor(.lightbackground)
-                        .padding(.horizontal)
+                    Divider()
                     
                     VStack {
                         Text("Your IdealWeight:")
@@ -75,7 +69,6 @@ struct IdealweightNewView: View {
                 .padding()
             }
             .navigationTitle("Idealweight")
-            .navigationBarTitleDisplayMode(.inline)
             .preferredColorScheme(.dark)
         }
     }

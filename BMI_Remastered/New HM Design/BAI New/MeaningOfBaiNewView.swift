@@ -15,22 +15,8 @@ struct MeaningOfBaiNewView: View {
                     .ignoresSafeArea(.all)
                 ScrollView {
                     LazyVStack(alignment: .leading) {
-                        Rectangle()
-                            .frame(height: 2)
-                            .foregroundColor(.lightbackground)
-
-                        Text("Underweight")
-                            .font(.title2)
-                            .foregroundColor(Color("appOrange"))
-                        Text("BAI under 8:")
-                            .foregroundColor(Color("appOrange"))
-                        Text("People with a very low body fat percentage may fall into this category.")
-                            .foregroundColor(Color("appOrange"))
-                        
-                        Rectangle()
-                            .frame(height: 2)
-                            .foregroundColor(.lightbackground)
-                            .padding(.bottom, 10)
+                       
+                        Divider()
                         
                         Text("Underweight")
                             .font(.title2)
@@ -40,46 +26,22 @@ struct MeaningOfBaiNewView: View {
                         Text("People with a very low body fat percentage may fall into this category.")
                             .foregroundColor(Color("appOrange"))
                         
-                        Rectangle()
-                            .frame(height: 2)
-                            .foregroundColor(.lightbackground)
-                            .padding(.bottom, 10)
-                        
-                        Text("Overweight")
-                            .font(.title)
-                        Text("BMI between 25 - 29.9")
-                        Text("A BMI between 25 and 29.9 indicates overweight. This increases the risk of health problems such as heart disease and type 2 diabetes.")
-                        
-                        Rectangle()
-                            .frame(height: 2)
-                            .foregroundColor(.lightbackground)
-                            .padding(.bottom, 10)
+                        Divider()
                         
                         Text("Healthy Weightt")
                             .font(.title2)
-                            .foregroundColor(Color("appOrange"))
                         Text("BAI between 8 and 21:")
-                            .foregroundColor(Color("appOrange"))
                         Text("A BAI value in this range is usually considered a healthy body weight.")
-                            .foregroundColor(Color("appOrange"))
                         
-                        Rectangle()
-                            .frame(height: 2)
-                            .foregroundColor(.lightbackground)
-                            .padding(.bottom, 10)
+                        
+                        Divider()
                         
                         Text("Overweight")
                             .font(.title2)
-                            .foregroundColor(Color("appOrange"))
                         Text("BAI over 26:")
-                            .foregroundColor(Color("appOrange"))
                         Text("A BAI value above 26 can indicate high body fat and is often considered a sign of obesity")
-                            .foregroundColor(Color("appOrange"))
                         
-                        Rectangle()
-                            .frame(height: 2)
-                            .foregroundColor(.lightbackground)
-                            .padding(.bottom, 10)
+                        Divider()
                         
                         Text("Obesity")
                             .font(.title2)
@@ -89,10 +51,7 @@ struct MeaningOfBaiNewView: View {
                         Text("A higher BAI value may indicate a higher percentage of body fat, which is classified as overweight.")
                             .foregroundColor(Color("appOrange"))
                         
-                        Rectangle()
-                            .frame(height: 2)
-                            .foregroundColor(.lightbackground)
-                            .padding(.bottom, 10)
+                        Divider()
                         
                         Text("Note")
                             .font(.title2)
@@ -104,9 +63,7 @@ struct MeaningOfBaiNewView: View {
                          """)
                         .foregroundColor(Color("appOrange"))
                         
-                        Rectangle()
-                            .frame(height: 2)
-                            .foregroundColor(.lightbackground)
+                        Divider()
                         
                     }
                     .foregroundColor(Color("appOrange"))
@@ -114,7 +71,7 @@ struct MeaningOfBaiNewView: View {
                     
                     Spacer()
                 }
-                .navigationTitle("Meaning of my BMI")
+                .navigationTitle("Meaning of my BAI")
                 .navigationBarTitleDisplayMode(.inline)
                 .preferredColorScheme(.dark)
             }

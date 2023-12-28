@@ -41,7 +41,7 @@ struct DiaryNewView: View {
                             .foregroundColor(Color("appOrange"))
                             .background(Color("appGrey"))
                             .font(.system(size: 24))
-                        
+
                         Button {
                             let diary = Diary(title: title, detail: detail, date: .now)
                             diaryContext.insert(diary)

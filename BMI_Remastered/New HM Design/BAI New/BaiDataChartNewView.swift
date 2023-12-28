@@ -37,8 +37,10 @@ struct BaiDataChartNewView: View {
                             VStack(alignment: .leading) {
                                 Text("\(data.dataBai)")
                                     .font(.headline)
+                                    .foregroundColor(Color("appOrange"))
                                 
                                 Text(data.date.formatted(date: .complete, time: .omitted))
+                                    .foregroundColor(Color("appOrange"))
                             }
                             .listRowBackground(Color("appBlue"))
                         }

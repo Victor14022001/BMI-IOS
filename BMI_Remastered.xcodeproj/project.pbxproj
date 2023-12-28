@@ -29,6 +29,7 @@
 		567073DB2AE952A0002AF246 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 567073DA2AE952A0002AF246 /* Localizable.xcstrings */; };
 		5676A54C2AC4B6CC008AAB85 /* MyTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5676A54B2AC4B6CC008AAB85 /* MyTabView.swift */; };
 		5676A5502AC4C30E008AAB85 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5676A54F2AC4C30E008AAB85 /* SettingsView.swift */; };
+		5677B55A2B2E4565008DEADB /* BmiChartNewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5677B5592B2E4565008DEADB /* BmiChartNewView.swift */; };
 		5684ACC02B123EDA004D6EDD /* ContentBmiViewNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5684ACBF2B123EDA004D6EDD /* ContentBmiViewNew.swift */; };
 		568D4ADF2B1BA5F9007DF35C /* CustomModifierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568D4ADE2B1BA5F9007DF35C /* CustomModifierView.swift */; };
 		568D4AE32B1BF9B6007DF35C /* MeaningOfBmiNewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568D4AE22B1BF9B6007DF35C /* MeaningOfBmiNewView.swift */; };
@@ -76,6 +77,7 @@
 		567073DA2AE952A0002AF246 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		5676A54B2AC4B6CC008AAB85 /* MyTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabView.swift; sourceTree = "<group>"; };
 		5676A54F2AC4C30E008AAB85 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		5677B5592B2E4565008DEADB /* BmiChartNewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BmiChartNewView.swift; sourceTree = "<group>"; };
 		5684ACBF2B123EDA004D6EDD /* ContentBmiViewNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentBmiViewNew.swift; sourceTree = "<group>"; };
 		568D4ADE2B1BA5F9007DF35C /* CustomModifierView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomModifierView.swift; sourceTree = "<group>"; };
 		568D4AE22B1BF9B6007DF35C /* MeaningOfBmiNewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeaningOfBmiNewView.swift; sourceTree = "<group>"; };
@@ -242,6 +244,7 @@
 				5684ACBF2B123EDA004D6EDD /* ContentBmiViewNew.swift */,
 				568D4AE22B1BF9B6007DF35C /* MeaningOfBmiNewView.swift */,
 				568D4AE42B1C9B98007DF35C /* BmiDataChartNewView.swift */,
+				5677B5592B2E4565008DEADB /* BmiChartNewView.swift */,
 			);
 			path = "BMI New";
 			sourceTree = "<group>";
@@ -494,6 +497,7 @@
 				5676A54C2AC4B6CC008AAB85 /* MyTabView.swift in Sources */,
 				56E75B3E2AB38E44004E915A /* IdealweightView.swift in Sources */,
 				564AADA12B21D0FF00321971 /* DiaryDataNewView.swift in Sources */,
+				5677B55A2B2E4565008DEADB /* BmiChartNewView.swift in Sources */,
 				5615512B2AF90D30004C8A3F /* BaiDataChartView.swift in Sources */,
 				5649EE472B0D580900A15AF5 /* SettingsViewNew.swift in Sources */,
 				568D4AE52B1C9B98007DF35C /* BmiDataChartNewView.swift in Sources */,

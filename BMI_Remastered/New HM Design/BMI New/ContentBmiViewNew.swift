@@ -21,6 +21,17 @@ struct ContentBmiViewNew: View {
     @State private var showIdealweightSheet = false
     @State private var showBaiSheet = false
     @State private var showBaiDataChartSheet = false
+    @State private var showBmiChartSheet = false
+    
+    init(viewModel: BmiViewModel) {
+        _viewModel = ObservedObject(wrappedValue: viewModel)
+        
+        // Large Navigation Title
+        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor(Color("appOrange"))]
+        // Inline Navigation Title
+        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor(Color("appOrange"))]
+    }
+    
     
     var body: some View {
         NavigationStack {
@@ -28,120 +39,126 @@ struct ContentBmiViewNew: View {
                 Color("appBlue")
                     .edgesIgnoringSafeArea(.all)
                 VStack(spacing: 20) {
-                    TextField("Your Bodyheight", text: $viewModel.bodyHeight)
-                        .keyboardType(.decimalPad)
-                        .focused($bodyDataFields)
-                        .modifier(TextFieldStyle())
-                    TextField("Your Bodyweight", text: $viewModel.bodyWeight)
-                        .keyboardType(.decimalPad)
-                        .focused($bodyDataFields)
-                        .modifier(TextFieldStyle())
-
-                    HStack {
-                        Text("Date")
-                        Spacer()
-                        Text("\(Date.now.formatted(date: .complete, time: .omitted))")
-                    }
-                    .padding()
-                    .frame(maxWidth: .infinity)
-                    .foregroundColor(Color("appOrange"))
-                    .font(.system(size: 24))
-
-                    Button {
-                        viewModel.calculateBMI()
-                        showAlert = true
-                    } label: {
+                    ScrollView {
+                        TextField("Your Bodyheight", text: $viewModel.bodyHeight)
+                            .keyboardType(.decimalPad)
+                            .focused($bodyDataFields)
+                            .modifier(TextFieldStyle())
+                        TextField("Your Bodyweight", text: $viewModel.bodyWeight)
+                            .keyboardType(.decimalPad)
+                            .focused($bodyDataFields)
+                            .modifier(TextFieldStyle())
+                        
                         HStack {
-                            Image(systemName: "plus.forwardslash.minus")
-                            Text("Calculate BMI")
+                            Text("Date")
+                            Spacer()
+                            Text("\(Date.now.formatted(date: .complete, time: .omitted))")
                         }
-                    }
-                    .modifier(ButtonStyle())
-                    .disabled(viewModel.bodyHeight.isEmpty || viewModel.bodyWeight.isEmpty)
-
-                    Menu("More Informations") {
-                        Menu("BMI") {
-                            Button("Meaning of my BMI", systemImage: "lightbulb.min") {
-                                showMeaningOfBmiSheet = true
-                            }
-                            Button("Bmi History Chart", systemImage: "chart.xyaxis.line") {
-                                showBmiDataChartSheet = true
-                            }
-                        }
-                        Menu("BAI") {
-                            Button("BAI", systemImage: "plus.forwardslash.minus") {
-                                showBaiSheet = true
-                            }
-                            Button("Bai History Chart", systemImage: "chart.xyaxis.line") {
-                                showBaiDataChartSheet = true
-                            }
-                        }
-                        Button("Idealweight", systemImage: "plus.forwardslash.minu") {
-                            showIdealweightSheet = true
-                        }
-                    }
-                    .modifier(ButtonStyle())
-
-                    if viewModel.yourBmi != nil {
-                        NavigationLink {
-                            BmiChartView(viewModel)
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .foregroundColor(Color("appOrange"))
+                        .font(.system(size: 24))
+                        
+                        Button {
+                            viewModel.calculateBMI()
+                            showAlert = true
                         } label: {
                             HStack {
-                                Image(systemName: "chart.bar.xaxis")
-                                Text("Look at your BMI at a Chart")
+                                Image(systemName: "plus.forwardslash.minus")
+                                Text("Calculate BMI")
                             }
                         }
                         .modifier(ButtonStyle())
-                    }
-                    Spacer()
-                }
-                .toolbar {
-                    ToolbarItemGroup(placement: .keyboard) {
+                        .disabled(viewModel.bodyHeight.isEmpty || viewModel.bodyWeight.isEmpty)
                         
+                        Menu("More Informations") {
+                            Menu("BMI") {
+                                Button("Meaning of my BMI", systemImage: "lightbulb.min") {
+                                    showMeaningOfBmiSheet = true
+                                }
+                                Button("Bmi History Chart", systemImage: "chart.xyaxis.line") {
+                                    showBmiDataChartSheet = true
+                                }
+                            }
+                            Menu("BAI") {
+                                Button("BAI", systemImage: "plus.forwardslash.minus") {
+                                    showBaiSheet = true
+                                }
+                                Button("Bai History Chart", systemImage: "chart.xyaxis.line") {
+                                    showBaiDataChartSheet = true
+                                }
+                            }
+                            Button("Idealweight", systemImage: "plus.forwardslash.minus") {
+                                showIdealweightSheet = true
+                            }
+                            .onAppear(perform: {
+                                viewModel.calculateIdealWeight()
+                            })
+                        }
+                        .modifier(ButtonStyle())
+                        
+                        if viewModel.yourBmi != nil {
+                            Button {
+                                showBmiChartSheet = true
+                            } label: {
+                                HStack {
+                                    Image(systemName: "chart.bar.xaxis")
+                                    Text("Look at your BMI at a Chart")
+                                }
+                            }
+                            .modifier(ButtonStyle())
+                        }
                         Spacer()
-                        
-                        Button("Done") {
-                            bodyDataFields = false
+                    }
+                    .toolbar {
+                        ToolbarItemGroup(placement: .keyboard) {
+                            
+                            Spacer()
+                            
+                            Button("Done") {
+                                bodyDataFields = false
+                            }
                         }
                     }
-                }
-                .padding()
-                .navigationTitle("BMI \(viewModel.yourBmiString)")
-                .preferredColorScheme(.dark)
-  
-                .sheet(isPresented: $showMeaningOfBmiSheet) {
-                    MeaningOfBmiNewView()
+                    .padding()
+                    .navigationTitle("BMI \(viewModel.yourBmiString)")
+                    .preferredColorScheme(.dark)
+                    
+                    .sheet(isPresented: $showBmiChartSheet) {
+                        BmiChartNewView(viewModel)
                     }
-                
-                .sheet(isPresented: $showBmiDataChartSheet) {
-                    BmiDataChartNewView()
+                    
+                    .sheet(isPresented: $showMeaningOfBmiSheet) {
+                        MeaningOfBmiNewView()
                     }
-                
-                .sheet(isPresented: $showIdealweightSheet) {
-                    IdealweightNewView(viewModel: viewModel)
-                        .onAppear(perform: {
-                            viewModel.calculateIdealWeight()
-                        })
-                }
-                
-                .sheet(isPresented: $showBaiSheet) {
-                    BaiNewView(viewModel: BmiViewModel())
-                }
-                
-                .sheet(isPresented: $showBaiDataChartSheet) {
-                    BaiDataChartNewView()
+                    
+                    .sheet(isPresented: $showBmiDataChartSheet) {
+                        BmiDataChartNewView()
                     }
-
-                .alert(isPresented: $showAlert) {
-                    Alert(
-                        title: Text("Save BMI"),
-                        message: Text("Do you want to save your BMI?"),
-                        primaryButton: .destructive(Text("Cancel")),
-                        secondaryButton: .default(Text("Save"), action: {
-                            guard let bmis = viewModel.yourBmi else { return }
-                            context.insert(BMIData(dataBmi: bmis, date: .now))
-                        })
-                    )
+                    
+                    .sheet(isPresented: $showIdealweightSheet) {
+                        IdealweightNewView(viewModel: viewModel)
+                    }
+                    
+                    .sheet(isPresented: $showBaiSheet) {
+                        BaiNewView(viewModel: viewModel)
+                    }
+                    
+                    .sheet(isPresented: $showBaiDataChartSheet) {
+                        BaiDataChartNewView()
+                    }
+                    
+                    .alert(isPresented: $showAlert) {
+                        Alert(
+                            title: Text("Save BMI"),
+                            message: Text("Do you want to save your BMI?"),
+                            primaryButton: .destructive(Text("Cancel")),
+                            secondaryButton: .default(Text("Save"), action: {
+                                guard let bmis = viewModel.yourBmi else { return }
+                                context.insert(BMIData(dataBmi: bmis, date: .now))
+                            })
+                        )
+                    }
                 }
             }
         }

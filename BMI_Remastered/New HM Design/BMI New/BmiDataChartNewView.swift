@@ -12,7 +12,7 @@ import Charts
 struct BmiDataChartNewView: View {
     @Query(sort: \BMIData.date) private var datas: [BMIData]
     @Environment(\.modelContext) var bmiContext
-
+    
     var body: some View {
         NavigationStack {
             ZStack {
@@ -32,16 +32,12 @@ struct BmiDataChartNewView: View {
                     Spacer()
                     
                     List {
-                        ForEach(datas) { data in
+                        ForEach(datas, id: \.self) { data in
                             VStack(alignment: .leading) {
-                                Rectangle()
-                                    .frame(height: 2)
-                                    .foregroundColor(.lightbackground)
-
                                 Text("\(data.dataBmi)")
                                     .font(.headline)
                                     .foregroundStyle(Color("appOrange"))
-
+                                
                                 Text(data.date.formatted(date: .complete, time: .omitted))
                                     .foregroundStyle(Color("appOrange"))
                             }
@@ -52,9 +48,11 @@ struct BmiDataChartNewView: View {
                                 let deleteData = datas[index]
                                 bmiContext.delete(deleteData)
                             }
+                            
                         }
                     }
                     .scrollContentBackground(.hidden)
+                    
                 }
                 .padding()
                 .navigationTitle("Bmi History Chart")
@@ -65,6 +63,6 @@ struct BmiDataChartNewView: View {
     }
 }
 
-    #Preview {
-        BmiDataChartNewView()
-    }
+#Preview {
+    BmiDataChartNewView()
+}

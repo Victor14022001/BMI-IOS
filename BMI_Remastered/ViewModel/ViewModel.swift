@@ -81,7 +81,7 @@ class BmiViewModel: NSObject, ObservableObject {
 
     func calculateIdealWeight() {
         guard let height = Double(bodyHeight) else { return }
-        let idealWeight = selectedGender == "Male" ? (height - 100) + 1 : (height - 110) + 1
+        let idealWeight = (height - 100) + 1
         yourIdealWeight = idealWeight
         yourIdealWeightString = String(format: "%.2f", idealWeight)
     }

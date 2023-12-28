@@ -16,22 +16,33 @@ struct DiaryDetailNewView: View {
                 Color("appBlue")
                     .ignoresSafeArea(.all)
                 VStack(alignment: .leading, spacing: 20) {
+                    
+                    Divider()
                     Text(diary.title)
-                    .font(.title)
-                    .foregroundColor(Color("appOrange"))
+                        .font(.title)
+                        .foregroundColor(Color("appOrange"))
+                    
+                    Divider()
                     
                     Text(diary.date.formatted(date: .complete, time: .omitted))
-                    .font(.headline)
-                    .foregroundColor(Color("appOrange"))
+                        .foregroundColor(Color("appOrange"))
                     
                     Text(diary.detail)
-                    .foregroundColor(Color("appOrange"))
-                    
-                  Spacer()
+                        .foregroundColor(Color("appOrange"))
+                    Divider()
+                    Spacer()
                 }
+                .frame(
+                    minWidth: 0,
+                    maxWidth: .infinity,
+                    minHeight: 0,
+                    maxHeight: .infinity,
+                    alignment: .topLeading
+                )
                 .padding()
                 .accentColor(Color("appOrange"))
                 .navigationTitle("\(diary.title)")
+                .foregroundColor(Color("appOrange"))
                 .navigationBarTitleDisplayMode(.inline)
             }
         }
