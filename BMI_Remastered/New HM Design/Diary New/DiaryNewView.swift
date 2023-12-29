@@ -15,6 +15,7 @@ struct DiaryNewView: View {
     let lineHeight: CGFloat = 330
     
     @State private var showMeaningBaiSheet = false
+    @FocusState var diaryEntryField: Bool
     
     var body: some View {
         NavigationView {
@@ -24,6 +25,8 @@ struct DiaryNewView: View {
                 ScrollView {
                     LazyVStack(alignment: .leading) {
                         TextField("Enter your Title", text: $title)
+                            .keyboardType(.default)
+                            .focused($diaryEntryField)
                             .modifier(TextFieldStyle())
                         
                         if detail.isEmpty {
@@ -41,7 +44,9 @@ struct DiaryNewView: View {
                             .foregroundColor(Color("appOrange"))
                             .background(Color("appGrey"))
                             .font(.system(size: 24))
-
+                            .keyboardType(.default)
+                            .focused($diaryEntryField)
+                        
                         Button {
                             let diary = Diary(title: title, detail: detail, date: .now)
                             diaryContext.insert(diary)
@@ -60,16 +65,24 @@ struct DiaryNewView: View {
                         }
                         .modifier(ButtonStyle())
                     }
-                     .padding()
+                    .padding()
                     //  Spacer()
                 }
                 .accentColor(Color("appOrange"))
                 .navigationTitle("Today's Diary: \(title)")
-                .navigationBarTitleDisplayMode(.inline)
+               // .navigationBarTitleDisplayMode(.inline)
                 .preferredColorScheme(.dark)
                 
                 .sheet(isPresented: $showMeaningBaiSheet) {
                     DiaryDataNewView()
+                }
+                .toolbar {
+                    ToolbarItemGroup(placement: .keyboard) {
+                        Spacer()
+                        Button("Done") {
+                            diaryEntryField = false
+                        }
+                    }
                 }
             }
         }

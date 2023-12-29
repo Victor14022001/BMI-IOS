@@ -19,6 +19,16 @@ struct DiaryDataNewView: View {
             return datas.sorted(by: { $0.date > $1.date })
         }
     
+    @State private var searchText: String = ""
+    
+    var filteredDatas: [Diary] {
+            if searchText.isEmpty {
+                return datas.sorted(by: { $0.date > $1.date })
+            } else {
+                return datas.filter { $0.title.localizedCaseInsensitiveContains(searchText) }
+            }
+        }
+    
     var body: some View {
         NavigationStack {
             ZStack {
@@ -26,7 +36,7 @@ struct DiaryDataNewView: View {
                     .ignoresSafeArea(.all)
                 VStack {
                     List {
-                        ForEach(sortedDatas) { data in
+                        ForEach(filteredDatas) { data in
                             NavigationLink {
                                DiaryDetailNewView(diary: data)
                                     .accentColor(Color("appOrange"))
@@ -58,6 +68,7 @@ struct DiaryDataNewView: View {
                 }
             }
         }
+        .searchable(text: $searchText, prompt: "Look through yozr Diarys...")
     }
 }
 

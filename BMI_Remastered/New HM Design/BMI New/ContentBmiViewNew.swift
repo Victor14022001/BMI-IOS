@@ -31,8 +31,7 @@ struct ContentBmiViewNew: View {
         // Inline Navigation Title
         UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor(Color("appOrange"))]
     }
-    
-    
+
     var body: some View {
         NavigationStack {
             ZStack {

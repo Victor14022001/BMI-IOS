@@ -178,7 +178,14 @@
       }
     },
     "Bai History Chart" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bai Verlaufsdiagramm"
+          }
+        }
+      }
     },
     "BAI History Chart" : {
       "localizations" : {
@@ -304,7 +311,14 @@
       }
     },
     "Bmi History Chart" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bei Verlaufsdiagramm "
+          }
+        }
+      }
     },
     "BMI History Chart" : {
       "localizations" : {
@@ -321,7 +335,7 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Bei unter < 18.5"
+            "value" : "Bai unter < 18.5"
           }
         }
       }
@@ -389,7 +403,14 @@
       }
     },
     "Can't send Mail from this Device." : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kann keine Mail von diesem Gerät senden."
+          }
+        }
+      }
     },
     "Cancel" : {
       "localizations" : {
@@ -641,10 +662,24 @@
       }
     },
     "Enter your Title" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gebe deinen Titel ein"
+          }
+        }
+      }
     },
     "Export BAI to PDF" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Export BAI to PDF"
+          }
+        }
+      }
     },
     "Export BMI to PDF" : {
       "localizations" : {
@@ -667,7 +702,14 @@
       }
     },
     "Export to PDF" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Exportieren zu PDF"
+          }
+        }
+      }
     },
     "Female" : {
       "extractionState" : "stale",
@@ -764,7 +806,14 @@
       }
     },
     "Idealweight" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Idealgewicht"
+          }
+        }
+      }
     },
     "If you press 'Yes' all saved BAI's will be deleted" : {
       "localizations" : {
@@ -826,6 +875,16 @@
         }
       }
     },
+    "Look through yozr Diarys..." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "durchsuche deine Einträge..."
+          }
+        }
+      }
+    },
     "Male" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -838,7 +897,14 @@
       }
     },
     "Meaning of my BAI" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bedeutung meines BAI"
+          }
+        }
+      }
     },
     "Meaning of my BMI" : {
       "localizations" : {
@@ -861,7 +927,14 @@
       }
     },
     "More Informations" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mehr Informationen"
+          }
+        }
+      }
     },
     "More nice things to know" : {
       "localizations" : {
@@ -1104,7 +1177,14 @@
       }
     },
     "text here..." : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Text eingeben..."
+          }
+        }
+      }
     },
     "The BAI is an alternative to the BMI, which is calculated based on hip circumference in relation to your height." : {
       "localizations" : {
