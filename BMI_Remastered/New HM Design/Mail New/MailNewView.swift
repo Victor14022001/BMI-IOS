@@ -41,8 +41,8 @@ struct MailNewView: UIViewControllerRepresentable {
     
     func makeUIViewController(context: UIViewControllerRepresentableContext<MailNewView>) -> MFMailComposeViewController {
         let viewController = MFMailComposeViewController()
-        viewController.setToRecipients(["victor@gate17.de"])
-        viewController.setSubject("Feedack for HealthMetrics")
+        viewController.setToRecipients(["vhorn.development@gmail.com"])
+        viewController.setSubject("HealthMetrics")
         viewController.setMessageBody("\(UIDevice.current.systemName) \n \(UIDevice.current.systemVersion) \n \(UIDevice.current.systemName) \n Describe your concern below this line. \n", isHTML: false)
         viewController.mailComposeDelegate = context.coordinator
         return viewController

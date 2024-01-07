@@ -27,7 +27,7 @@ struct DiaryDetailNewView: View {
                         
                         Divider()
                         
-                        Text(diary.date.formatted(date: .complete, time: .omitted))
+                        Text(diary.date.formatted(date: .complete, time: .omitted) )
                             .foregroundColor(Color("appOrange"))
                             .multilineTextAlignment(.leading)
                         

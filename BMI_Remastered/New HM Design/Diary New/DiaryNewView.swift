@@ -29,23 +29,10 @@ struct DiaryNewView: View {
                             .focused($diaryEntryField)
                             .modifier(TextFieldStyle())
                         
-                        if detail.isEmpty {
-                            Text("text here...")
-                                .opacity(0.2)
-                                .font(.system(size: 24))
-                                .background(Color("appGrey"))
-                            
-                        }
-                        
-                        TextEditor(text: $detail)
-                            .frame(height: lineHeight)
-                            .cornerRadius(10)
-                            .scrollContentBackground(.hidden)
-                            .foregroundColor(Color("appOrange"))
-                            .background(Color("appGrey"))
-                            .font(.system(size: 24))
+                        TextField("text here...", text: $detail, axis: .vertical)
                             .keyboardType(.default)
                             .focused($diaryEntryField)
+                            .modifier(TextFieldStyle())
                         
                         Button {
                             let diary = Diary(title: title, detail: detail, date: .now)
@@ -68,14 +55,13 @@ struct DiaryNewView: View {
                     .padding()
                     //  Spacer()
                 }
-                .accentColor(Color("appOrange"))
-                .navigationTitle("Today's Diary: \(title)")
-               // .navigationBarTitleDisplayMode(.inline)
-                .preferredColorScheme(.dark)
-                
                 .sheet(isPresented: $showMeaningBaiSheet) {
                     DiaryDataNewView()
                 }
+                .accentColor(Color("appOrange"))
+                .navigationTitle("Today's Diary: \(title)")
+                // .navigationBarTitleDisplayMode(.inline)
+                .preferredColorScheme(.dark)
                 .toolbar {
                     ToolbarItemGroup(placement: .keyboard) {
                         Spacer()
