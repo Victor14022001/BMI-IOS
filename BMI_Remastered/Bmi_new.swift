@@ -17,3 +17,6 @@ struct Bmi_new: App {
         .modelContainer(for: [BMIData.self, Diary.self, BAIData.self])
     }
 }
+
+// TODO: - Check all files for Trailing Whitespaces i have 185 Warnings in Swiftlint!
+// TODO: - Change deprecated foregroundColor to foregroundStyle

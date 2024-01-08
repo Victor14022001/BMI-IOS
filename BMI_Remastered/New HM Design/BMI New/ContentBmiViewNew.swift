@@ -12,7 +12,7 @@ import UIKit
 struct ContentBmiViewNew: View {
     @FocusState private var bodyDataFields: Bool
     @ObservedObject var viewModel: BmiViewModel
-    @Query private var datas: [BMIData]
+    @Query private var datas: [BMIData] // TODO: - Variable not used, delete it
     @Environment(\.modelContext) var context
     
     @State private var showAlert = false
@@ -32,6 +32,7 @@ struct ContentBmiViewNew: View {
         UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor(Color("appOrange"))]
     }
 
+    // TODO: - Really Long body, try to minimize, extract parts to own view files.
     var body: some View {
         NavigationStack {
             ZStack {

@@ -8,6 +8,8 @@
 import SwiftUI
 import Charts
 
+// TODO: - Creatae Chart struct in own file
+
 struct BmiChartNewView: View {
     let viewModel: BmiViewModel
     var bmiValues: [BmiAverageChart]

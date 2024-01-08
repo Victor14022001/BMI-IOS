@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct MeaningOfBmiNewView: View {
+    // TODO: - Big body with a lot of text, create Enumerate BMIMeaning with cases for all different meanings and add variables in enum for the title, description & subtitle
     var body: some View {
         NavigationStack {
             ZStack {

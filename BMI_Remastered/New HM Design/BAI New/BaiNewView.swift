@@ -14,8 +14,8 @@ struct BaiNewView: View {
     @FocusState private var hipDataField: Bool
     
     @Environment(\.modelContext) var baiContenxt
-    @Query private var datas: [BAIData]
-    
+    @Query private var datas: [BAIData] // TODO: - Variable not used, delete it
+
     @State private var showBaiSaveAlert = false
     @State private var showMeningBaiSheet = false
     

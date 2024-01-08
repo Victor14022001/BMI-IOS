@@ -11,6 +11,7 @@ import SwiftData
 struct SettingsViewNew: View {
     @ObservedObject var viewModel: BmiViewModel
     
+    // TODO: - There should only be one context, no need for more then one
     @Environment(\.modelContext) var bmiContext
     @Environment(\.modelContext) var diaryContext
     @Environment(\.modelContext) var baiContext

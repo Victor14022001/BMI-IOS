@@ -12,6 +12,8 @@ import SwiftData
 import Charts
 import MessageUI
 
+// TODO: - Create own files for the Modesl
+
 @Model
 class BAIData {
     let dataBai: Double
