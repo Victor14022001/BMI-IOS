@@ -7,6 +7,7 @@
 
 import SwiftUI
 import UIKit
+import UserNotifications
 
 struct MyTabViewNew: View {
     @ObservedObject var viewModel: BmiViewModel = .init()
@@ -34,7 +35,6 @@ struct MyTabViewNew: View {
         }
         .accentColor(Color("appOrange"))
         .preferredColorScheme(.dark)
-       // .environment(\.colorScheme, viewModel.isDarkmodeEnabled ? .dark: .light)
     }
 }
 

@@ -9,7 +9,7 @@ import SwiftUI
 import SwiftData
 
 struct DiaryDetailView: View {
-    var diary: Diary
+    var diary: DiaryData
 
     var body: some View {
         List {

@@ -109,7 +109,7 @@ struct SettingsView: View {
                             primaryButton: .destructive(Text("Cancel")),
                             secondaryButton: .default(Text("Yes"), action: {
                                 do {
-                                    try diaryContext.delete(model: Diary.self)
+                                    try diaryContext.delete(model: DiaryData.self)
                                 } catch {
                                     print("Failed to delete data")
                                 }

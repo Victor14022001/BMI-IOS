@@ -9,16 +9,16 @@ import SwiftUI
 import SwiftData
 
 struct DiaryDataView: View {
-    @Query var datas: [Diary]
+    @Query var datas: [DiaryData]
     @Environment(\.modelContext) var diaryContext
     @State private var showDetailSheet = false
-    var diaryDtails: Diary? // value misspelling
+    var diaryDtails: DiaryData? // value misspelling
 
     var body: some View {
         List {
             ForEach(datas) { data in
                 Button {
-                    diaryDtails = data
+                  //®  diaryDtails = data
                     showDetailSheet = true
                 } label: {
                     VStack(alignment: .leading) {

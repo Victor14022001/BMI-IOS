@@ -26,6 +26,27 @@
     "%lf" : {
 
     },
+    "%lld" : {
+
+    },
+    "1 L" : {
+
+    },
+    "1,5 L" : {
+
+    },
+    "2 L" : {
+
+    },
+    "100 ml" : {
+
+    },
+    "250 ml" : {
+
+    },
+    "500 ml" : {
+
+    },
     "A BAI value above 26 can indicate high body fat and is often considered a sign of obesity" : {
       "localizations" : {
         "de" : {
@@ -45,6 +66,9 @@
           }
         }
       }
+    },
+    "A balanced diet plays a crucial role in our health and well-being. The food we eat not only provides the energy we need for daily functioning, but also the nutrients necessary for numerous vital functions of our body.\n\nA healthy diet should be rich in various nutrients, including proteins, carbohydrates, fats, vitamins and minerals. Fruits and vegetables are excellent sources of vitamins and fiber, which strengthen the immune system and aid digestion. Whole grains provide complex carbohydrates that provide long-term energy, while lean meats, fish, nuts and legumes provide important proteins and healthy fats." : {
+
     },
     "A BMI between 18.5 and 24.9 is considered normal weight. This is the range that many consider a healthy weight." : {
       "localizations" : {
@@ -105,6 +129,9 @@
           }
         }
       }
+    },
+    "Add drink WAter" : {
+
     },
     "Are you sure to delete all saved BAI's?" : {
       "localizations" : {
@@ -598,6 +625,9 @@
         }
       }
     },
+    "Diet" : {
+
+    },
     "Do you want to save your BAI?" : {
       "localizations" : {
         "de" : {
@@ -630,6 +660,9 @@
     },
     "eins_zwei" : {
       "extractionState" : "manual"
+    },
+    "Empty VStack" : {
+
     },
     "Enter todays Diary" : {
       "localizations" : {
@@ -845,6 +878,9 @@
         }
       }
     },
+    "In our busy and connected world, it's easy to overlook basic needs like proper water intake. Use an iPhone WaterDrinkReminder for health benefits, improved concentration, skin health, and weight management. Customizable push notifications make it effortless to stay hydrated without disrupting your routine. Integrate this simple yet effective method into your daily life for a healthier, well-hydrated future!" : {
+
+    },
     "Index" : {
       "localizations" : {
         "de" : {
@@ -855,6 +891,9 @@
         }
       }
     },
+    "It is important to ensure adequate hydration, preferably water. Water plays a key role in maintaining the body's water balance, regulating body temperature and supporting metabolic processes.\n\nAvoiding excessive consumption of sugary drinks, high-fat foods and highly processed foods is an essential part of a healthy diet. A balanced diet not only helps prevent diseases such as cardiovascular disease, diabetes and obesity, but also promotes mental health and an overall sense of well-being.\n\nTo achieve the best results, it is advisable to adapt the diet to individual needs, lifestyle and physical activity. A balanced diet is therefore a crucial factor for a healthy and fulfilling life." : {
+
+    },
     "It is important to note that BMI is only a rough method of assessing body weight and does not take into account all relevant factors, such as muscle mass, body composition, age and gender differences. Therefore, BMI should be used in conjunction with other health factors and medical judgment to provide a more comprehensive assessment of health status." : {
       "localizations" : {
         "de" : {
@@ -864,6 +903,9 @@
           }
         }
       }
+    },
+    "item" : {
+
     },
     "Look at your BMI at a Chart" : {
       "localizations" : {
@@ -1005,6 +1047,9 @@
           }
         }
       }
+    },
+    "OG Water" : {
+
     },
     "OS and Version:" : {
       "localizations" : {
@@ -1246,6 +1291,9 @@
         }
       }
     },
+    "Type" : {
+
+    },
     "Underweight" : {
       "localizations" : {
         "de" : {
@@ -1275,6 +1323,12 @@
           }
         }
       }
+    },
+    "Water" : {
+
+    },
+    "Water reminder" : {
+
     },
     "Weight" : {
       "localizations" : {

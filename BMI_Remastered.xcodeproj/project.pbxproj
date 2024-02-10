@@ -19,6 +19,7 @@
 		562471C12AF8F3B700409F29 /* BaiDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562471C02AF8F3B700409F29 /* BaiDataView.swift */; };
 		563159312B07F572006E01A1 /* BmiPDFCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563159302B07F572006E01A1 /* BmiPDFCreator.swift */; };
 		563C8F4E2AB711AF0094C985 /* MeaningBAIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563C8F4D2AB711AF0094C985 /* MeaningBAIView.swift */; };
+		5644E5222B72D33A001F9318 /* WaterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5644E5212B72D33A001F9318 /* WaterData.swift */; };
 		5645A0782AF958DE00B6BC87 /* DiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5645A0772AF958DE00B6BC87 /* DiaryView.swift */; };
 		564685BF2B00EC250093E403 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 564685BE2B00EC250093E403 /* LaunchScreen.storyboard */; };
 		5646E2D92B2106EA0051B132 /* MeaningOfBaiNewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5646E2D82B2106EA0051B132 /* MeaningOfBaiNewView.swift */; };
@@ -26,7 +27,13 @@
 		5649EE442B0D56D800A15AF5 /* MyTabViewNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5649EE432B0D56D800A15AF5 /* MyTabViewNew.swift */; };
 		5649EE472B0D580900A15AF5 /* SettingsViewNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5649EE462B0D580900A15AF5 /* SettingsViewNew.swift */; };
 		564AADA12B21D0FF00321971 /* DiaryDataNewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564AADA02B21D0FF00321971 /* DiaryDataNewView.swift */; };
+		564F66572B62820F00791575 /* AddDrinkWAterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564F66562B62820F00791575 /* AddDrinkWAterView.swift */; };
+		5665D48B2B5DA1C700326BBC /* DietView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5665D48A2B5DA1C700326BBC /* DietView.swift */; };
+		5665D48D2B5DCEAB00326BBC /* WaterDrinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5665D48C2B5DCEAB00326BBC /* WaterDrinkView.swift */; };
 		567073DB2AE952A0002AF246 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 567073DA2AE952A0002AF246 /* Localizable.xcstrings */; };
+		5673330D2B54753B001F8488 /* BMIData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5673330C2B54753B001F8488 /* BMIData.swift */; };
+		5673330F2B5475BB001F8488 /* DiaryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5673330E2B5475BB001F8488 /* DiaryData.swift */; };
+		567333112B5475F7001F8488 /* BAIData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567333102B5475F7001F8488 /* BAIData.swift */; };
 		5676A54C2AC4B6CC008AAB85 /* MyTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5676A54B2AC4B6CC008AAB85 /* MyTabView.swift */; };
 		5676A5502AC4C30E008AAB85 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5676A54F2AC4C30E008AAB85 /* SettingsView.swift */; };
 		5677B55A2B2E4565008DEADB /* BmiChartNewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5677B5592B2E4565008DEADB /* BmiChartNewView.swift */; };
@@ -66,6 +73,7 @@
 		562471C02AF8F3B700409F29 /* BaiDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiDataView.swift; sourceTree = "<group>"; };
 		563159302B07F572006E01A1 /* BmiPDFCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BmiPDFCreator.swift; sourceTree = "<group>"; };
 		563C8F4D2AB711AF0094C985 /* MeaningBAIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeaningBAIView.swift; sourceTree = "<group>"; };
+		5644E5212B72D33A001F9318 /* WaterData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterData.swift; sourceTree = "<group>"; };
 		5645A0772AF958DE00B6BC87 /* DiaryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiaryView.swift; sourceTree = "<group>"; };
 		564685B92B00E8550093E403 /* BMI-Remastered-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "BMI-Remastered-Info.plist"; sourceTree = SOURCE_ROOT; };
 		564685BE2B00EC250093E403 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -74,7 +82,13 @@
 		5649EE432B0D56D800A15AF5 /* MyTabViewNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabViewNew.swift; sourceTree = "<group>"; };
 		5649EE462B0D580900A15AF5 /* SettingsViewNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewNew.swift; sourceTree = "<group>"; };
 		564AADA02B21D0FF00321971 /* DiaryDataNewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryDataNewView.swift; sourceTree = "<group>"; };
+		564F66562B62820F00791575 /* AddDrinkWAterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDrinkWAterView.swift; sourceTree = "<group>"; };
+		5665D48A2B5DA1C700326BBC /* DietView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietView.swift; sourceTree = "<group>"; };
+		5665D48C2B5DCEAB00326BBC /* WaterDrinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterDrinkView.swift; sourceTree = "<group>"; };
 		567073DA2AE952A0002AF246 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		5673330C2B54753B001F8488 /* BMIData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMIData.swift; sourceTree = "<group>"; };
+		5673330E2B5475BB001F8488 /* DiaryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryData.swift; sourceTree = "<group>"; };
+		567333102B5475F7001F8488 /* BAIData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAIData.swift; sourceTree = "<group>"; };
 		5676A54B2AC4B6CC008AAB85 /* MyTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabView.swift; sourceTree = "<group>"; };
 		5676A54F2AC4C30E008AAB85 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		5677B5592B2E4565008DEADB /* BmiChartNewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BmiChartNewView.swift; sourceTree = "<group>"; };
@@ -163,6 +177,10 @@
 			isa = PBXGroup;
 			children = (
 				56ABFA552AB2384C005D7E49 /* ViewModel.swift */,
+				567333102B5475F7001F8488 /* BAIData.swift */,
+				5673330E2B5475BB001F8488 /* DiaryData.swift */,
+				5644E5212B72D33A001F9318 /* WaterData.swift */,
+				5673330C2B54753B001F8488 /* BMIData.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -193,6 +211,7 @@
 		5649EE412B0D51D000A15AF5 /* New HM Design */ = {
 			isa = PBXGroup;
 			children = (
+				5665D4892B5DA14D00326BBC /* Diet */,
 				56F89C052B27603600FC5390 /* PDF New */,
 				56F89C002B27068600FC5390 /* Mail New */,
 				5646E2DA2B2115F60051B132 /* Diary New */,
@@ -228,6 +247,25 @@
 				567073DA2AE952A0002AF246 /* Localizable.xcstrings */,
 			);
 			path = Translations;
+			sourceTree = "<group>";
+		};
+		564F66552B62818500791575 /* Water */ = {
+			isa = PBXGroup;
+			children = (
+				5665D48C2B5DCEAB00326BBC /* WaterDrinkView.swift */,
+				564F66562B62820F00791575 /* AddDrinkWAterView.swift */,
+			);
+			path = Water;
+			sourceTree = "<group>";
+		};
+		5665D4892B5DA14D00326BBC /* Diet */ = {
+			isa = PBXGroup;
+			children = (
+				564F66552B62818500791575 /* Water */,
+				5665D48A2B5DA1C700326BBC /* DietView.swift */,
+			);
+			name = Diet;
+			path = "Ernäfrung";
 			sourceTree = "<group>";
 		};
 		5676A54A2AC4B5EF008AAB85 /* TabView */ = {
@@ -470,16 +508,22 @@
 				560515AA2AB60EDB0059DD4E /* BmiChartView.swift in Sources */,
 				56ABFA4A2AB23807005D7E49 /* ContentBmiView.swift in Sources */,
 				56BFBB402B081008005F2721 /* ChoicePDFView.swift in Sources */,
+				5644E5222B72D33A001F9318 /* WaterData.swift in Sources */,
 				5649EE442B0D56D800A15AF5 /* MyTabViewNew.swift in Sources */,
+				5673330D2B54753B001F8488 /* BMIData.swift in Sources */,
+				5665D48B2B5DA1C700326BBC /* DietView.swift in Sources */,
 				568D4AE32B1BF9B6007DF35C /* MeaningOfBmiNewView.swift in Sources */,
 				5614759D2AC8B2DB00B405CE /* BmiDataChartView.swift in Sources */,
 				56ABFA562AB2384C005D7E49 /* ViewModel.swift in Sources */,
+				5673330F2B5475BB001F8488 /* DiaryData.swift in Sources */,
 				560515AC2AB64E820059DD4E /* BAIView.swift in Sources */,
 				5676A5502AC4C30E008AAB85 /* SettingsView.swift in Sources */,
 				5623AE5C2AF6B859000102AA /* DiaryDataView.swift in Sources */,
 				56202D6D2AFEE241002D2A84 /* MailView.swift in Sources */,
+				5665D48D2B5DCEAB00326BBC /* WaterDrinkView.swift in Sources */,
 				563C8F4E2AB711AF0094C985 /* MeaningBAIView.swift in Sources */,
 				56D9E9BC2B0BCDD80079EB4F /* BaiPDFCreator.swift in Sources */,
+				567333112B5475F7001F8488 /* BAIData.swift in Sources */,
 				563159312B07F572006E01A1 /* BmiPDFCreator.swift in Sources */,
 				56F89C022B2706BC00FC5390 /* SendMailNewView.swift in Sources */,
 				56ABFA482AB23807005D7E49 /* Bmi_new.swift in Sources */,
@@ -490,6 +534,7 @@
 				5614759A2AC87D1600B405CE /* BMIDataView.swift in Sources */,
 				568D4AEB2B1DBEC9007DF35C /* BaiNewView.swift in Sources */,
 				56908C5C2AEB23BF00F03DF3 /* MeaningOfBMIView.swift in Sources */,
+				564F66572B62820F00791575 /* AddDrinkWAterView.swift in Sources */,
 				56202D6F2AFEEB24002D2A84 /* SendMaillView.swift in Sources */,
 				56F89BFF2B254D0C00FC5390 /* DiaryDetailNewView.swift in Sources */,
 				5645A0782AF958DE00B6BC87 /* DiaryView.swift in Sources */,

@@ -42,3 +42,17 @@ struct DeleteButtonStyle: ViewModifier {
             .font(.headline)
     }
 }
+
+struct CapacitiyPicker: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .foregroundColor(Color("appBlue"))
+            .frame(width: 120, height: 120)
+            .background(Color("appOrange"))
+            .cornerRadius(16)
+            .overlay(
+                RoundedRectangle(cornerRadius: 16)
+                    .stroke(Color.blue, lineWidth: 2)
+            )
+    }
+}

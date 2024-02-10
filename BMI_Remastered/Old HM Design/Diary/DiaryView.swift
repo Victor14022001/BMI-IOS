@@ -29,7 +29,7 @@ struct DiaryView: View {
                 }
                 Section {
                     Button {
-                        let diary = Diary(title: title, detail: detail, date: .now)
+                        let diary = DiaryData(title: title, detail: detail, date: .now)
                         diaryContext.insert(diary)
                     } label: {
                         Text("Done")

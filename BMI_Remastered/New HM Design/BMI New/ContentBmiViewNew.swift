@@ -22,6 +22,7 @@ struct ContentBmiViewNew: View {
     @State private var showBaiSheet = false
     @State private var showBaiDataChartSheet = false
     @State private var showBmiChartSheet = false
+    @State private var showDietViewSheet = false
     
     init(viewModel: BmiViewModel) {
         _viewModel = ObservedObject(wrappedValue: viewModel)
@@ -94,6 +95,9 @@ struct ContentBmiViewNew: View {
                             .onAppear(perform: {
                                 viewModel.calculateIdealWeight()
                             })
+                            Button("Diet") {
+                                showDietViewSheet = true
+                            }
                         }
                         .modifier(ButtonStyle())
                         
@@ -146,6 +150,10 @@ struct ContentBmiViewNew: View {
                     
                     .sheet(isPresented: $showBaiDataChartSheet) {
                         BaiDataChartNewView()
+                    }
+                    
+                    .sheet(isPresented: $showDietViewSheet) {
+                        DietView()
                     }
                     
                     .alert(isPresented: $showAlert) {

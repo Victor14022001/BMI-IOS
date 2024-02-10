@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DiaryDetailNewView: View {
-    var diary: Diary
+    var diary: DiaryData
 
     var body: some View {
         NavigationStack {

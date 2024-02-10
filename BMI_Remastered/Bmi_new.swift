@@ -14,7 +14,7 @@ struct Bmi_new: App {
         WindowGroup {
             MyTabViewNew()
         }
-        .modelContainer(for: [BMIData.self, Diary.self, BAIData.self])
+        .modelContainer(for: [BMIData.self, DiaryData.self, BAIData.self, WaterData.self])
     }
 }
 

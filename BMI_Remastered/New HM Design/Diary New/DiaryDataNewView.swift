@@ -10,18 +10,18 @@ import SwiftData
 import Charts
 
 struct DiaryDataNewView: View {
-    @Query var datas: [Diary]
+    @Query var datas: [DiaryData]
     @Environment(\.modelContext) var diaryContext
     @State private var showDetailSheet = false
-    var diaryDtails: Diary?
+    var diaryDtails: DiaryData?
     
-    var sortedDatas: [Diary] {
+    var sortedDatas: [DiaryData] {
             return datas.sorted(by: { $0.date > $1.date })
         }
     
     @State private var searchText: String = ""
     
-    var filteredDatas: [Diary] {
+    var filteredDatas: [DiaryData] {
             if searchText.isEmpty {
                 return datas.sorted(by: { $0.date > $1.date })
             } else {

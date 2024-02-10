@@ -8,7 +8,7 @@
 import SwiftUI
 import Charts
 
-// TODO: - Creatae Chart struct in own file
+// TODO: - Creatae Chart struct in own file (eigene File)
 
 struct BmiChartNewView: View {
     let viewModel: BmiViewModel
