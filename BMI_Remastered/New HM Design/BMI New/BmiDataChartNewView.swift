@@ -11,7 +11,7 @@ import Charts
 
 struct BmiDataChartNewView: View {
     @Query(sort: \BMIData.date) private var datas: [BMIData]
-    @Environment(\.modelContext) var bmiContext
+   
     
     var body: some View {
         NavigationStack {

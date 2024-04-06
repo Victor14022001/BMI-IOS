@@ -12,6 +12,8 @@ struct AddDrinkWAterView: View {
     @Query var waterData: [WaterData]
     @Environment(\.modelContext) var waterContext
     
+    @State private var percent: Double = 40.0
+    
     var body: some View {
         NavigationStack {
             ZStack {
@@ -19,14 +21,6 @@ struct AddDrinkWAterView: View {
                     .ignoresSafeArea(.all)
                 
                 ScrollView {
-                    VStack(alignment: .leading) {
-                        Text("Empty VStack")
-                        
-                        ForEach(waterData) { water in
-                            Text("\(water.drankWater)")
-                        }
-                    }
-                    
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack {
                             VStack {
@@ -110,8 +104,13 @@ struct AddDrinkWAterView: View {
                         }
                     }
                     VStack {
-                      // WaterCircleWaveView(percent: 40)
-                        //Slider(value: self.$wavePercent, in: 1...100)
+                        CircleWaveView(percent: Int(self.percent))
+                        Slider(value: self.$percent, in: 1...100)
+                    }
+                    .padding(.all)
+                    
+                    ForEach(waterData) { water in
+                        Text("\(water.drankWater)")
                     }
                 }
                 .padding()

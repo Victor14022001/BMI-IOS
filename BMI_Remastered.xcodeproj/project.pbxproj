@@ -12,6 +12,7 @@
 		5614759A2AC87D1600B405CE /* BMIDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561475992AC87D1600B405CE /* BMIDataView.swift */; };
 		5614759D2AC8B2DB00B405CE /* BmiDataChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5614759C2AC8B2DB00B405CE /* BmiDataChartView.swift */; };
 		5615512B2AF90D30004C8A3F /* BaiDataChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5615512A2AF90D30004C8A3F /* BaiDataChartView.swift */; };
+		5616A90B2BA5CAED0024FA5A /* WaveShapeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5616A90A2BA5CAED0024FA5A /* WaveShapeModel.swift */; };
 		56202D6D2AFEE241002D2A84 /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56202D6C2AFEE241002D2A84 /* MailView.swift */; };
 		56202D6F2AFEEB24002D2A84 /* SendMaillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56202D6E2AFEEB24002D2A84 /* SendMaillView.swift */; };
 		5623AE5C2AF6B859000102AA /* DiaryDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5623AE5B2AF6B859000102AA /* DiaryDataView.swift */; };
@@ -31,6 +32,7 @@
 		5665D48B2B5DA1C700326BBC /* DietView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5665D48A2B5DA1C700326BBC /* DietView.swift */; };
 		5665D48D2B5DCEAB00326BBC /* WaterDrinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5665D48C2B5DCEAB00326BBC /* WaterDrinkView.swift */; };
 		567073DB2AE952A0002AF246 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 567073DA2AE952A0002AF246 /* Localizable.xcstrings */; };
+		5670D39C2BA5CEB500EF120A /* CircleWaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5670D39B2BA5CEB500EF120A /* CircleWaceView.swift */; };
 		5673330D2B54753B001F8488 /* BMIData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5673330C2B54753B001F8488 /* BMIData.swift */; };
 		5673330F2B5475BB001F8488 /* DiaryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5673330E2B5475BB001F8488 /* DiaryData.swift */; };
 		567333112B5475F7001F8488 /* BAIData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567333102B5475F7001F8488 /* BAIData.swift */; };
@@ -66,6 +68,7 @@
 		561475992AC87D1600B405CE /* BMIDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMIDataView.swift; sourceTree = "<group>"; };
 		5614759C2AC8B2DB00B405CE /* BmiDataChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BmiDataChartView.swift; sourceTree = "<group>"; };
 		5615512A2AF90D30004C8A3F /* BaiDataChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiDataChartView.swift; sourceTree = "<group>"; };
+		5616A90A2BA5CAED0024FA5A /* WaveShapeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveShapeModel.swift; sourceTree = "<group>"; };
 		56202D6C2AFEE241002D2A84 /* MailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
 		56202D6E2AFEEB24002D2A84 /* SendMaillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMaillView.swift; sourceTree = "<group>"; };
 		5623AE5B2AF6B859000102AA /* DiaryDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryDataView.swift; sourceTree = "<group>"; };
@@ -86,6 +89,7 @@
 		5665D48A2B5DA1C700326BBC /* DietView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietView.swift; sourceTree = "<group>"; };
 		5665D48C2B5DCEAB00326BBC /* WaterDrinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterDrinkView.swift; sourceTree = "<group>"; };
 		567073DA2AE952A0002AF246 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		5670D39B2BA5CEB500EF120A /* CircleWaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleWaceView.swift; sourceTree = "<group>"; };
 		5673330C2B54753B001F8488 /* BMIData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMIData.swift; sourceTree = "<group>"; };
 		5673330E2B5475BB001F8488 /* DiaryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryData.swift; sourceTree = "<group>"; };
 		567333102B5475F7001F8488 /* BAIData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAIData.swift; sourceTree = "<group>"; };
@@ -138,6 +142,14 @@
 			path = BAI;
 			sourceTree = "<group>";
 		};
+		5616A90C2BA5CBCD0024FA5A /* WaterWave */ = {
+			isa = PBXGroup;
+			children = (
+				5670D39B2BA5CEB500EF120A /* CircleWaceView.swift */,
+			);
+			path = WaterWave;
+			sourceTree = "<group>";
+		};
 		56202D6B2AFEE1EE002D2A84 /* Mail */ = {
 			isa = PBXGroup;
 			children = (
@@ -181,6 +193,7 @@
 				5673330E2B5475BB001F8488 /* DiaryData.swift */,
 				5644E5212B72D33A001F9318 /* WaterData.swift */,
 				5673330C2B54753B001F8488 /* BMIData.swift */,
+				5616A90A2BA5CAED0024FA5A /* WaveShapeModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -252,6 +265,7 @@
 		564F66552B62818500791575 /* Water */ = {
 			isa = PBXGroup;
 			children = (
+				5616A90C2BA5CBCD0024FA5A /* WaterWave */,
 				5665D48C2B5DCEAB00326BBC /* WaterDrinkView.swift */,
 				564F66562B62820F00791575 /* AddDrinkWAterView.swift */,
 			);
@@ -504,6 +518,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5670D39C2BA5CEB500EF120A /* CircleWaceView.swift in Sources */,
 				568D4ADF2B1BA5F9007DF35C /* CustomModifierView.swift in Sources */,
 				560515AA2AB60EDB0059DD4E /* BmiChartView.swift in Sources */,
 				56ABFA4A2AB23807005D7E49 /* ContentBmiView.swift in Sources */,
@@ -524,6 +539,7 @@
 				563C8F4E2AB711AF0094C985 /* MeaningBAIView.swift in Sources */,
 				56D9E9BC2B0BCDD80079EB4F /* BaiPDFCreator.swift in Sources */,
 				567333112B5475F7001F8488 /* BAIData.swift in Sources */,
+				5616A90B2BA5CAED0024FA5A /* WaveShapeModel.swift in Sources */,
 				563159312B07F572006E01A1 /* BmiPDFCreator.swift in Sources */,
 				56F89C022B2706BC00FC5390 /* SendMailNewView.swift in Sources */,
 				56ABFA482AB23807005D7E49 /* Bmi_new.swift in Sources */,

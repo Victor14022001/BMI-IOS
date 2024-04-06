@@ -29,6 +29,9 @@
     "%lld" : {
 
     },
+    "%lld%%" : {
+
+    },
     "1 L" : {
 
     },
@@ -660,9 +663,6 @@
     },
     "eins_zwei" : {
       "extractionState" : "manual"
-    },
-    "Empty VStack" : {
-
     },
     "Enter todays Diary" : {
       "localizations" : {
