@@ -4,6 +4,18 @@
     "" : {
 
     },
+    " %.2f g" : {
+
+    },
+    "%.2f" : {
+
+    },
+    "%.2f g" : {
+
+    },
+    "%.2f mg" : {
+
+    },
     "%@" : {
 
     },
@@ -432,6 +444,9 @@
         }
       }
     },
+    "Calories:" : {
+
+    },
     "Can't send Mail from this Device." : {
       "localizations" : {
         "de" : {
@@ -451,6 +466,12 @@
           }
         }
       }
+    },
+    "Carbohydrates:" : {
+
+    },
+    "Cholesterol:" : {
+
     },
     "Choose a Date" : {
       "extractionState" : "stale",
@@ -684,6 +705,9 @@
         }
       }
     },
+    "Enter your Fruit" : {
+
+    },
     "Enter your Hip circumference" : {
       "localizations" : {
         "de" : {
@@ -744,6 +768,9 @@
         }
       }
     },
+    "Fat:" : {
+
+    },
     "Female" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -754,6 +781,15 @@
           }
         }
       }
+    },
+    "Fetch Nutrition Info" : {
+
+    },
+    "Fiber:" : {
+
+    },
+    "Fruits" : {
+
     },
     "Gender" : {
       "localizations" : {
@@ -1008,6 +1044,9 @@
         }
       }
     },
+    "Nutrition" : {
+
+    },
     "Obesity" : {
       "localizations" : {
         "de" : {
@@ -1121,6 +1160,15 @@
         }
       }
     },
+    "Potassium:" : {
+
+    },
+    "Protein:" : {
+
+    },
+    "Saturated Fat:" : {
+
+    },
     "Save" : {
       "localizations" : {
         "de" : {
@@ -1160,6 +1208,9 @@
           }
         }
       }
+    },
+    "Serving Size:" : {
+
     },
     "Settings" : {
       "localizations" : {
@@ -1220,6 +1271,12 @@
           }
         }
       }
+    },
+    "Sodium:" : {
+
+    },
+    "Sugar:" : {
+
     },
     "text here..." : {
       "localizations" : {

@@ -68,50 +68,46 @@ struct ContentBmiViewNew: View {
                                 Image(systemName: "plus.forwardslash.minus")
                                 Text("Calculate BMI")
                             }
+                            .frame(maxWidth: .infinity)
                         }
                         .modifier(ButtonStyle())
                         .disabled(viewModel.bodyHeight.isEmpty || viewModel.bodyWeight.isEmpty)
                         
-                        Menu("More Informations") {
-                            Menu("BMI") {
-                                Button("Meaning of my BMI", systemImage: "lightbulb.min") {
-                                    showMeaningOfBmiSheet = true
+                        Menu {
+                            Menu("More Informations") {
+                                Menu("BMI") {
+                                    Button("Meaning of my BMI", systemImage: "lightbulb.min") {
+                                        showMeaningOfBmiSheet = true
+                                    }
+                                    Button("Bmi History Chart", systemImage: "chart.xyaxis.line") {
+                                        showBmiDataChartSheet = true
+                                    }
                                 }
-                                Button("Bmi History Chart", systemImage: "chart.xyaxis.line") {
-                                    showBmiDataChartSheet = true
+                                Menu("BAI") {
+                                    Button("BAI", systemImage: "plus.forwardslash.minus") {
+                                        showBaiSheet = true
+                                    }
+                                    Button("Bai History Chart", systemImage: "chart.xyaxis.line") {
+                                        showBaiDataChartSheet = true
+                                    }
+                                }
+                                Button("Idealweight", systemImage: "plus.forwardslash.minus") {
+                                    showIdealweightSheet = true
+                                }
+                                .onAppear(perform: {
+                                    viewModel.calculateIdealWeight()
+                                })
+                                Button("Diet") {
+                                    showDietViewSheet = true
                                 }
                             }
-                            Menu("BAI") {
-                                Button("BAI", systemImage: "plus.forwardslash.minus") {
-                                    showBaiSheet = true
-                                }
-                                Button("Bai History Chart", systemImage: "chart.xyaxis.line") {
-                                    showBaiDataChartSheet = true
-                                }
-                            }
-                            Button("Idealweight", systemImage: "plus.forwardslash.minus") {
-                                showIdealweightSheet = true
-                            }
-                            .onAppear(perform: {
-                                viewModel.calculateIdealWeight()
-                            })
-                            Button("Diet") {
-                                showDietViewSheet = true
-                            }
+                           
+
+                        } label: {
+                            Text("More Informations")
+                                .frame(maxWidth: .infinity)
                         }
                         .modifier(ButtonStyle())
-                        
-                        if viewModel.yourBmi != nil {
-                            Button {
-                                showBmiChartSheet = true
-                            } label: {
-                                HStack {
-                                    Image(systemName: "chart.bar.xaxis")
-                                    Text("Look at your BMI at a Chart")
-                                }
-                            }
-                            .modifier(ButtonStyle())
-                        }
                         Spacer()
                     }
                     .toolbar {

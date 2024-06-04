@@ -56,6 +56,7 @@
 		56BFBB402B081008005F2721 /* ChoicePDFView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BFBB3F2B081008005F2721 /* ChoicePDFView.swift */; };
 		56D9E9BC2B0BCDD80079EB4F /* BaiPDFCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D9E9BB2B0BCDD80079EB4F /* BaiPDFCreator.swift */; };
 		56E75B3E2AB38E44004E915A /* IdealweightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E75B3D2AB38E44004E915A /* IdealweightView.swift */; };
+		56EC10752BFBA46C000C72DF /* FruitsNewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EC10742BFBA46C000C72DF /* FruitsNewView.swift */; };
 		56F89BFF2B254D0C00FC5390 /* DiaryDetailNewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F89BFE2B254D0C00FC5390 /* DiaryDetailNewView.swift */; };
 		56F89C022B2706BC00FC5390 /* SendMailNewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F89C012B2706BC00FC5390 /* SendMailNewView.swift */; };
 		56F89C042B275F8200FC5390 /* MailNewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F89C032B275F8200FC5390 /* MailNewView.swift */; };
@@ -114,6 +115,7 @@
 		56BFBB3F2B081008005F2721 /* ChoicePDFView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoicePDFView.swift; sourceTree = "<group>"; };
 		56D9E9BB2B0BCDD80079EB4F /* BaiPDFCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiPDFCreator.swift; sourceTree = "<group>"; };
 		56E75B3D2AB38E44004E915A /* IdealweightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdealweightView.swift; sourceTree = "<group>"; };
+		56EC10742BFBA46C000C72DF /* FruitsNewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitsNewView.swift; sourceTree = "<group>"; };
 		56F89BFE2B254D0C00FC5390 /* DiaryDetailNewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryDetailNewView.swift; sourceTree = "<group>"; };
 		56F89C012B2706BC00FC5390 /* SendMailNewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMailNewView.swift; sourceTree = "<group>"; };
 		56F89C032B275F8200FC5390 /* MailNewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailNewView.swift; sourceTree = "<group>"; };
@@ -362,6 +364,7 @@
 				564A05962AE94B7000D0DB15 /* Translations */,
 				5649EE402B0D51B200A15AF5 /* Old HM Design */,
 				5649EE412B0D51D000A15AF5 /* New HM Design */,
+				56EC106F2BFBA3F8000C72DF /* Fruit New */,
 				56448CD32B001DAE006A6735 /* Launch Screen */,
 				5649D1442AE41139000D8CD9 /* ViewModel */,
 				56ABFA4B2AB23808005D7E49 /* Assets.xcassets */,
@@ -398,6 +401,14 @@
 				561475992AC87D1600B405CE /* BMIDataView.swift */,
 			);
 			path = BMI;
+			sourceTree = "<group>";
+		};
+		56EC106F2BFBA3F8000C72DF /* Fruit New */ = {
+			isa = PBXGroup;
+			children = (
+				56EC10742BFBA46C000C72DF /* FruitsNewView.swift */,
+			);
+			path = "Fruit New";
 			sourceTree = "<group>";
 		};
 		56F89C002B27068600FC5390 /* Mail New */ = {
@@ -564,6 +575,7 @@
 				568D4AE52B1C9B98007DF35C /* BmiDataChartNewView.swift in Sources */,
 				5646E2D92B2106EA0051B132 /* MeaningOfBaiNewView.swift in Sources */,
 				56F89C042B275F8200FC5390 /* MailNewView.swift in Sources */,
+				56EC10752BFBA46C000C72DF /* FruitsNewView.swift in Sources */,
 				568D4AEF2B1DD84D007DF35C /* ColorTheme.swift in Sources */,
 				5623AE602AF6D6B1000102AA /* DiaryDetailView.swift in Sources */,
 				5684ACC02B123EDA004D6EDD /* ContentBmiViewNew.swift in Sources */,

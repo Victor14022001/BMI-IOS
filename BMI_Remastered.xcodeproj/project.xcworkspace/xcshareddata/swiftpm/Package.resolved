@@ -1,4 +1,5 @@
 {
+  "originHash" : "a977674b3075da42ac73558bad8eecd870b2914dbfc249399d39375e82a34b54",
   "pins" : [
     {
       "identity" : "animatednumber",
@@ -10,5 +11,5 @@
       }
     }
   ],
-  "version" : 2
+  "version" : 3
 }

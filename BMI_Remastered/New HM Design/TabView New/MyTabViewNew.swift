@@ -32,6 +32,11 @@ struct MyTabViewNew: View {
                 .tabItem {
                     Label("Diary", systemImage: "pencil")
                 }
+            
+            FruitsNewView()
+                .tabItem {
+                    Label("Fruits", systemImage: "apple.logo")
+                }
         }
         .accentColor(Color("appOrange"))
         .preferredColorScheme(.dark)
