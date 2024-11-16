@@ -12,18 +12,20 @@ class BmiViewModel: NSObject, ObservableObject {
     // MARK: - AppStorage
     @AppStorage("isDarkModeEnabled") var isDarkmodeEnabled: Bool = false
     @AppStorage("waterPushNotifications") var waterNotifications: Bool = false
+    @AppStorage("selectedAge") var storedAge: Int = 1
+    @AppStorage("Gender") var storedGender = ""
+    @AppStorage("bodyHeight") var storedBodyHeight = ""
     
     // MARK: - Published
     @Published var bodyWeight = ""
     @Published var bodyHeight = ""
     
     @Published var yourBmi: Double?
-    @Published var yourBmiString: String = ""
+    @Published var calculatedBmiString: String = ""
     
     @Published var yourIdealWeight: Double?
-    @Published var yourIdealWeightString: String = ""
+    @Published var calculatedIdealwieghtString: String = ""
     
-    @Published var selectedGender = "Male"
     @Published var genders = ["Male", "Female"]
     
     @Published var chooseDate: Date = Date.now
@@ -32,31 +34,38 @@ class BmiViewModel: NSObject, ObservableObject {
     
     @Published var hipCircumference: String = ""
     @Published var yourBai: Double?
-    @Published var yourBaiString: String = ""
+    @Published var calculatedBaiString: String = ""
     
     @Published var drinkWaterNotification = false
     
     func calculateBMI() {
-        guard let height = Double(bodyHeight), let weight = Double(bodyWeight) else { return }
-        let calculatedBmi = weight / ((height / 100) * (height / 100))
-        yourBmi = calculatedBmi
-        yourBmiString = String(format: "%.2f", calculatedBmi)
+        guard let height = Double(storedBodyHeight), let weight = Double(bodyWeight) else { return }
+            let calculatedBmi = weight / ((height / 100) * (height / 100))
+            yourBmi = calculatedBmi
+            calculatedBmiString = String(format: "%.2f", calculatedBmi)
     }
     
     func calculateIdealWeight() {
-        guard let height = Double(bodyHeight) else { return }
-        let idealWeight = (height - 100) + 1
-        yourIdealWeight = idealWeight
-        yourIdealWeightString = String(format: "%.2f", idealWeight)
+        print("\(storedAge)")
+        print("\(storedBodyHeight)")
+        
+        // Umwandlung der Körperhöhe von Zentimetern in Meter
+        guard let heightInCn = Double(storedBodyHeight) else { return }
+        let basedHeight = heightInCn - 100
+        let ageAdjustment = storedAge / 10
+        let idealWeightCalculation = (basedHeight + Double(ageAdjustment)) * 0.9
+        yourIdealWeight = idealWeightCalculation
+        calculatedIdealwieghtString = String(format: "%.2f", idealWeightCalculation)
     }
+
     
     func calculateBAI() {
-        guard let hipCircumference = Double(hipCircumference), let height = Double(bodyHeight) else { return }
+        guard let hipCircumference = Double(hipCircumference), let height = Double(storedBodyHeight) else { return }
         let heightInMeters = height / 100.0
         let calculatedBai = (hipCircumference / pow(heightInMeters, 1.5)) - 18
         let roundedBAI = (calculatedBai * 100).rounded() / 100
         yourBai = roundedBAI
-        yourBaiString = String(format: "%.2f", roundedBAI)
+        calculatedBaiString = String(format: "%.2f", roundedBAI)
     }
     
     func drinkWaterReminder() {

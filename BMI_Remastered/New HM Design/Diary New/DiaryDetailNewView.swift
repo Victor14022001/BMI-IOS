@@ -50,6 +50,7 @@ struct DiaryDetailNewView: View {
                     .foregroundColor(Color("appOrange"))
                     .navigationBarTitleDisplayMode(.inline)
                 }
+                .scrollBounceBehavior(.basedOnSize)
             }
         }
     }

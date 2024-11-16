@@ -12,11 +12,10 @@ import UIKit
 struct ContentBmiViewNew: View {
     @FocusState private var bodyDataFields: Bool
     @ObservedObject var viewModel: BmiViewModel
-    @Query private var datas: [BMIData] // TODO: - Variable not used, delete it
     @Environment(\.modelContext) var context
     
     @State private var showAlert = false
-    @State private var showMeaningOfBmiSheet = false
+    @State private var showMeaningOfBmiSheet = false  
     @State private var showBmiDataChartSheet = false
     @State private var showIdealweightSheet = false
     @State private var showBaiSheet = false
@@ -32,7 +31,7 @@ struct ContentBmiViewNew: View {
         // Inline Navigation Title
         UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor(Color("appOrange"))]
     }
-
+    
     // TODO: - Really Long body, try to minimize, extract parts to own view files.
     var body: some View {
         NavigationStack {
@@ -41,7 +40,10 @@ struct ContentBmiViewNew: View {
                     .edgesIgnoringSafeArea(.all)
                 VStack(spacing: 20) {
                     ScrollView {
-                        TextField("Your Bodyheight", text: $viewModel.bodyHeight)
+                        TextField("Your Bodyheight", text: $viewModel.storedBodyHeight)
+                            .onChange(of: viewModel.storedBodyHeight) {
+                                viewModel.bodyHeight = viewModel.storedBodyHeight
+                            }
                             .keyboardType(.decimalPad)
                             .focused($bodyDataFields)
                             .modifier(TextFieldStyle())
@@ -49,13 +51,54 @@ struct ContentBmiViewNew: View {
                             .keyboardType(.decimalPad)
                             .focused($bodyDataFields)
                             .modifier(TextFieldStyle())
+                       
+                        HStack {
+                            Picker("Choose your age", selection: $viewModel.storedAge) {
+                                ForEach(1...100, id: \.self) {
+                                    Text("\($0)").tag($0)
+                                        .foregroundColor(Color("appOrange"))
+                                }
+                            }
+                            .pickerStyle(.wheel)
+                            
+                            Picker("Select your Gender", selection: $viewModel.storedGender) {
+                                ForEach(viewModel.genders, id: \.self) {
+                                    Text($0).tag($0)
+                                        .foregroundColor(Color("appOrange"))
+                                }
+                            }
+                            .pickerStyle(.wheel)
+                            
+                        }
+                        
+                        HStack {
+                            Text("Gender:")
+                            Spacer()
+                            Text(viewModel.storedGender)
+                        }
+                        .padding(.horizontal)
+                        .padding(.top)
+                        .frame(maxWidth: .infinity)
+                        .foregroundColor(Color("appOrange"))
+                        .font(.system(size: 24))
+                        
+                        HStack {
+                            Text("Age:")
+                            Spacer()
+                            Text("\(viewModel.storedAge)")
+                        }
+                        .padding(.horizontal)
+                        .frame(maxWidth: .infinity)
+                        .foregroundColor(Color("appOrange"))
+                        .font(.system(size: 24))
                         
                         HStack {
                             Text("Date")
                             Spacer()
                             Text("\(Date.now.formatted(date: .complete, time: .omitted))")
                         }
-                        .padding()
+                        .padding(.horizontal)
+                        .padding(.bottom)
                         .frame(maxWidth: .infinity)
                         .foregroundColor(Color("appOrange"))
                         .font(.system(size: 24))
@@ -68,48 +111,46 @@ struct ContentBmiViewNew: View {
                                 Image(systemName: "plus.forwardslash.minus")
                                 Text("Calculate BMI")
                             }
-                            .frame(maxWidth: .infinity)
+                            .frame(maxWidth: .infinity, maxHeight: .infinity)
                         }
                         .modifier(ButtonStyle())
-                        .disabled(viewModel.bodyHeight.isEmpty || viewModel.bodyWeight.isEmpty)
+                        .disabled(viewModel.bodyWeight.isEmpty)
                         
                         Menu {
-                            Menu("More Informations") {
-                                Menu("BMI") {
-                                    Button("Meaning of my BMI", systemImage: "lightbulb.min") {
-                                        showMeaningOfBmiSheet = true
-                                    }
-                                    Button("Bmi History Chart", systemImage: "chart.xyaxis.line") {
-                                        showBmiDataChartSheet = true
-                                    }
+                            Menu("BMI") {
+                                Button("Meaning of my BMI", systemImage: "lightbulb.min") {
+                                    showMeaningOfBmiSheet = true
                                 }
-                                Menu("BAI") {
-                                    Button("BAI", systemImage: "plus.forwardslash.minus") {
-                                        showBaiSheet = true
-                                    }
-                                    Button("Bai History Chart", systemImage: "chart.xyaxis.line") {
-                                        showBaiDataChartSheet = true
-                                    }
-                                }
-                                Button("Idealweight", systemImage: "plus.forwardslash.minus") {
-                                    showIdealweightSheet = true
-                                }
-                                .onAppear(perform: {
-                                    viewModel.calculateIdealWeight()
-                                })
-                                Button("Diet") {
-                                    showDietViewSheet = true
+                                Button("Bmi History Chart", systemImage: "chart.xyaxis.line") {
+                                    showBmiDataChartSheet = true
                                 }
                             }
-                           
-
+                            Menu("BAI") {
+                                Button("BAI", systemImage: "plus.forwardslash.minus") {
+                                    showBaiSheet = true
+                                }
+                                Button("Bai History Chart", systemImage: "chart.xyaxis.line") {
+                                    showBaiDataChartSheet = true
+                                }
+                            }
+                            Button("Idealweight", systemImage: "plus.forwardslash.minus") {
+                                showIdealweightSheet = true
+                            }
+                            .onAppear(perform: {
+                                viewModel.calculateIdealWeight()
+                            })
+                            Button("Diet") {
+                                showDietViewSheet = true
+                            }
+                            
                         } label: {
                             Text("More Informations")
-                                .frame(maxWidth: .infinity)
+                                .frame(maxWidth: .infinity, maxHeight: .infinity)
                         }
                         .modifier(ButtonStyle())
                         Spacer()
                     }
+                    .scrollBounceBehavior(.basedOnSize)
                     .toolbar {
                         ToolbarItemGroup(placement: .keyboard) {
                             
@@ -121,7 +162,7 @@ struct ContentBmiViewNew: View {
                         }
                     }
                     .padding()
-                    .navigationTitle("BMI \(viewModel.yourBmiString)")
+                    .navigationTitle("BMI \(viewModel.calculatedBmiString)")
                     .preferredColorScheme(.dark)
                     
                     .sheet(isPresented: $showBmiChartSheet) {

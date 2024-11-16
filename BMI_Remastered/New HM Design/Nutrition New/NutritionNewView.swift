@@ -28,7 +28,7 @@ struct Nutrition: Codable, Identifiable {
     }
 }
 
-struct FruitsNewView: View {
+struct NutritionNewView: View {
     @State private var fruit: String = ""
     @State private var item = [Nutrition]()
     @State private var isLoading = false
@@ -40,7 +40,7 @@ struct FruitsNewView: View {
                     .ignoresSafeArea(.all)
                 ScrollView {
                     VStack {
-                        TextField("Enter your Fruit", text: $fruit)
+                        TextField("Enter your e.g. Fruit you looking for", text: $fruit)
                             .modifier(TextFieldStyle())
                             .padding()
                         
@@ -50,7 +50,7 @@ struct FruitsNewView: View {
                             }
                         } label: {
                             Text("Fetch Nutrition Info")
-                                .frame(maxWidth: .infinity)
+                                .frame(maxWidth: .infinity, maxHeight: .infinity)
                         }
                         .modifier(ButtonStyle())
                                   
@@ -61,14 +61,16 @@ struct FruitsNewView: View {
                         
                         ForEach(item) { fruit in
                             VStack {
-                                Text(fruit.name)
+                                Text(fruit.name.capitalized)
                                     .font(.title)
+                                    .foregroundColor(Color("appOrange"))
                                 
                                 HStack {
                                     Text("Calories:")
                                     Spacer()
                                     Text("\(fruit.calories, specifier: "%.2f")")
                                 }
+                                .foregroundColor(Color("appOrange"))
                                 .frame(maxWidth: .infinity, alignment: .leading)
                                 
                                 HStack {
@@ -76,6 +78,7 @@ struct FruitsNewView: View {
                                     Spacer()
                                     Text("\(fruit.servingSizeG, specifier: "%.2f") g")
                                 }
+                                .foregroundColor(Color("appOrange"))
                                 .frame(maxWidth: .infinity, alignment: .leading)
                                 
                                 HStack {
@@ -83,6 +86,7 @@ struct FruitsNewView: View {
                                     Spacer()
                                     Text("\(fruit.fatTotalG, specifier: "%.2f") g")
                                 }
+                                .foregroundColor(Color("appOrange"))
                                 .frame(maxWidth: .infinity, alignment: .leading)
                                 
                                 HStack {
@@ -90,6 +94,7 @@ struct FruitsNewView: View {
                                     Spacer()
                                     Text("\(fruit.fatSaturatedG, specifier: "%.2f") g")
                                 }
+                                .foregroundColor(Color("appOrange"))
                                 .frame(maxWidth: .infinity, alignment: .leading)
                                 
                                 HStack {
@@ -97,6 +102,7 @@ struct FruitsNewView: View {
                                     Spacer()
                                     Text("\(fruit.proteinG, specifier: "%.2f") g")
                                 }
+                                .foregroundColor(Color("appOrange"))
                                 .frame(maxWidth: .infinity, alignment: .leading)
                                 
                                 HStack {
@@ -104,6 +110,7 @@ struct FruitsNewView: View {
                                     Spacer()
                                     Text("\(fruit.sodiumMg, specifier: "%.2f") mg")
                                 }
+                                .foregroundColor(Color("appOrange"))
                                 .frame(maxWidth: .infinity, alignment: .leading)
                                 
                                 HStack {
@@ -111,6 +118,7 @@ struct FruitsNewView: View {
                                     Spacer()
                                     Text("\(fruit.potassiumMg, specifier: "%.2f") mg")
                                 }
+                                .foregroundColor(Color("appOrange"))
                                 .frame(maxWidth: .infinity, alignment: .leading)
                                 
                                 HStack {
@@ -118,6 +126,7 @@ struct FruitsNewView: View {
                                     Spacer()
                                     Text("\(fruit.cholesterolMg, specifier: "%.2f") mg")
                                 }
+                                .foregroundColor(Color("appOrange"))
                                 .frame(maxWidth: .infinity, alignment: .leading)
                                 
                                 HStack {
@@ -125,6 +134,7 @@ struct FruitsNewView: View {
                                     Spacer()
                                     Text("\(fruit.carbohydratesTotalG, specifier: "%.2f") g")
                                 }
+                                .foregroundColor(Color("appOrange"))
                                 .frame(maxWidth: .infinity, alignment: .leading)
                                 
                                 HStack {
@@ -132,6 +142,7 @@ struct FruitsNewView: View {
                                     Spacer()
                                     Text("\(fruit.fiberG, specifier: "%.2f") g")
                                 }
+                                .foregroundColor(Color("appOrange"))
                                 .frame(maxWidth: .infinity, alignment: .leading)
                                 
                                 HStack {
@@ -139,10 +150,13 @@ struct FruitsNewView: View {
                                     Spacer()
                                     Text(" \(fruit.sugarG, specifier: "%.2f") g")
                                 }
+                                .foregroundColor(Color("appOrange"))
                                 .frame(maxWidth: .infinity, alignment: .leading)
                                 
                             }
                             .padding(.top)
+                            
+                            Divider()
                         }
                     }
                     .padding()
@@ -184,4 +198,8 @@ struct FruitsNewView: View {
         
         isLoading = false
     }
+}
+
+#Preview {
+    NutritionNewView()
 }

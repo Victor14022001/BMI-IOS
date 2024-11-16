@@ -82,7 +82,7 @@ struct BAIView: View {
 
                             Spacer()
 
-                            Text("\(viewModel.yourBaiString)")
+                            Text("\(viewModel.calculatedBaiString)")
                         }
                     }
 

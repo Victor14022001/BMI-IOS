@@ -19,7 +19,7 @@ struct IdealweightView: View {
                 HStack {
                     VStack {
                         Text("Gender")
-                        Text("\(viewModel.selectedGender)")
+                        Text("\(viewModel.storedGender)")
                     }
 
                     Spacer()
@@ -44,7 +44,7 @@ struct IdealweightView: View {
 
                     Spacer()
 
-                    Text("\(viewModel.yourIdealWeightString)")
+                    Text("\(viewModel.calculatedIdealwieghtString)")
                 }
             }
         }

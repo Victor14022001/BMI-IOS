@@ -51,6 +51,7 @@ struct BaiDataChartNewView: View {
                             }
                         }
                     }
+                    .scrollBounceBehavior(.basedOnSize)
                     .scrollContentBackground(.hidden)
                     .navigationTitle("Bai's History Chart")
                     .navigationBarTitleDisplayMode(.inline)

@@ -56,7 +56,7 @@
 		56BFBB402B081008005F2721 /* ChoicePDFView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BFBB3F2B081008005F2721 /* ChoicePDFView.swift */; };
 		56D9E9BC2B0BCDD80079EB4F /* BaiPDFCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D9E9BB2B0BCDD80079EB4F /* BaiPDFCreator.swift */; };
 		56E75B3E2AB38E44004E915A /* IdealweightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E75B3D2AB38E44004E915A /* IdealweightView.swift */; };
-		56EC10752BFBA46C000C72DF /* FruitsNewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EC10742BFBA46C000C72DF /* FruitsNewView.swift */; };
+		56EC10752BFBA46C000C72DF /* NutritionNewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EC10742BFBA46C000C72DF /* NutritionNewView.swift */; };
 		56F89BFF2B254D0C00FC5390 /* DiaryDetailNewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F89BFE2B254D0C00FC5390 /* DiaryDetailNewView.swift */; };
 		56F89C022B2706BC00FC5390 /* SendMailNewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F89C012B2706BC00FC5390 /* SendMailNewView.swift */; };
 		56F89C042B275F8200FC5390 /* MailNewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F89C032B275F8200FC5390 /* MailNewView.swift */; };
@@ -106,7 +106,7 @@
 		568D4AEC2B1DC19D007DF35C /* BaiDataChartNewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiDataChartNewView.swift; sourceTree = "<group>"; };
 		568D4AEE2B1DD84D007DF35C /* ColorTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTheme.swift; sourceTree = "<group>"; };
 		56908C5B2AEB23BF00F03DF3 /* MeaningOfBMIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeaningOfBMIView.swift; sourceTree = "<group>"; };
-		56ABFA442AB23807005D7E49 /* BMI_Remastered.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BMI_Remastered.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		56ABFA442AB23807005D7E49 /* HealthMetrics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthMetrics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56ABFA472AB23807005D7E49 /* Bmi_new.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bmi_new.swift; sourceTree = "<group>"; };
 		56ABFA492AB23807005D7E49 /* ContentBmiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 1; path = ContentBmiView.swift; sourceTree = "<group>"; };
 		56ABFA4B2AB23808005D7E49 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -115,7 +115,7 @@
 		56BFBB3F2B081008005F2721 /* ChoicePDFView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoicePDFView.swift; sourceTree = "<group>"; };
 		56D9E9BB2B0BCDD80079EB4F /* BaiPDFCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiPDFCreator.swift; sourceTree = "<group>"; };
 		56E75B3D2AB38E44004E915A /* IdealweightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdealweightView.swift; sourceTree = "<group>"; };
-		56EC10742BFBA46C000C72DF /* FruitsNewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitsNewView.swift; sourceTree = "<group>"; };
+		56EC10742BFBA46C000C72DF /* NutritionNewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionNewView.swift; sourceTree = "<group>"; };
 		56F89BFE2B254D0C00FC5390 /* DiaryDetailNewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryDetailNewView.swift; sourceTree = "<group>"; };
 		56F89C012B2706BC00FC5390 /* SendMailNewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMailNewView.swift; sourceTree = "<group>"; };
 		56F89C032B275F8200FC5390 /* MailNewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailNewView.swift; sourceTree = "<group>"; };
@@ -226,16 +226,17 @@
 		5649EE412B0D51D000A15AF5 /* New HM Design */ = {
 			isa = PBXGroup;
 			children = (
-				5665D4892B5DA14D00326BBC /* Diet */,
-				56F89C052B27603600FC5390 /* PDF New */,
-				56F89C002B27068600FC5390 /* Mail New */,
-				5646E2DA2B2115F60051B132 /* Diary New */,
+				5684ACBE2B123E2E004D6EDD /* BMI New */,
 				568D4AE92B1DBEB5007DF35C /* BAI New */,
 				568D4AE62B1D1F5D007DF35C /* Idealweight New */,
-				568D4ADB2B1BA20E007DF35C /* Modifier - Color Teme */,
-				5684ACBE2B123E2E004D6EDD /* BMI New */,
+				56EC106F2BFBA3F8000C72DF /* Nutrition New */,
+				56F89C002B27068600FC5390 /* Mail New */,
+				5646E2DA2B2115F60051B132 /* Diary New */,
+				5665D4892B5DA14D00326BBC /* Diet */,
 				5649EE452B0D57ED00A15AF5 /* Settings New */,
+				56F89C052B27603600FC5390 /* PDF New */,
 				5649EE422B0D568900A15AF5 /* TabView New */,
+				568D4ADB2B1BA20E007DF35C /* Modifier - Color Teme */,
 			);
 			path = "New HM Design";
 			sourceTree = "<group>";
@@ -351,7 +352,7 @@
 		56ABFA452AB23807005D7E49 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				56ABFA442AB23807005D7E49 /* BMI_Remastered.app */,
+				56ABFA442AB23807005D7E49 /* HealthMetrics.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -364,7 +365,6 @@
 				564A05962AE94B7000D0DB15 /* Translations */,
 				5649EE402B0D51B200A15AF5 /* Old HM Design */,
 				5649EE412B0D51D000A15AF5 /* New HM Design */,
-				56EC106F2BFBA3F8000C72DF /* Fruit New */,
 				56448CD32B001DAE006A6735 /* Launch Screen */,
 				5649D1442AE41139000D8CD9 /* ViewModel */,
 				56ABFA4B2AB23808005D7E49 /* Assets.xcassets */,
@@ -403,12 +403,12 @@
 			path = BMI;
 			sourceTree = "<group>";
 		};
-		56EC106F2BFBA3F8000C72DF /* Fruit New */ = {
+		56EC106F2BFBA3F8000C72DF /* Nutrition New */ = {
 			isa = PBXGroup;
 			children = (
-				56EC10742BFBA46C000C72DF /* FruitsNewView.swift */,
+				56EC10742BFBA46C000C72DF /* NutritionNewView.swift */,
 			);
-			path = "Fruit New";
+			path = "Nutrition New";
 			sourceTree = "<group>";
 		};
 		56F89C002B27068600FC5390 /* Mail New */ = {
@@ -431,24 +431,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		56ABFA432AB23807005D7E49 /* BMI_Remastered */ = {
+		56ABFA432AB23807005D7E49 /* HealthMetrics */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 56ABFA522AB23808005D7E49 /* Build configuration list for PBXNativeTarget "BMI_Remastered" */;
+			buildConfigurationList = 56ABFA522AB23808005D7E49 /* Build configuration list for PBXNativeTarget "HealthMetrics" */;
 			buildPhases = (
 				56ABFA402AB23807005D7E49 /* Sources */,
 				56ABFA412AB23807005D7E49 /* Frameworks */,
 				56ABFA422AB23807005D7E49 /* Resources */,
-				4F353F9E2AF984B1006DCC8C /* Swiftlint */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = BMI_Remastered;
+			name = HealthMetrics;
 			packageProductDependencies = (
 			);
 			productName = "BMI_ 2";
-			productReference = 56ABFA442AB23807005D7E49 /* BMI_Remastered.app */;
+			productReference = 56ABFA442AB23807005D7E49 /* HealthMetrics.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -459,14 +458,14 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1500;
+				LastUpgradeCheck = 1540;
 				TargetAttributes = {
 					56ABFA432AB23807005D7E49 = {
 						CreatedOnToolsVersion = 14.3.1;
 					};
 				};
 			};
-			buildConfigurationList = 56ABFA3F2AB23807005D7E49 /* Build configuration list for PBXProject "BMI_Remastered" */;
+			buildConfigurationList = 56ABFA3F2AB23807005D7E49 /* Build configuration list for PBXProject "HealthMetrics" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -483,7 +482,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				56ABFA432AB23807005D7E49 /* BMI_Remastered */,
+				56ABFA432AB23807005D7E49 /* HealthMetrics */,
 			);
 		};
 /* End PBXProject section */
@@ -501,28 +500,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		4F353F9E2AF984B1006DCC8C /* Swiftlint */ = {
-			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = Swiftlint;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		56ABFA402AB23807005D7E49 /* Sources */ = {
@@ -575,7 +552,7 @@
 				568D4AE52B1C9B98007DF35C /* BmiDataChartNewView.swift in Sources */,
 				5646E2D92B2106EA0051B132 /* MeaningOfBaiNewView.swift in Sources */,
 				56F89C042B275F8200FC5390 /* MailNewView.swift in Sources */,
-				56EC10752BFBA46C000C72DF /* FruitsNewView.swift in Sources */,
+				56EC10752BFBA46C000C72DF /* NutritionNewView.swift in Sources */,
 				568D4AEF2B1DD84D007DF35C /* ColorTheme.swift in Sources */,
 				5623AE602AF6D6B1000102AA /* DiaryDetailView.swift in Sources */,
 				5684ACC02B123EDA004D6EDD /* ContentBmiViewNew.swift in Sources */,
@@ -589,6 +566,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -650,6 +628,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -780,7 +759,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		56ABFA3F2AB23807005D7E49 /* Build configuration list for PBXProject "BMI_Remastered" */ = {
+		56ABFA3F2AB23807005D7E49 /* Build configuration list for PBXProject "HealthMetrics" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				56ABFA502AB23808005D7E49 /* Debug */,
@@ -789,7 +768,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		56ABFA522AB23808005D7E49 /* Build configuration list for PBXNativeTarget "BMI_Remastered" */ = {
+		56ABFA522AB23808005D7E49 /* Build configuration list for PBXNativeTarget "HealthMetrics" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				56ABFA532AB23808005D7E49 /* Debug */,

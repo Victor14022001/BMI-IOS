@@ -61,6 +61,7 @@ To achieve the best results, it is advisable to adapt the diet to individual nee
                     }
                     .padding()
                     Spacer()
+                        .scrollBounceBehavior(.basedOnSize)
                 }
             }
             .navigationTitle("Diet")

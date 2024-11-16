@@ -22,20 +22,20 @@ struct MyTabViewNew: View {
                 .tabItem {
                     Label("Home", systemImage: "house")
                 }
- 
-            SettingsViewNew(viewModel: viewModel)
-                .tabItem {
-                    Label("Settings", systemImage: "gearshape")
-                }
 
             DiaryNewView()
                 .tabItem {
                     Label("Diary", systemImage: "pencil")
                 }
             
-            FruitsNewView()
+            NutritionNewView()
                 .tabItem {
-                    Label("Fruits", systemImage: "apple.logo")
+                    Label("Fruits", systemImage: "fork.knife.circle")
+                }
+            
+            SettingsViewNew(viewModel: viewModel)
+                .tabItem {
+                    Label("Settings", systemImage: "gearshape")
                 }
         }
         .accentColor(Color("appOrange"))

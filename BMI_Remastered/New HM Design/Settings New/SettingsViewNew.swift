@@ -36,6 +36,7 @@ struct SettingsViewNew: View {
                                 Image(systemName: "trash")
                                 Text("Delete all BMI's")
                             }
+                            .frame(maxWidth: .infinity, maxHeight: .infinity)
                         }
                         .modifier(DeleteButtonStyle())
                         .alert(isPresented: $showBMIDeleteAlert) {
@@ -60,6 +61,7 @@ struct SettingsViewNew: View {
                                 Image(systemName: "trash")
                                 Text("Delete all Diaries")
                             }
+                            .frame(maxWidth: .infinity, maxHeight: .infinity)
                         }
                         .modifier(DeleteButtonStyle())
                         .alert(isPresented: $showDiaryDeleteAlert) {
@@ -84,6 +86,7 @@ struct SettingsViewNew: View {
                                 Image(systemName: "trash")
                                 Text("Delete all BAI's")
                             }
+                            .frame(maxWidth: .infinity, maxHeight: .infinity)
                         }
                         .modifier(DeleteButtonStyle())
                         .alert(isPresented: $showBAIDeleteAlert) {
@@ -108,6 +111,7 @@ struct SettingsViewNew: View {
                                 Image(systemName: "square.and.arrow.up")
                                 Text("Export Data to PDF")
                             }
+                            .frame(maxWidth: .infinity, maxHeight: .infinity)
                         }
                         .modifier(ButtonStyle())
                         
@@ -118,6 +122,7 @@ struct SettingsViewNew: View {
                                 Image(systemName: "mail")
                                 Text("Contact the Support")
                             }
+                            .frame(maxWidth: .infinity, maxHeight: .infinity)
                         }
                         .modifier(ButtonStyle())
                         .sheet(isPresented: $showMailSheet) {
@@ -130,6 +135,7 @@ struct SettingsViewNew: View {
                     .padding()
                     Spacer()
                 }
+                .scrollBounceBehavior(.basedOnSize)
             }
         }
     }

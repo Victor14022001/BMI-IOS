@@ -51,6 +51,7 @@ struct BmiDataChartNewView: View {
                             
                         }
                     }
+                    .scrollBounceBehavior(.basedOnSize)
                     .scrollContentBackground(.hidden)
                     
                 }

@@ -1,10 +1,3 @@
-//
-//  AddDrinkWAterView.swift
-//  BMI_Remastered
-//
-//  Created by Victor Horn on 25.01.24.
-//
-
 import SwiftUI
 import SwiftData
 
@@ -20,109 +13,85 @@ struct AddDrinkWAterView: View {
                 Color("appBlue")
                     .ignoresSafeArea(.all)
                 
-                ScrollView {
+                VStack {
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack {
-                            VStack {
-                                Image(systemName: "drop.fill")
-                                    .font(.system(size: 32))
-                                    .foregroundColor(Color("appBlue"))
-                                Text("100 ml")
-                                    .font(.headline)
-                                
-                            }
-                            .modifier(CapacitiyPicker())
-                            .onTapGesture {
-                                let water = WaterData(drankWater: 100)
-                                waterContext.insert(water)
-                            }
-                            
-                            VStack {
-                                Image(systemName: "drop.fill")
-                                    .font(.system(size: 32))
-                                    .foregroundColor(Color("appBlue"))
-                                Text("250 ml")
-                                    .font(.headline)
-                            }
-                            .modifier(CapacitiyPicker())
-                            .onTapGesture {
-                                let water = WaterData(drankWater: 250)
-                                waterContext.insert(water)
-                            }
-                            
-                            VStack {
-                                Image(systemName: "drop.fill")
-                                    .font(.system(size: 32))
-                                    .foregroundColor(Color("appBlue"))
-                                Text("500 ml")
-                                    .font(.headline)
-                            }
-                            .modifier(CapacitiyPicker())
-                            .onTapGesture {
-                                let water = WaterData(drankWater: 500)
-                                waterContext.insert(water)
-                            }
-                            
-                            VStack {
-                                Image(systemName: "drop.fill")
-                                    .font(.system(size: 32))
-                                    .foregroundColor(Color("appBlue"))
-                                Text("1 L")
-                                    .font(.headline)
-                            }
-                            .modifier(CapacitiyPicker())
-                            .onTapGesture {
-                                let water = WaterData(drankWater: 1000)
-                                waterContext.insert(water)
-                            }
-                            
-                            VStack {
-                                Image(systemName: "drop.fill")
-                                    .font(.system(size: 32))
-                                    .foregroundColor(Color("appBlue"))
-                                Text("1,5 L")
-                                    .font(.headline)
-                            }
-                            .modifier(CapacitiyPicker())
-                            .onTapGesture {
-                                let water = WaterData(drankWater: 1500)
-                                waterContext.insert(water)
-                            }
-                            
-                            VStack {
-                                Image(systemName: "drop.fill")
-                                    .font(.system(size: 32))
-                                    .foregroundColor(Color("appBlue"))
-                                Text("2 L")
-                                    .font(.headline)
-                            }
-                            .modifier(CapacitiyPicker())
-                            .onTapGesture {
-                                let water = WaterData(drankWater: 2000)
-                                waterContext.insert(water)
+                            ForEach([100, 250, 500, 1000, 1500, 2000], id: \.self) { amount in
+                                VStack {
+                                    Image(systemName: "drop.fill")
+                                        .font(.system(size: 32))
+                                        .foregroundColor(Color("appBlue"))
+                                    Text("\(amount / 1000 > 0 ? "\(amount / 1000) L" : "\(amount) ml")")
+                                        .font(.headline)
+                                }
+                                .modifier(CapacitiyPicker())
+                                .onTapGesture {
+                                    let water = WaterData(drankWater: amount)
+                                    waterContext.insert(water)
+                                }
                             }
                         }
+                        .padding(.top)
                     }
-                    VStack {
-                        CircleWaveView(percent: Int(self.percent))
-                        Slider(value: self.$percent, in: 1...100)
-                    }
-                    .padding(.all)
                     
-                    ForEach(waterData) { water in
-                        Text("\(water.drankWater)")
+                    ScrollView {
+                        VStack {
+                            if waterData.isEmpty {
+                                VStack {
+                                    Text("No data available")
+                                        .font(.title)
+                                        .foregroundColor(Color("appOrange"))
+                                    CircleWaveView(percent: 0)
+                                    Text("Total: 0 ml")
+                                        .foregroundColor(Color("appOrange"))
+                                        .padding(.top)
+                                }
+                                .padding(.vertical)
+                            } else {
+                                ForEach(aggregateWaterDataByDate(), id: \.0) { date, totalWater in
+                                    VStack {
+                                        Text("Date: \(dateString(from: date))")
+                                            .font(.title)
+                                            .foregroundColor(Color("appOrange"))
+                                        CircleWaveView(percent: min(100, totalWater * 100 / 2000)) // Display as percentage of 2000 ml
+                                        Text("Total: \(totalWater) ml")
+                                            .foregroundColor(Color("appOrange"))
+                                            .padding(.top)
+                                    }
+                                    .padding(.vertical)
+                                }
+                            }
+                        }
+                        .padding()
                     }
+                    .scrollBounceBehavior(.basedOnSize)
                 }
-                .padding()
-                Spacer()
+                .background(Color("appBlue")) // Ensure background color covers all
             }
             .navigationTitle("Add drink WAter")
             .navigationBarTitleDisplayMode(.inline)
             .preferredColorScheme(.dark)
         }
     }
+    
+    func aggregateWaterDataByDate() -> [(Date, Int)] {
+        let calendar = Calendar.current
+        var groupedData: [Date: Int] = [:]
+        
+        for water in waterData {
+            let startOfDay = calendar.startOfDay(for: water.drankWaterDate)
+            groupedData[startOfDay, default: 0] += water.drankWater
+        }
+        
+        return groupedData.sorted(by: { $0.key < $1.key })
+    }
+    
+    func dateString(from date: Date) -> String {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        return formatter.string(from: date)
+    }
 }
-
 
 #Preview {
     AddDrinkWAterView()

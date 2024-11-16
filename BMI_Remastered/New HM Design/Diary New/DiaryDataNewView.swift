@@ -61,6 +61,7 @@ struct DiaryDataNewView: View {
                             }
                         }
                     }
+                    .scrollBounceBehavior(.basedOnSize)
                     .scrollContentBackground(.hidden)
                     .navigationTitle("Your Diary's")
                     .navigationBarTitleDisplayMode(.inline)

@@ -35,9 +35,12 @@ struct SendMailNewView: View {
                     .foregroundColor(Color("appOrange"))
                     .font(.system(size: 24))
                     
-                    if MFMailComposeViewController.canSendMail() {
-                        Button("Send Mail") {
+                    if MFMailComposeViewController.canSendMail() {    
+                        Button {
                             self.showMailView.toggle()
+                        } label: {
+                            Text("Send Mail")
+                                .frame(maxWidth: .infinity, maxHeight: .infinity)
                         }
                         .modifier(ButtonStyle())
                     } else {
@@ -45,8 +48,6 @@ struct SendMailNewView: View {
                             .foregroundColor(Color("appOrange"))
                             .font(.system(size: 24))
                     }
-                    
-                    
                     Spacer()
                 }
                 .padding()

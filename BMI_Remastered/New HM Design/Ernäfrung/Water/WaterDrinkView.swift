@@ -33,15 +33,21 @@ struct WaterDrinkView: View {
 In our busy and connected world, it's easy to overlook basic needs like proper water intake. Use an iPhone WaterDrinkReminder for health benefits, improved concentration, skin health, and weight management. Customizable push notifications make it effortless to stay hydrated without disrupting your routine. Integrate this simple yet effective method into your daily life for a healthier, well-hydrated future!
 """)
                         .foregroundStyle(Color("appOrange"))
-                        
-                        Button("OG Water") {
+                        .padding(.top)
+                       
+                        Button {
                             showWaterSheet = true
+                        } label: {
+                            Text("Add Water")
+                                .frame(maxWidth: .infinity, maxHeight: .infinity)
                         }
                         .modifier(ButtonStyle())
+                        .padding(.top)
                     }
                     .padding()
                     Spacer()
                 }
+                .scrollBounceBehavior(.basedOnSize)
             }
             .navigationTitle("Water")
             .preferredColorScheme(.dark)

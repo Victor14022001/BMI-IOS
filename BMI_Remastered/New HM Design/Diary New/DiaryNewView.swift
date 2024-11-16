@@ -39,6 +39,7 @@ struct DiaryNewView: View {
                             diaryContext.insert(diary)
                         } label: {
                             Text("Done")
+                                .frame(maxWidth: .infinity, maxHeight: .infinity)
                         }
                         .modifier(ButtonStyle())
                         
@@ -49,12 +50,14 @@ struct DiaryNewView: View {
                                 Image(systemName: "bookmark")
                                 Text("Show my Diaries")
                             }
+                            .frame(maxWidth: .infinity, maxHeight: .infinity)
                         }
                         .modifier(ButtonStyle())
                     }
                     .padding()
                     //  Spacer()
                 }
+                .scrollBounceBehavior(.basedOnSize)
                 .sheet(isPresented: $showMeaningBaiSheet) {
                     DiaryDataNewView()
                 }

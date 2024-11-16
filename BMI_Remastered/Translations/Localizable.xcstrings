@@ -11,7 +11,14 @@
 
     },
     "%.2f g" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%.2f g"
+          }
+        }
+      }
     },
     "%.2f mg" : {
 
@@ -41,25 +48,17 @@
     "%lld" : {
 
     },
+    "%lld years" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jahre"
+          }
+        }
+      }
+    },
     "%lld%%" : {
-
-    },
-    "1 L" : {
-
-    },
-    "1,5 L" : {
-
-    },
-    "2 L" : {
-
-    },
-    "100 ml" : {
-
-    },
-    "250 ml" : {
-
-    },
-    "500 ml" : {
 
     },
     "A BAI value above 26 can indicate high body fat and is often considered a sign of obesity" : {
@@ -146,6 +145,15 @@
       }
     },
     "Add drink WAter" : {
+
+    },
+    "Add Water" : {
+
+    },
+    "Age" : {
+
+    },
+    "Age:" : {
 
     },
     "Are you sure to delete all saved BAI's?" : {
@@ -495,6 +503,9 @@
         }
       }
     },
+    "Choose your age" : {
+
+    },
     "Choose your Gender" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -537,6 +548,16 @@
       }
     },
     "Date" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Datum"
+          }
+        }
+      }
+    },
+    "Date: %@" : {
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -650,7 +671,14 @@
       }
     },
     "Diet" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ernährung"
+          }
+        }
+      }
     },
     "Do you want to save your BAI?" : {
       "localizations" : {
@@ -705,7 +733,7 @@
         }
       }
     },
-    "Enter your Fruit" : {
+    "Enter your e.g. Fruit you looking for" : {
 
     },
     "Enter your Hip circumference" : {
@@ -802,7 +830,6 @@
       }
     },
     "Gender:" : {
-      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -1024,6 +1051,9 @@
         }
       }
     },
+    "No data available" : {
+
+    },
     "Normalwieght" : {
       "localizations" : {
         "de" : {
@@ -1086,9 +1116,6 @@
           }
         }
       }
-    },
-    "OG Water" : {
-
     },
     "OS and Version:" : {
       "localizations" : {
@@ -1198,6 +1225,9 @@
           }
         }
       }
+    },
+    "Select your Gender" : {
+
     },
     "Send Mail" : {
       "localizations" : {
@@ -1348,6 +1378,19 @@
         }
       }
     },
+    "Total: %lld ml" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Total: %lld ml"
+          }
+        }
+      }
+    },
+    "Total: 0 ml" : {
+
+    },
     "Type" : {
 
     },
@@ -1385,7 +1428,14 @@
 
     },
     "Water reminder" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wassererinnerung"
+          }
+        }
+      }
     },
     "Weight" : {
       "localizations" : {

@@ -18,5 +18,4 @@ struct Bmi_new: App {
     }
 }
 
-// TODO: - Check all files for Trailing Whitespaces i have 185 Warnings in Swiftlint!
 // TODO: - Change deprecated foregroundColor to foregroundStyle

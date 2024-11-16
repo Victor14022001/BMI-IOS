@@ -106,7 +106,7 @@ struct ContentBmiView: View {
                     }
                 }
             }
-            .navigationTitle("BMI \(viewModel.yourBmiString)")
+            .navigationTitle("BMI \(viewModel.calculatedBmiString)")
             .alert(isPresented: $showAlert) {
                 Alert(
                     title: Text("Save BMI"),

@@ -44,6 +44,7 @@ struct BaiNewView: View {
                                 Image(systemName: "plus.forwardslash.minus")
                                 Text("Calculate BAI")
                             }
+                            .frame(maxWidth: .infinity, maxHeight: .infinity)
                         }
                         .disabled(viewModel.hipCircumference.isEmpty)
                         .modifier(ButtonStyle())
@@ -55,6 +56,7 @@ struct BaiNewView: View {
                                 secondaryButton: .default(Text("Save"), action: {
                                     guard let bais = viewModel.yourBai else { return }
                                     baiContenxt.insert(BAIData(dataBai: bais, date: .now))
+                                    print("BAI saved!")
                                 })
                             )
                         }
@@ -76,7 +78,7 @@ struct BaiNewView: View {
                                 Text("Height")
                                     .foregroundColor(Color("appOrange"))
                                 Spacer()
-                                Text("\(viewModel.bodyHeight) cm")
+                                Text("\(viewModel.storedBodyHeight) cm")
                                     .foregroundColor(Color("appOrange"))
                             }
                             .padding(.bottom, 10)
@@ -95,7 +97,7 @@ struct BaiNewView: View {
                                 .foregroundColor(Color("appOrange"))
                                 .font(.title)
                             
-                            Text("\(viewModel.yourBaiString)")
+                            Text("\(viewModel.calculatedBaiString)")
                                 .foregroundColor(Color("appOrange"))
                                 .font(.title2)
                         }
@@ -109,11 +111,13 @@ struct BaiNewView: View {
                                 Image(systemName: "lightbulb.min")
                                 Text("What is the meaning of my BAI?")
                             }
+                            .frame(maxWidth: .infinity, maxHeight: .infinity)
                         }
                         .modifier(ButtonStyle())
                         Spacer()
                     }
                 }
+                .scrollBounceBehavior(.basedOnSize)
                 .padding()
             }
             

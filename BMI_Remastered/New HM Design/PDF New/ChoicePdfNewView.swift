@@ -24,6 +24,7 @@ struct ChoicePdfNewView: View {
                     } label: {
                         Image(systemName: "square.and.arrow.up")
                         Text("Export BMI to PDF")
+                            .frame(maxWidth: .infinity, maxHeight: .infinity)
                     }
                     .modifier(ButtonStyle())
                     
@@ -32,6 +33,7 @@ struct ChoicePdfNewView: View {
                     } label: {
                         Image(systemName: "square.and.arrow.up")
                         Text("Export BAI to PDF")
+                            .frame(maxWidth: .infinity, maxHeight: .infinity)
                     }
                     .modifier(ButtonStyle())
                     

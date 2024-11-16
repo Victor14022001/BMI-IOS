@@ -65,6 +65,7 @@ struct MeaningOfBmiNewView: View {
                     
                     Spacer()
                 }
+                .scrollBounceBehavior(.basedOnSize)
                 .navigationTitle("Meaning of my BMI")
                 .navigationBarTitleDisplayMode(.inline)
                 .preferredColorScheme(.dark)

@@ -23,7 +23,7 @@ struct ButtonStyle: ViewModifier {
     func body(content: Content) -> some View {
         content
             .padding()
-            .frame(maxWidth: .infinity)
+            .frame(maxWidth: .infinity, maxHeight: 50)
             .background(Color("appOrange"))
             .cornerRadius(10)
             .foregroundColor(Color("appBlue"))
