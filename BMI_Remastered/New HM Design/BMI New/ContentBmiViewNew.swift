@@ -71,26 +71,23 @@ struct ContentBmiViewNew: View {
                             
                         }
                         
-                        HStack {
-                            Text("Gender:")
-                            Spacer()
-                            Text(viewModel.storedGender)
-                        }
-                        .padding(.horizontal)
-                        .padding(.top)
-                        .frame(maxWidth: .infinity)
-                        .foregroundColor(Color("appOrange"))
-                        .font(.system(size: 24))
+//                        HStack {
+//                            Text("Gender:")
+//                            Spacer()
+//                            Text(viewModel.storedGender)
+//                        }
+//                        .padding(.horizontal)
+//                        .frame(maxWidth: .infinity)
+//                        .modifier(BodyTextStyle())
                         
-                        HStack {
-                            Text("Age:")
-                            Spacer()
-                            Text("\(viewModel.storedAge)")
-                        }
-                        .padding(.horizontal)
-                        .frame(maxWidth: .infinity)
-                        .foregroundColor(Color("appOrange"))
-                        .font(.system(size: 24))
+//                        HStack {
+//                            Text("Age:")
+//                            Spacer()
+//                            Text("\(viewModel.storedAge)")
+//                        }
+//                        .padding(.horizontal)
+//                        .frame(maxWidth: .infinity)
+//                        .modifier(BodyTextStyle())
                         
                         HStack {
                             Text("Date")
@@ -100,8 +97,7 @@ struct ContentBmiViewNew: View {
                         .padding(.horizontal)
                         .padding(.bottom)
                         .frame(maxWidth: .infinity)
-                        .foregroundColor(Color("appOrange"))
-                        .font(.system(size: 24))
+                        .modifier(BodyTextStyle())
                         
                         Button {
                             viewModel.calculateBMI()
@@ -146,8 +142,10 @@ struct ContentBmiViewNew: View {
                         } label: {
                             Text("More Informations")
                                 .frame(maxWidth: .infinity, maxHeight: .infinity)
+                                
                         }
                         .modifier(ButtonStyle())
+                        
                         Spacer()
                     }
                     .scrollBounceBehavior(.basedOnSize)
@@ -165,6 +163,16 @@ struct ContentBmiViewNew: View {
                     .navigationTitle("BMI \(viewModel.calculatedBmiString)")
                     .preferredColorScheme(.dark)
                     
+                    .toolbar {
+                        ToolbarItem(placement: .navigationBarTrailing) {
+                            NavigationLink {
+                                MeaningOfBmiNewView()
+                            } label: {
+                                Image(systemName: "info.circle")
+                                    .foregroundStyle(Color(Color("appOrange")))
+                            }
+                        }
+                    }
                     .sheet(isPresented: $showBmiChartSheet) {
                         BmiChartNewView(viewModel)
                     }

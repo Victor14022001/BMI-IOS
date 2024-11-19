@@ -50,12 +50,21 @@ class BmiViewModel: NSObject, ObservableObject {
         print("\(storedBodyHeight)")
         
         // Umwandlung der Körperhöhe von Zentimetern in Meter
-        guard let heightInCn = Double(storedBodyHeight) else { return }
-        let basedHeight = heightInCn - 100
+        guard let heightInCm = Double(storedBodyHeight) else { return }
+        let basedHeight = heightInCm - 100
         let ageAdjustment = storedAge / 10
-        let idealWeightCalculation = (basedHeight + Double(ageAdjustment)) * 0.9
-        yourIdealWeight = idealWeightCalculation
-        calculatedIdealwieghtString = String(format: "%.2f", idealWeightCalculation)
+        
+        if storedGender == "Male" {
+            let idealWeightCalculation = (basedHeight + Double(ageAdjustment)) * 0.9
+            yourIdealWeight = idealWeightCalculation
+            calculatedIdealwieghtString = String(format: "%.2f", idealWeightCalculation)
+        } else {
+            let idealWeightCalculation = (basedHeight + Double(ageAdjustment)) * 0.8
+            yourIdealWeight = idealWeightCalculation
+            calculatedIdealwieghtString = String(format: "%.2f", idealWeightCalculation)
+        }
+       
+      
     }
 
     

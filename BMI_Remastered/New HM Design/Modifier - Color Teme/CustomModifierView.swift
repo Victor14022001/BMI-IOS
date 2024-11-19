@@ -56,3 +56,11 @@ struct CapacitiyPicker: ViewModifier {
             )
     }
 }
+
+struct BodyTextStyle: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(.body)
+            .foregroundColor(Color("appOrange"))
+    }
+}

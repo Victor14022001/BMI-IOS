@@ -4,13 +4,8 @@
     "" : {
 
     },
-    " %.2f g" : {
-
-    },
-    "%.2f" : {
-
-    },
     "%.2f g" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -19,9 +14,6 @@
           }
         }
       }
-    },
-    "%.2f mg" : {
-
     },
     "%@" : {
 
@@ -42,6 +34,16 @@
     "%@ kg" : {
 
     },
+    "%@ years" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ Jahre"
+          }
+        }
+      }
+    },
     "%lf" : {
 
     },
@@ -49,6 +51,7 @@
 
     },
     "%lld years" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -151,9 +154,6 @@
 
     },
     "Age" : {
-
-    },
-    "Age:" : {
 
     },
     "Are you sure to delete all saved BAI's?" : {
@@ -830,6 +830,7 @@
       }
     },
     "Gender:" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {

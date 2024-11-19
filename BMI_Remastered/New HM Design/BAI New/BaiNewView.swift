@@ -27,6 +27,7 @@ struct BaiNewView: View {
                 ScrollView {
                     VStack(spacing: 20) {
                         Text("The BAI is an alternative to the BMI, which is calculated based on hip circumference in relation to your height.")
+                            .font(.body)
                             .foregroundColor(Color("appOrange"))
                         
                         Divider()
@@ -66,22 +67,13 @@ struct BaiNewView: View {
                         
                         VStack {
                             HStack {
-                                Text("Hip")
-                                    .foregroundColor(Color("appOrange"))
-                                Spacer()
-                                Text("\(viewModel.hipCircumference) cm")
-                                    .foregroundColor(Color("appOrange"))
-                            }
-                            .padding(.bottom, 10)
-                            
-                            HStack {
                                 Text("Height")
                                     .foregroundColor(Color("appOrange"))
                                 Spacer()
                                 Text("\(viewModel.storedBodyHeight) cm")
                                     .foregroundColor(Color("appOrange"))
                             }
-                            .padding(.bottom, 10)
+                            .padding(.horizontal)
                             
                             HStack {
                                 Text("Weight")
@@ -90,6 +82,7 @@ struct BaiNewView: View {
                                 Text("\(viewModel.bodyWeight) kg")
                                     .foregroundColor(Color("appOrange"))
                             }
+                            .padding(.horizontal)
                         }
                         
                         VStack {
