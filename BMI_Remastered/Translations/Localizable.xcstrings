@@ -4,8 +4,13 @@
     "" : {
 
     },
+    " %.2f g" : {
+
+    },
+    "%.2f" : {
+
+    },
     "%.2f g" : {
-      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -14,6 +19,9 @@
           }
         }
       }
+    },
+    "%.2f mg" : {
+
     },
     "%@" : {
 
