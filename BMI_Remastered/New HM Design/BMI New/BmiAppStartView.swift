@@ -9,7 +9,7 @@ import SwiftUI
 import SwiftData
 import UIKit
 
-struct ContentBmiViewNew: View {
+struct BmiAppStartView: View {
     @FocusState private var bodyDataFields: Bool
     @ObservedObject var viewModel: BmiViewModel
     @Environment(\.modelContext) var context
@@ -71,24 +71,6 @@ struct ContentBmiViewNew: View {
                             
                         }
                         
-//                        HStack {
-//                            Text("Gender:")
-//                            Spacer()
-//                            Text(viewModel.storedGender)
-//                        }
-//                        .padding(.horizontal)
-//                        .frame(maxWidth: .infinity)
-//                        .modifier(BodyTextStyle())
-                        
-//                        HStack {
-//                            Text("Age:")
-//                            Spacer()
-//                            Text("\(viewModel.storedAge)")
-//                        }
-//                        .padding(.horizontal)
-//                        .frame(maxWidth: .infinity)
-//                        .modifier(BodyTextStyle())
-                        
                         HStack {
                             Text("Date")
                             Spacer()
@@ -102,6 +84,7 @@ struct ContentBmiViewNew: View {
                         Button {
                             viewModel.calculateBMI()
                             showAlert = true
+                            bodyDataFields = false
                         } label: {
                             HStack {
                                 Image(systemName: "plus.forwardslash.minus")
@@ -114,9 +97,6 @@ struct ContentBmiViewNew: View {
                         
                         Menu {
                             Menu("BMI") {
-                                Button("Meaning of my BMI", systemImage: "lightbulb.min") {
-                                    showMeaningOfBmiSheet = true
-                                }
                                 Button("Bmi History Chart", systemImage: "chart.xyaxis.line") {
                                     showBmiDataChartSheet = true
                                 }
@@ -165,13 +145,20 @@ struct ContentBmiViewNew: View {
                     
                     .toolbar {
                         ToolbarItem(placement: .navigationBarTrailing) {
-                            NavigationLink {
-                                MeaningOfBmiNewView()
-                            } label: {
+                            NavigationLink(destination: MeaningOfBaiNewView().navigationTitle("BMI")) {
                                 Image(systemName: "info.circle")
-                                    .foregroundStyle(Color(Color("appOrange")))
+                                    .foregroundStyle(Color("appOrange"))
                             }
-                        }
+
+                                
+//                            NavigationLink {
+//                                MeaningOfBmiNewView()
+//                            } label: {
+//                                Image(systemName: "info.circle")
+//                                    .foregroundStyle(Color(Color("appOrange")))
+//                            }
+                                           }
+                                           
                     }
                     .sheet(isPresented: $showBmiChartSheet) {
                         BmiChartNewView(viewModel)
@@ -219,5 +206,5 @@ struct ContentBmiViewNew: View {
 }
 
 #Preview {
-    ContentBmiViewNew(viewModel: .init())
+    BmiAppStartView(viewModel: .init())
 }

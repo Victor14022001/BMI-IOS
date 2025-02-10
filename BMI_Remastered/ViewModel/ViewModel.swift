@@ -15,8 +15,9 @@ class BmiViewModel: NSObject, ObservableObject {
     @AppStorage("selectedAge") var storedAge: Int = 1
     @AppStorage("Gender") var storedGender = ""
     @AppStorage("bodyHeight") var storedBodyHeight = ""
+    @AppStorage("Design") var choosenDesign: String = ""
     
-    // MARK: - Published
+    // MARK: - Published    
     @Published var bodyWeight = ""
     @Published var bodyHeight = ""
     
@@ -27,6 +28,7 @@ class BmiViewModel: NSObject, ObservableObject {
     @Published var calculatedIdealwieghtString: String = ""
     
     @Published var genders = ["Male", "Female"]
+    @Published var chooseDesign = ["Standart IOS design", "HealthMetrics design"]
     
     @Published var chooseDate: Date = Date.now
     

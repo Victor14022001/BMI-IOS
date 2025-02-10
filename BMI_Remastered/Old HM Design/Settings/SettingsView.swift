@@ -18,7 +18,7 @@ struct SettingsView: View {
     @State private var showBMIDeleteAlert = false
     @State private var showDiaryDeleteAlert = false
     @State private var showBAIDeleteAlert = false
-
+    @State private var showDesignAlert = false
     @State private var showMailSheet = false
 
     var body: some View {
@@ -26,6 +26,17 @@ struct SettingsView: View {
             Form {
                 Section("Color Scheme") {
                     Toggle("Darkmode", isOn: $viewModel.isDarkmodeEnabled)
+                }
+                
+                Section("Design") {
+                    Picker("Choose your App Design", selection: $viewModel.choosenDesign) {
+                        ForEach(viewModel.chooseDesign, id: \.self) {
+                            Text($0).tag($0)
+                        }
+                    }
+                    .onChange(of: viewModel.choosenDesign) {
+                        showDesignAlert = true
+                    }
                 }
 
                 Section("BMI") {
@@ -169,6 +180,11 @@ struct SettingsView: View {
             }
             .navigationTitle("Settings")
             .navigationBarTitleDisplayMode(.inline)
+            .alert(isPresented: $showDesignAlert) {
+                Alert(title: Text("Notice"),
+                      message: Text("Please restart the App to use the other design"),
+                      dismissButton: .default(Text("OK")))
+            }
         }
     }
 }

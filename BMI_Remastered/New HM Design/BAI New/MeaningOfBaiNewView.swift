@@ -73,7 +73,7 @@ struct MeaningOfBaiNewView: View {
                     
                     Spacer()
                 }
-                .navigationTitle("Meaning of my BAI")
+                .navigationTitle("BAI's Meaning")
                 .navigationBarTitleDisplayMode(.inline)
                 .preferredColorScheme(.dark)
             }

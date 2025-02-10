@@ -10,8 +10,8 @@ import SwiftData
 
 @Model
 class BMIData: Identifiable {
-    let dataBmi: Double
-    let date: Date
+    var dataBmi: Double
+    var date: Date
 
     init(dataBmi: Double, date: Date = .now) {
         self.dataBmi = dataBmi

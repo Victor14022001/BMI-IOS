@@ -10,9 +10,20 @@ import SwiftData
 
 @main
 struct Bmi_new: App {
+  
+    var viewModel = BmiViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            MyTabViewNew()
+            if viewModel.choosenDesign == "HealthMetrics design" {
+                MyTabViewNew()
+            } else {
+                MyTabView()
+            }
+               
+             
+            
+            
         }
         .modelContainer(for: [BMIData.self, DiaryData.self, BAIData.self, WaterData.self])
     }

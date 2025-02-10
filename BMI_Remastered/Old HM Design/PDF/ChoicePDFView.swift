@@ -29,32 +29,29 @@ struct ChoicePDFView: View {
                     Text("Export BAI to PDF")
                 }
             }
-            .navigationTitle("Export to PDF")
-            .navigationBarTitleDisplayMode(.inline)
         }
+        .navigationTitle("Export to PDF")
+        .navigationBarTitleDisplayMode(.inline)
     }
 
     func showBmiPDF() {
-        let pdfView = BmiPDFCreator.createPDF(bmiDatas: bmiDatas)
-
-    // PDFView in einem UIViewController platzieren (optional)
-    let pdfViewController = UIViewController()
-    pdfViewController.view = pdfView
-
-    // PDF-Datei in der Vorschau anzeigen (optional)
-    UIApplication.shared.windows.first?.rootViewController?.present(pdfViewController, animated: true, completion: nil)
-}
+        presentPDFView(pdfView: BmiPDFCreator.createPDF(bmiDatas: bmiDatas))
+    }
 
     func showBaiPDF() {
-        let pdfView = BaiPDFCreator.createPDF(baiDatas: baiDatas)
+        presentPDFView(pdfView: BaiPDFCreator.createPDF(baiDatas: baiDatas))
+    }
 
-    // PDFView in einem UIViewController platzieren (optional)
-    let pdfViewController = UIViewController()
-    pdfViewController.view = pdfView
+    private func presentPDFView(pdfView: UIView) {
+        // Sucht die oberste Fenster-Szene
+        if let windowScene = UIApplication.shared.connectedScenes.first(where: { $0 is UIWindowScene }) as? UIWindowScene,
+           let rootViewController = windowScene.windows.first?.rootViewController {
+            let pdfViewController = UIViewController()
+            pdfViewController.view = pdfView
 
-    // PDF-Datei in der Vorschau anzeigen (optional)
-    UIApplication.shared.windows.first?.rootViewController?.present(pdfViewController, animated: true, completion: nil)
-}
+            rootViewController.present(pdfViewController, animated: true, completion: nil)
+        }
+    }
 }
 
 #Preview {

@@ -56,9 +56,12 @@ struct ChoicePdfNewView: View {
         pdfViewController.view = pdfView
         
         // PDF-Datei in der Vorschau anzeigen (optional)
-        UIApplication.shared.windows.first?.rootViewController?.present(pdfViewController, animated: true, completion: nil)
+        if let windowScene = UIApplication.shared.connectedScenes.first(where: { $0 is UIWindowScene }) as? UIWindowScene,
+           let rootViewController = windowScene.windows.first?.rootViewController {
+            rootViewController.present(pdfViewController, animated: true, completion: nil)
+        }
     }
-    
+     
     func showBaiPDF() {
         let pdfView = BaiPDFCreator.createPDF(baiDatas: baiDatas)
         
@@ -67,7 +70,10 @@ struct ChoicePdfNewView: View {
         pdfViewController.view = pdfView
         
         // PDF-Datei in der Vorschau anzeigen (optional)
-        UIApplication.shared.windows.first?.rootViewController?.present(pdfViewController, animated: true, completion: nil)
+        if let windowScene = UIApplication.shared.connectedScenes.first(where: { $0 is UIWindowScene }) as? UIWindowScene,
+           let rootViewController = windowScene.windows.first?.rootViewController {
+            rootViewController.present(pdfViewController, animated: true, completion: nil)
+        }
     }
 }
 

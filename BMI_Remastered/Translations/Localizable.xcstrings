@@ -58,17 +58,6 @@
     "%lld" : {
 
     },
-    "%lld years" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Jahre"
-          }
-        }
-      }
-    },
     "%lld%%" : {
 
     },
@@ -175,7 +164,7 @@
       }
     },
     "Are you sure to delete all saved BMI's" : {
-      "extractionState" : "stale",
+      "extractionState" : "manual",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -285,6 +274,9 @@
         }
       }
     },
+    "BAI's Meaning" : {
+
+    },
     "BMI" : {
       "localizations" : {
         "de" : {
@@ -373,7 +365,7 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Bei Verlaufsdiagramm "
+            "value" : "BMI Verlaufsdiagramm "
           }
         }
       }
@@ -398,23 +390,12 @@
         }
       }
     },
-    "Body mass index BMI is a measure of body fat based on height and weight that applies to" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Der Body-Mass-Index (BMI) ist ein Maß für den Körperfettanteil, der auf Größe und Gewicht basiert"
-          }
-        }
-      }
-    },
     "Calculate BAI" : {
       "localizations" : {
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Berechne BAI"
+            "value" : "BAI berechnen"
           }
         }
       }
@@ -424,7 +405,7 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Berechne BMI"
+            "value" : "BMI berechnen"
           }
         }
       }
@@ -434,7 +415,7 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Berechne mein Idealgewicht"
+            "value" : "Idealgewicht berechnen"
           }
         }
       }
@@ -449,19 +430,15 @@
         }
       }
     },
-    "Calculate your Idealweight" : {
-      "extractionState" : "stale",
+    "Calories:" : {
       "localizations" : {
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Berechne dein Idealgewicht"
+            "value" : "Kalorien "
           }
         }
       }
-    },
-    "Calories:" : {
-
     },
     "Can't send Mail from this Device." : {
       "localizations" : {
@@ -484,46 +461,23 @@
       }
     },
     "Carbohydrates:" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kohlenhydrate"
+          }
+        }
+      }
     },
     "Cholesterol:" : {
 
     },
-    "Choose a Date" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Wähle ein Datum "
-          }
-        }
-      }
-    },
-    "Choose a date for your saved BMI" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Wähle ein Datum für deinen gespeicherten BMI"
-          }
-        }
-      }
-    },
     "Choose your age" : {
 
     },
-    "Choose your Gender" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Wähle dein Geschlecht "
-          }
-        }
-      }
+    "Choose your App Design" : {
+
     },
     "Color Scheme" : {
       "localizations" : {
@@ -595,34 +549,12 @@
         }
       }
     },
-    "Delete all data" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Lösche alle gespeicherten BMI's"
-          }
-        }
-      }
-    },
     "Delete all Diaries" : {
       "localizations" : {
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lösche alle Tagebucheinträge"
-          }
-        }
-      }
-    },
-    "Delete your saved BMI's" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Lösche deine gespeicherten BMI's"
           }
         }
       }
@@ -657,6 +589,9 @@
           }
         }
       }
+    },
+    "Design" : {
+
     },
     "Device:" : {
       "localizations" : {
@@ -807,17 +742,6 @@
     "Fat:" : {
 
     },
-    "Female" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Freu"
-          }
-        }
-      }
-    },
     "Fetch Nutrition Info" : {
 
     },
@@ -833,39 +757,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Geschlecht"
-          }
-        }
-      }
-    },
-    "Gender:" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Geschlecht:"
-          }
-        }
-      }
-    },
-    "Hallo" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hallo"
-          }
-        }
-      }
-    },
-    "HealthMetrics" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "HealthMetrics"
           }
         }
       }
@@ -1011,11 +902,12 @@
       }
     },
     "Meaning of my BAI" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Bedeutung meines BAI"
+            "value" : "Bedeutung von meinem BAI"
           }
         }
       }
@@ -1083,6 +975,9 @@
         }
       }
     },
+    "Notice" : {
+
+    },
     "Nutrition" : {
 
     },
@@ -1125,6 +1020,9 @@
           }
         }
       }
+    },
+    "OK" : {
+
     },
     "OS and Version:" : {
       "localizations" : {
@@ -1186,6 +1084,9 @@
         }
       }
     },
+    "Please restart the App to use the other design" : {
+
+    },
     "Please send us an email if you have any problems or ideas for new features." : {
       "localizations" : {
         "de" : {
@@ -1234,6 +1135,9 @@
           }
         }
       }
+    },
+    "Select Design" : {
+
     },
     "Select your Gender" : {
 

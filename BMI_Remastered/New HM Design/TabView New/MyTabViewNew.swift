@@ -18,7 +18,7 @@ struct MyTabViewNew: View {
 
     var body: some View {
         TabView {
-            ContentBmiViewNew(viewModel: viewModel)
+            BmiAppStartView(viewModel: viewModel)
                 .tabItem {
                     Label("Home", systemImage: "house")
                 }

@@ -10,8 +10,8 @@ import SwiftData
 
 @Model
 class WaterData {
-    let drankWater: Int
-    let drankWaterDate: Date
+    var drankWater: Int
+    var drankWaterDate: Date
     
     init(drankWater: Int, drankWaterDate: Date = .now) {
         self.drankWater = drankWater

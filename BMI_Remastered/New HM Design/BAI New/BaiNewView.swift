@@ -12,18 +12,19 @@ import UIKit
 struct BaiNewView: View {
     @ObservedObject var viewModel: BmiViewModel
     @FocusState private var hipDataField: Bool
-    
+
     @Environment(\.modelContext) var baiContenxt
     @Query private var datas: [BAIData] // TODO: - Variable not used, delete it
 
     @State private var showBaiSaveAlert = false
     @State private var showMeningBaiSheet = false
-    
+
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ZStack {
                 Color("appBlue")
-                    .ignoresSafeArea(.all)
+                    .ignoresSafeArea()
+
                 ScrollView {
                     VStack(spacing: 20) {
                         Text("The BAI is an alternative to the BMI, which is calculated based on hip circumference in relation to your height.")
@@ -40,29 +41,17 @@ struct BaiNewView: View {
                         Button {
                             viewModel.calculateBAI()
                             showBaiSaveAlert = true
+                            hipDataField = false
                         } label: {
                             HStack {
                                 Image(systemName: "plus.forwardslash.minus")
                                 Text("Calculate BAI")
                             }
-                            .frame(maxWidth: .infinity, maxHeight: .infinity)
+                            .frame(maxWidth: .infinity)
                         }
                         .disabled(viewModel.hipCircumference.isEmpty)
                         .modifier(ButtonStyle())
-                        .alert(isPresented: $showBaiSaveAlert) {
-                            Alert(
-                                title: Text("Save BAI"),
-                                message: Text("Do you want to save your BAI?"),
-                                primaryButton: .destructive(Text("Cancel")),
-                                secondaryButton: .default(Text("Save"), action: {
-                                    guard let bais = viewModel.yourBai else { return }
-                                    baiContenxt.insert(BAIData(dataBai: bais, date: .now))
-                                    print("BAI saved!")
-                                })
-                            )
-                        }
-                        .padding(.bottom, 10)
-                        
+                       
                         Divider()
                         
                         VStack {
@@ -97,41 +86,44 @@ struct BaiNewView: View {
                         
                         Divider()
                         
-                        Button {
-                            showMeningBaiSheet = true
-                        } label: {
-                            HStack {
-                                Image(systemName: "lightbulb.min")
-                                Text("What is the meaning of my BAI?")
-                            }
-                            .frame(maxWidth: .infinity, maxHeight: .infinity)
-                        }
-                        .modifier(ButtonStyle())
                         Spacer()
                     }
+                    .padding()
                 }
-                .scrollBounceBehavior(.basedOnSize)
-                .padding()
             }
-            
-        
-        .navigationTitle("BAI")
-        .navigationBarTitleDisplayMode(.inline)
+            .navigationTitle("BAI")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .keyboard) {
+                    Spacer()
+                    Button("Done") {
+                        hipDataField = false
+                    }
+                    .foregroundStyle(Color("appOrange"))
+                }
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    NavigationLink {
+                        MeaningOfBaiNewView()
+                    } label: {
+                        Image(systemName: "info.circle")
+                            .foregroundStyle(Color("appOrange"))
+                    }
+                }
+            }
+            .alert(isPresented: $showBaiSaveAlert) {
+                Alert(
+                    title: Text("Save BAI"),
+                    message: Text("Do you want to save your BAI?"),
+                    primaryButton: .destructive(Text("Cancel")),
+                    secondaryButton: .default(Text("Save"), action: {
+                        guard let bais = viewModel.yourBai else { return }
+                        baiContenxt.insert(BAIData(dataBai: bais, date: .now))
+                        print("BAI saved!")
+                    })
+                )
+            }
+        }
         .preferredColorScheme(.dark)
-        .sheet(isPresented: $showMeningBaiSheet) {
-            MeaningOfBaiNewView()
-        }
-        .toolbar {
-            ToolbarItemGroup(placement: .keyboard) {
-                
-                Spacer()
-                
-                Button("Done") {
-                    hipDataField = false
-                }
-            }
-        }
-        }
     }
 }
 

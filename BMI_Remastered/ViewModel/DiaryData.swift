@@ -10,9 +10,9 @@ import SwiftData
 
 @Model
 class DiaryData {
-    let title: String
-    let detail: String
-    let date: Date
+    var title: String
+    var detail: String
+    var date: Date
 
     init(title: String, detail: String, date: Date = .now) {
         self.title = title

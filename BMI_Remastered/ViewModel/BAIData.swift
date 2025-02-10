@@ -10,8 +10,8 @@ import SwiftData
 
 @Model
 class BAIData {
-    let dataBai: Double
-    let date: Date
+    var dataBai: Double
+    var date: Date
 
     init(dataBai: Double, date: Date = .now) {
         self.dataBai = dataBai
