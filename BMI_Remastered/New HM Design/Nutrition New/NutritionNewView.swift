@@ -176,7 +176,7 @@ struct NutritionNewView: View {
         isLoading = true
         
         var request = URLRequest(url: fruitUrl)
-        request.setValue("TxBdMtIA8D1f1XNhfzZ2lA==QhaiXoMmxRNTtrH4", forHTTPHeaderField: "X-Api-Key")
+        request.setValue("afhvRBX4iK0hptyuHBruRs7wL7PqaOPiyc9f0jHn", forHTTPHeaderField: "X-Api-Key")
         
         do {
             let (data, response) = try await URLSession.shared.data(for: request)

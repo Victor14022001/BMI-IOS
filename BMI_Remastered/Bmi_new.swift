@@ -16,9 +16,9 @@ struct Bmi_new: App {
     var body: some Scene {
         WindowGroup {
             if viewModel.choosenDesign == "HealthMetrics design" {
-                MyTabViewNew()
-            } else {
                 MyTabView()
+            } else {
+                MyTabViewNew()
             }
                
              
