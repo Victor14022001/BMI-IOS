@@ -18,47 +18,54 @@ struct BmiDataChartNewView: View {
             ZStack {
                 Color("appBlue")
                     .ignoresSafeArea(.all)
-                VStack {
-                    Chart {
-                        ForEach(datas) { value in
-                            LineMark(
-                                x: .value("Index", value.date),
-                                y: .value("Value", value.dataBmi)
-                            )
+                
+                if datas .isEmpty {
+                    Text("keine Daten virhanden")
+                } else {
+                    VStack {
+                        Chart {
+                            ForEach(datas) { value in
+                                LineMark(
+                                    x: .value("Index", value.date),
+                                   y: .value("Value", value.dataBmi)
+                                )
+                            }
                         }
-                    }
-                    .foregroundColor(Color("appOrange"))
-                    .frame(maxWidth: .infinity, maxHeight: 200)
-                    Spacer()
-                    
-                    List {
-                        ForEach(datas, id: \.self) { data in
-                            VStack(alignment: .leading) {
-                                Text("\(data.dataBmi)")
-                                    .font(.headline)
-                                    .foregroundStyle(Color("appOrange"))
+                        .foregroundColor(Color("appOrange"))
+                        .frame(maxWidth: .infinity, maxHeight: 200)
+                        Spacer()
+                        
+                        List {
+                            ForEach(datas, id: \.self) { data in
+                                VStack(alignment: .leading) {
+                                    Text("\(data.dataBmi)")
+                                        .font(.headline)
+                                        .foregroundStyle(Color("appOrange"))
+                                    
+                                    Text(data.date.formatted(date: .complete, time: .omitted))
+                                        .foregroundStyle(Color("appOrange"))
+                                }
+                                .listRowBackground(Color("appBlue"))
+                            }
+                            .onDelete { indexSet in
+                                for index in indexSet {
+                                    let deleteData = datas[index]
+                                    bmiContext.delete(deleteData)
+                                }
                                 
-                                Text(data.date.formatted(date: .complete, time: .omitted))
-                                    .foregroundStyle(Color("appOrange"))
                             }
-                            .listRowBackground(Color("appBlue"))
                         }
-                        .onDelete { indexSet in
-                            for index in indexSet {
-                                let deleteData = datas[index]
-                                bmiContext.delete(deleteData)
-                            }
-                            
-                        }
+                        .scrollBounceBehavior(.basedOnSize)
+                        .scrollContentBackground(.hidden)
+                        
                     }
-                    .scrollBounceBehavior(.basedOnSize)
-                    .scrollContentBackground(.hidden)
-                    
+                    .padding()
+                    .navigationTitle("Bmi History Chart")
+                    .navigationBarTitleDisplayMode(.inline)
+                    .preferredColorScheme(.dark)
                 }
-                .padding()
-                .navigationTitle("Bmi History Chart")
-                .navigationBarTitleDisplayMode(.inline)
-                .preferredColorScheme(.dark)
+                
+                
             }
         }
     }

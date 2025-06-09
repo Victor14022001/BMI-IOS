@@ -656,6 +656,9 @@
     "eins_zwei" : {
       "extractionState" : "manual"
     },
+    "Eiweiß: %@ g" : {
+
+    },
     "Enter todays Diary" : {
       "localizations" : {
         "de" : {
@@ -743,6 +746,9 @@
 
     },
     "Fetch Nutrition Info" : {
+
+    },
+    "Fett: %@ g" : {
 
     },
     "Fiber:" : {
@@ -868,6 +874,21 @@
       }
     },
     "item" : {
+
+    },
+    "Kalorien: %@ kcal" : {
+
+    },
+    "Kein Produkt gefunden." : {
+
+    },
+    "keine Daten virhanden" : {
+
+    },
+    "Keine Nährwertangaben verfügbar." : {
+
+    },
+    "Kohlenhydrate: %@ g" : {
 
     },
     "Look at your BMI at a Chart" : {
@@ -1100,7 +1121,16 @@
     "Potassium:" : {
 
     },
+    "Produkt suchen..." : {
+
+    },
+    "Produktsuche" : {
+
+    },
     "Protein:" : {
+
+    },
+    "Salz: %@ g" : {
 
     },
     "Saturated Fat:" : {
@@ -1485,6 +1515,9 @@
           }
         }
       }
+    },
+    "Zucker: %@ g" : {
+
     }
   },
   "version" : "1.0"

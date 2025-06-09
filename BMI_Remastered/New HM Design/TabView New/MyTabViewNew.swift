@@ -28,7 +28,8 @@ struct MyTabViewNew: View {
                     Label("Diary", systemImage: "pencil")
                 }
             
-            NutritionNewView()
+//            NutritionNewView()
+            SearchView()
                 .tabItem {
                     Label("Fruits", systemImage: "fork.knife.circle")
                 }

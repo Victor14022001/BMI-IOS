@@ -36,6 +36,7 @@
 		5673330D2B54753B001F8488 /* BMIData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5673330C2B54753B001F8488 /* BMIData.swift */; };
 		5673330F2B5475BB001F8488 /* DiaryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5673330E2B5475BB001F8488 /* DiaryData.swift */; };
 		567333112B5475F7001F8488 /* BAIData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567333102B5475F7001F8488 /* BAIData.swift */; };
+		56761E652DF71FD600DAC8EE /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56761E642DF71FD600DAC8EE /* SearchView.swift */; };
 		5676A54C2AC4B6CC008AAB85 /* MyTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5676A54B2AC4B6CC008AAB85 /* MyTabView.swift */; };
 		5676A5502AC4C30E008AAB85 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5676A54F2AC4C30E008AAB85 /* SettingsView.swift */; };
 		5677B55A2B2E4565008DEADB /* BmiChartNewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5677B5592B2E4565008DEADB /* BmiChartNewView.swift */; };
@@ -94,6 +95,7 @@
 		5673330C2B54753B001F8488 /* BMIData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMIData.swift; sourceTree = "<group>"; };
 		5673330E2B5475BB001F8488 /* DiaryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryData.swift; sourceTree = "<group>"; };
 		567333102B5475F7001F8488 /* BAIData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAIData.swift; sourceTree = "<group>"; };
+		56761E642DF71FD600DAC8EE /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		5676A54B2AC4B6CC008AAB85 /* MyTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabView.swift; sourceTree = "<group>"; };
 		5676A54F2AC4C30E008AAB85 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		5677B5592B2E4565008DEADB /* BmiChartNewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BmiChartNewView.swift; sourceTree = "<group>"; };
@@ -407,6 +409,7 @@
 			isa = PBXGroup;
 			children = (
 				56EC10742BFBA46C000C72DF /* NutritionNewView.swift */,
+				56761E642DF71FD600DAC8EE /* SearchView.swift */,
 			);
 			path = "Nutrition New";
 			sourceTree = "<group>";
@@ -546,6 +549,7 @@
 				5676A54C2AC4B6CC008AAB85 /* MyTabView.swift in Sources */,
 				56E75B3E2AB38E44004E915A /* IdealweightView.swift in Sources */,
 				564AADA12B21D0FF00321971 /* DiaryDataNewView.swift in Sources */,
+				56761E652DF71FD600DAC8EE /* SearchView.swift in Sources */,
 				5677B55A2B2E4565008DEADB /* BmiChartNewView.swift in Sources */,
 				5615512B2AF90D30004C8A3F /* BaiDataChartView.swift in Sources */,
 				5649EE472B0D580900A15AF5 /* SettingsViewNew.swift in Sources */,
